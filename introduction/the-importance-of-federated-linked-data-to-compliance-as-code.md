@@ -12,9 +12,9 @@ Compliance as Code data flow
 
 Notice in the diagram above that we show _multiple_ API gateways and applications. We’ve done this, as you’ll quickly learn, because the world of Compliance as Code normally involves drawing data from multiple locations when creating many of the output files we use.
 
-To explain, let’s continue our discussion with a real-world scenario. Let’s say that you want to build some form of jobs-related application.
+![My Jobs App](../.gitbook/assets/my-jobs-app10.png)
 
-![My Jobs App](../.gitbook/assets/1%20%281%29.png)
+To explain, let’s continue our discussion with a real-world scenario. Let’s say that you want to build some form of jobs-related application.
 
 You could either build the application using all of your own research and data or reach out through the Internet and connect to existing data from external sources.
 
