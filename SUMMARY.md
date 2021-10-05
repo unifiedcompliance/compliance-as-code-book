@@ -5,6 +5,7 @@
   * [This book is a living book](introduction/this-book-is-a-living-book.md)
   * [Chapter Structure](introduction/chapter-structure.md)
   * [A quick visual explanation of Compliance as Code](introduction/a-quick-visual-explanation-of-compliance-as-code.md)
-  * [Compliance as Code and the no-code movement](introduction/compliance-as-code-and-the-no-code-movement.md)
   * [The interpretations of Compliance as Code](introduction/the-interpretations-of-compliance-as-code.md)
+  * [The importance of Federated Linked Data to Compliance as Code](introduction/the-importance-of-federated-linked-data-to-compliance-as-code.md)
+  * [Compliance as Code and the no-code movement](introduction/compliance-as-code-and-the-no-code-movement.md)
 
