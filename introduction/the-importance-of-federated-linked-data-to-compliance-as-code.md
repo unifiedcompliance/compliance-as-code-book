@@ -1,7 +1,5 @@
 # The importance of Federated Linked Data to Compliance as Code
 
-## The importance of Federated Linked Data to Compliance as Code
-
 As described in “A quick visual explanation of Compliance as Code”, Compliance as Code is a part of an ecosystem and data flow that ends with delivering content to the end user \(shown below left\) and begins with a JSON schema \(shown below right\).
 
 ![Graphical user interface, application
