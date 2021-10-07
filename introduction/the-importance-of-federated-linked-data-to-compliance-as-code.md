@@ -2,11 +2,7 @@
 
 As described in “A quick visual explanation of Compliance as Code”, Compliance as Code is a part of an ecosystem and data flow that ends with delivering content to the end user \(shown below left\) and begins with a JSON schema \(shown below right\).
 
-![Graphical user interface, application
-
-Description automatically generated](../.gitbook/assets/0%20%283%29.png)
-
-Compliance as Code data flow
+![Compliance as Code data flow](../.gitbook/assets/0%20%283%29.png)
 
 Notice in the diagram above that we show _multiple_ API gateways and applications. We’ve done this, as you’ll quickly learn, because the world of Compliance as Code normally involves drawing data from multiple locations when creating many of the output files we use.
 
