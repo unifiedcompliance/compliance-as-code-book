@@ -13,3 +13,5 @@
     * [Frames, Panes, Windows, Pages](no-code-design-elements/basics/frames-panes-windows-pages.md)
     * [Window Basics](no-code-design-elements/basics/window-basics.md)
     * [Landing Pages](no-code-design-elements/basics/landing-pages.md)
+* [Minimum Viable Products](minimum-viable-products/README.md)
+  * [Page 1](minimum-viable-products/page-1.md)

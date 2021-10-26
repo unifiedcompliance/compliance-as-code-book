@@ -1,6 +1,6 @@
 # Window Basics
 
-The public sharing for this wireframe is: [https://balsamiq.cloud/srj76i4/p3l8wr](https://balsamiq.cloud/srj76i4/p3l8wr). In this section we will cover colors, user & account information, and navigation.
+In this section we will cover colors, user & account information, and navigation.
 
 ## Colors
 
