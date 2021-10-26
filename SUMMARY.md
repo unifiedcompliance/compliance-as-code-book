@@ -12,3 +12,4 @@
   * [Basics](no-code-design-elements/basics/README.md)
     * [Frames, Panes, Windows, Pages](no-code-design-elements/basics/frames-panes-windows-pages.md)
     * [Window Basics](no-code-design-elements/basics/window-basics.md)
+    * [Landing Pages](no-code-design-elements/basics/landing-pages.md)
