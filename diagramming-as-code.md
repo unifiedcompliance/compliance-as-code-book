@@ -126,6 +126,45 @@ A work breakdown structure defines all the things a project needs to accomplish,
 
 As you can see, PlantUML allows users to specify various types of diagrams in a simple text format similar to programming languages. It is the most popular text format for diagramming. As we showed above, it supports many different diagram types, separates each diagram element according to its function, and uses a simple, human-readable language.
 
+
+
+### The schema for diagramming as code
+
+The schema for diagramming as code is very simple. In essence, outside of the _core_ schema elements diagramming as code has these _specific_ elements”
+
+* **name** the name of the file in question.
+* **description** the textual content of the diagram.
+* **diagram\_type** the type of the diagram, such as _Deployment, Class, Activity_, etc.
+
+The whole schema is below (not much to it). We’ve explained the main parts above, the rest can be found at [GRCSchema.org/PlantUML](https://grcschema.org/PlantUML):
+
+```
+{
+  "PlantUML": {
+    "@context": "http://grcschema.org/",
+    "@type": "PlantUML",
+    "diagram_type": "Activity",
+    "name": "Sign-In Process",
+    "element_id": "629",
+    "description": "@startuml\n:This;\n:That;\n@enduml",
+    "languagecode_alpha3": "ENG",
+    "@id": "https://ucfcac/api/PlantUML/629/",
+    "CoreMetaData": {
+      "@type": "CoreMetaData",
+      "checksum": "42",
+      "created_audit_id": "10265",
+      "date_created": "2021-09-02",
+      "date_modified": "2021-09-02",
+      "live_status": "1",
+      "modified_audit_id": "29754",
+      "notes": "none",
+      "superseded_by": "0",
+      "validated": "1"
+    }
+  }
+}
+```
+
 ### How do we use diagramming as code?
 
 Easily enough, you can create your own code-based diagrams using Plant UML by going to PlantUML’s website by clicking [HERE](https://www.plantuml.com/plantuml/uml/). This will start a new page for you and you can diagram away. If you need to learn more about the various formats, you can click [HERE](https://plantuml.com).
