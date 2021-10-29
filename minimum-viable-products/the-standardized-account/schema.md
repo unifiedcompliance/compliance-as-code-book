@@ -7,7 +7,9 @@ The schema for an account is found in multiple locations:
 * [https://grcschema.org/User](https://grcschema.org/User), which provides the schema for a typical user found within an ac-count.
 * [https://grcschema.org/Group](https://grcschema.org/Group), and [https://grcschema.org/Initiative](https://grcschema.org/Initiative), which provides the schema for grouping users (an initiative is only different in that it has a beginning and end-date) within the account.
 
-The ERD for working with an account looks like the diagram that follows: ![Account ERD](https://www.complianceascode.net/wp-content/uploads/2021/10/AccountSchema.png)
+The ERD for working with an account looks like the diagram that follows:
+
+![Account ERD](https://www.complianceascode.net/wp-content/uploads/2021/10/AccountSchema.png)
 
 ### What needs to be understood about this structure
 
