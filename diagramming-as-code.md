@@ -126,8 +126,6 @@ A work breakdown structure defines all the things a project needs to accomplish,
 
 As you can see, PlantUML allows users to specify various types of diagrams in a simple text format similar to programming languages. It is the most popular text format for diagramming. As we showed above, it supports many different diagram types, separates each diagram element according to its function, and uses a simple, human-readable language.
 
-
-
 ### The schema for diagramming as code
 
 The schema for diagramming as code is very simple. In essence, outside of the _core_ schema elements diagramming as code has these _specific_ elements”
@@ -171,4 +169,4 @@ Easily enough, you can create your own code-based diagrams using Plant UML by go
 
 If you want to learn more, you can visit our research site where we our bibliography for this topic is kept by clicking [HERE](https://theucf.info/research/PlantUML).
 
-If you want your own application that allows your team to create and track your diagrams as code, stand by… we’ll have something to show you soon!
+If you want your own application that allows your team to create and track your diagrams as code, look at the section [PlantUML Diagrams as Code](minimum-viable-products/plantuml-diagrams-as-code/)!
