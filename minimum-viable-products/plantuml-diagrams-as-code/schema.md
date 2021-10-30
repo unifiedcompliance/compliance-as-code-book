@@ -1,5 +1,7 @@
 # Schema
 
+
+
 The schema for PlantUML diagrams is very simple. In essence, outside of the _core_ schema elements diagramming as code has these _specific_ elements”
 
 * **name** the name of the file in question.
@@ -54,8 +56,17 @@ The whole schema is below (not much to it). We’ve explained the main parts abo
 * WBS
 * ERD
 
-When sharing these documents within a federated system, the schemas for an _Account\[^_[_https://grcschema.org/account_](https://grcschema.org/account)_], Organization\[^_[_https://grcschema.org/organization_](https://grcschema.org/organization)_],_ and _Person\[^_[_https://grcschema.org/person_](https://grcschema.org/person)_]_ must also be taken into consideration.
+When sharing these documents within a federated system, the schemas for an _Account1, Organization2,_ and _Person3_ must also be taken into consideration.
 
 #### ERD
 
-The ERD for connecting the PlantUML table to the various account tables is shown below\[^In the ERD Users and Persons are one in the same as a Person is a published User.]. ![PlantUML ERD](https://www.complianceascode.net/wp-content/uploads/2021/10/PlantUML-ERD.png)
+The ERD for connecting the PlantUML table to the various account tables is shown below4.
+
+![PlantUML ERD](https://www.complianceascode.net/wp-content/uploads/2021/10/PlantUML-ERD.png)
+
+### Footnotes
+
+1. [https://grcschema.org/account](https://grcschema.org/account) ↩︎
+2. [https://grcschema.org/organization](https://grcschema.org/organization) ↩︎
+3. [https://grcschema.org/person](https://grcschema.org/person) ↩︎
+4. In the ERD Users and Persons are one in the same as a Person is a published User. ↩︎
