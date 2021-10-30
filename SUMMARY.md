@@ -21,3 +21,4 @@
   * [PlantUML Diagrams as Code](minimum-viable-products/plantuml-diagrams-as-code/README.md)
     * [Use Cases](minimum-viable-products/plantuml-diagrams-as-code/use-cases.md)
     * [Schema](minimum-viable-products/plantuml-diagrams-as-code/schema.md)
+    * [Wireframes](minimum-viable-products/plantuml-diagrams-as-code/wireframes.md)
