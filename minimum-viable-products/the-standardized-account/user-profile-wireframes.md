@@ -34,7 +34,7 @@ Navigation to the User profile can be achieved from two locations as exhibited i
 
 Basic information for each User comprises their primary name & email address (mandatory), and optional social addresses. The suggested layout for basic information follows:
 
-![Basic Info](https://www.complianceascode.net/wp-content/uploads/2021/11/User-Profile-Basic-Info.png)
+![Basic Info](https://www.complianceascode.net/wp-content/uploads/2021/11/User-Profile-Basic-Info2.png)
 
 1 The **Save** and **Delete** buttons should be activated and the **Cancel** button should only be activated _if_ changes to the record were made by the User.
 
@@ -55,6 +55,8 @@ Basic information for each User comprises their primary name & email address (ma
 9 & 10. These are both automatically calculated. (see Calculating disambiguated names below).
 
 11\. These are optional checkboxes that denote whether the staff member is the **admin**, the **billing contact**, or a **contributor** to content added to the federated mapping system. Only the **Administrator** of the Account can promote a user to **Admin** or **Billing Contact**. Clicking the **Contributor** button sets off a process to convert the user to a Contributor and is not covered at this time.
+
+12\. This is the API Key from the AGPM gateway.
 
 ### Name prefixes and suffixes
 
