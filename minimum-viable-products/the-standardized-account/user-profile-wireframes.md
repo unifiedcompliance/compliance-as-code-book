@@ -73,4 +73,66 @@ if(prefix≠null;prefix & “ “) & first name & “ “ & if(middle initial≠
 
 #### Calculating disambiguated names
 
-This will be accomplished via a future API call.
+The larger the organization, the greater the chances that duplicate names might exist when combining first and last names. Two people named James and John Smith would create a duplicate if the organization’s naming standard were first initial followed by last name. Joseph L. Smith and Joe T Smith would create duplicates if the organization’s naming standard were first name followed by last name.
+
+Therefore, two things must happen.
+
+a. The organization should establish a standard name configuration system for creating system names. The basic system can be as simple as the “name configurator” shown below:
+
+![Sample name configurator](https://www.complianceascode.net/wp-content/uploads/2021/11/Name-Configurator.png)
+
+This has settings for first, middle, last names, whether to uses spaces or periods between names, how to set the case, and even whether to convert the text to ASCII characters.
+
+b. The name configuration standard _could_ produce duplicate results. Therefore, a methodology for disambiguation needs to be put into place. Whether this method is configurable (such as the name configurator) or automatic doesn’t matter. One algorithm is to simply add a numeric value behind the system name so that the second joseph.smith would become joseph.smith2, the third joseph.smith3, and so on. It can be more complicated than that, or as simple as that.
+
+### User Names
+
+User names is an array of names. The person’s primary name can be set from here or on the Basic Info layout.
+
+For all names, the First Name and the Last Name must be filled out.
+
+![Staff Names](https://www.complianceascode.net/wp-content/uploads/2021/11/User-Profile-Names.png)
+
+There is a bit of a trick to this layout – a person’s name can either be in the format of a name or an alias. If an alias, the only thing filled out is the freeform\_name field, not shown here. Therefore, this layout should not include any record wherein the freeform\_name is the only entry.
+
+### Aliases
+
+There is a bit of a trick to this layout, as mentioned in Staff Names above. This layout is _only_ for names records that _only_ have the freeform\_name field filled out.
+
+![Aliases](https://www.complianceascode.net/wp-content/uploads/2021/11/User-Profile-Aliases.png)
+
+1. This is the freeform name. The **Disambiguated System Name** is _always_ entered as a record for this user.
+2. This is the _alias type ID_ and is derived from _something other than_ “1”, from the Primary field.
+
+2 = disambiguated system name
+
+3 = previous system name
+
+### Emails and Phone Numbers
+
+These are both arrays assigned to a staff member. Other than the primary email address, they are optional.
+
+![Email & Phone Numbers](https://www.complianceascode.net/wp-content/uploads/2021/11/User-Profile-Email.png)
+
+The _calling codes_ for phone numbers can be automatically created using the callingcodes schema and API calls.
+
+* **Calling Codes Schema** - http://grcschema.org/CallingCode
+* **Calling Codes API** – not finished yet
+
+### Postal Addresses
+
+Postal Addresses for each staff member are optional. When filled out, they must be filled out in the order of _country_, _state_, _city_, and then the rest of the information. This is because _country_, _state_, and _city_ are all pop-ups, one deriving its list from the other.
+
+![Postal Address](https://www.complianceascode.net/wp-content/uploads/2021/11/User-Profile-Addresses.png)
+
+1. **Country** **API** – This will be accomplished via a future API call.
+2. **State API** - This will be accomplished via a future API call.
+3. **City API** - This will be accomplished via a future API call.
+
+### Teams and Roles
+
+These are completely optional for being filled out. Both teams and roles should be pop-ups selectable from _existing_ teams and roles _found in this account or Organization_.
+
+![Teams & Roles](https://www.complianceascode.net/wp-content/uploads/2021/11/User-Profile-Teams-and-Roles.png)
+
+###
