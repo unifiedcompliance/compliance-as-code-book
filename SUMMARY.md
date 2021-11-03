@@ -18,6 +18,7 @@
   * [The Standardized Account](minimum-viable-products/the-standardized-account/README.md)
     * [User Stories](minimum-viable-products/the-standardized-account/user-stories.md)
     * [Schema](minimum-viable-products/the-standardized-account/schema.md)
+    * [Account Management Wireframes](minimum-viable-products/the-standardized-account/account-management-wireframes.md)
     * [User Profile Wireframes](minimum-viable-products/the-standardized-account/user-profile-wireframes.md)
   * [PlantUML Diagrams as Code](minimum-viable-products/plantuml-diagrams-as-code/README.md)
     * [Use Cases](minimum-viable-products/plantuml-diagrams-as-code/use-cases.md)
