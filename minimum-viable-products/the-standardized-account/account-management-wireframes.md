@@ -80,8 +80,6 @@ For information about the Users' fields, see the section on [User Profile Wirefr
 
 The main difference between the User Profile Management look and feel and the Account Management for _Users_ look and feel is that the Account Management version has a vertical left navigation for all of the users that allows linking to that User's account, as shown below:
 
-
-
 ![Account view of User Basic Info](https://www.complianceascode.net/wp-content/uploads/2021/11/Account-Users-Basic-Info.png)
 
 ### Account Groups
@@ -152,3 +150,9 @@ Teams is a very simplistic screen. A team doesn’t need much information, other
 3. The team lead appears in this field. It is _not_ modifiable here, as this is a selection that can be made in the user’s table.
 4. The description for the team is optional.
 5. The members of the team are listed and can be navigated to via clicking the arrow by their names.
+
+### Account Other Settings
+
+There also should be a “catch all” area for additional settings that will be necessary, such as a place to put the AGPM API key, etc.
+
+![Account Other Settings](https://www.complianceascode.net/wp-content/uploads/2021/11/Account-Basic-Settings.png)
