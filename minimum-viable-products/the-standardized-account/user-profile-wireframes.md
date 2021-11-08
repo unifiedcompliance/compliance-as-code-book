@@ -1,10 +1,10 @@
 # User Profile Wireframes
 
-3This document identifies the core wireframe features for managing a User Profile within the Compliance as Code environment. The left-hand navigation in this diagram is limited to only those items that pertain to _this diagram_ and _do not contain_ any normative navigation items found within the rest of the application.
+This document identifies the core wireframe features for managing a User Profile within the Compliance as Code environment. The left-hand navigation in this diagram is limited to only those items that pertain to _this diagram_ and _do not contain_ any normative navigation items found within the rest of the application.
 
 ### The difference between a User and a known Person
 
-There is a huge difference between an account user and a disambiguated (known) Person. A User of an account can request information fro the federated database and can change _local_ information within their own application. In order to contribute content _to_ the federated database, the user must be vetted and disambiguated and be registered as a known Person. The content in these wireframes shows _all_ of the content that pertains to a Person, and the User’s content is a subset of that. Throughout this document we will distinguish between a User’s information and a Person’s information.
+There is a huge difference between an account user and a disambiguated (known) Person. A User of an account can request information from the federated database and can change _local_ information within their own application. In order to contribute content _to_ the federated database, the user must be vetted and disambiguated and be registered as a known Person. The content in these wireframes shows _all_ of the content that pertains to a Person, and the User’s content is a subset of that. Throughout this document, we will distinguish between a User’s information and a Person’s information.
 
 #### JSON Schema for User and Person
 
