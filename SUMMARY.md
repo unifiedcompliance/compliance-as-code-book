@@ -22,7 +22,7 @@
     * [User Profile Wireframes](minimum-viable-products/the-standardized-account/user-profile-wireframes.md)
   * [Federated Contributors](minimum-viable-products/federated-contributors/README.md)
     * [User Stories](minimum-viable-products/federated-contributors/user-stories.md)
-    * [Schema](minimum-viable-products/federated-contributors/schema.md)
+    * [Schemas](minimum-viable-products/federated-contributors/schemas.md)
     * [Dataflow for converting a User to a known Contributor](minimum-viable-products/federated-contributors/dataflow-for-converting-a-user-to-a-known-contributor.md)
   * [PlantUML Diagrams as Code](minimum-viable-products/plantuml-diagrams-as-code/README.md)
     * [Use Cases](minimum-viable-products/plantuml-diagrams-as-code/use-cases.md)
