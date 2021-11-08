@@ -1,26 +1,107 @@
 # Dataflow for converting a User to a known Contributor
 
-The Compliance as Code federated system uses a couple of API calls to convert an Account’s User to a known Person so that the person can contribute content. The dataflow diagram for this process is shown below:
 
-![Person Validation flow](https://www.complianceascode.net/wp-content/uploads/2021/11/NoCode-Person-Validation.png)
+
+The Compliance as Code federated system uses a couple of API calls to convert an Account’s User to a known Person so that the person can contribute content.
+
+![Abbreviated Flow](https://www.complianceascode.net/wp-content/uploads/2021/11/NoCode-User-or-Organization-to-Contributor.png)
 
 Let’s walk through the process.
-
-### Begin Validate Person
 
 The process to convert a user to a known Person begins within the User’s Profile when the user clicks the **Contributor** checkbox (1) in the screen below:
 
 ![Contributor button](https://www.complianceascode.net/wp-content/uploads/2021/11/User-Profile-Convert-to-Contributor-1.png)
 
-### Choosing to Convert
+Before we convert the User to a Person, the user must first accept what we call the _TLP_ (Terms of Service, License, and Privacy Policy).
 
-Clicking the **Contributor** checkbox should bring up a dialog that asks the end user to convert to a known person.
+## Accepting the Terms of Service, License, and Privacy Policy
 
-> Action: Select Validate Public Person
+It all begins with walking the user through the **Terms of Service**, **License Agreement**, and **Privacy Policy**.
+
+![No-Code TLP process](https://www.complianceascode.net/wp-content/uploads/2021/11/NoCode-TLP-Acknowledgement2.png)
+
+### Terms of Service
+
+The No-Code application must make the call to get the current Terms of Service.
+
+> **API Call**: GET /ToS;
+
+To which the gateway will return those terms.
+
+> **API Return**: ToS;
+
+Once the data is returned, the application must notify the user that he or she _must_ accept the Terms of Service prior to moving forward.
+
+> **Prompt User**: "You must accept the terms of service.”
+
+A window is then displayed with the current Terms of Service in it, as shown below.
+
+![TLP Acknowledgement](https://www.complianceascode.net/wp-content/uploads/2021/11/TLP-Window.png)
+
+1. If the text is longer than fits within the window, the window must display a scrolling field.
+2. Both the **Decline** and **Accept** buttons are initially disabled _if_ the scroll bar is activated. _Scrolling to the end_ of the text is what activates both buttons.
+
+_If_ the user accepts the Terms of Service, they can continue.
+
+_If_ the user _does not_ accept the Terms of Service, the application must display a prompt that the process will be canceled.
+
+> **Prompt User**: "You cannot continue without acknowledging the Terms of Service."
+
+### Privacy Policy
+
+The No-Code application makes an API call to get the Privacy Policy.
+
+> **API Call**: GET /PrivacyPolicy;
+
+To which the gateway will return the current version of the Privacy Policy.
+
+> **API Return**: PrivacyPolicy;
+
+Once the data is returned, the application must notify the user that he or she _must_ accept the Privacy Policy prior to moving forward.
+
+> **Prompt User**: "You must accept the Privacy Policy.”
+
+A window is then displayed with the current Privacy Policy in it that acts the same as the one for the Terms of Service above.
+
+_If_ the user accepts the Privacy Policy, they can continue.
+
+_If_ the user _does not_ accept the Privacy Policy, the application must display a prompt that the process will be canceled.
+
+> **Prompt User**: "You cannot continue without acknowledging the Privacy Policy.”
+
+### License Agreement
+
+The No-Code application makes an API call to get the License Agreement.
+
+> **API Call**: GET /License;
+
+To which the gateway will return the current version of the License Agreement.
+
+> **API Return**: License;
+
+Once the data is returned, the application must notify the user that he or she _must_ accept the License Agreement prior to moving forward.
+
+> **Prompt User**: "You must accept the License Agreement.”
+
+A window is then displayed with the current License Agreement in it that acts the same as the one for the Terms of Service above.
+
+_If_ the user accepts the License Agreement, they can continue.
+
+_If_ the user _does not_ accept the License Agreement, the application must display a prompt that the process will be canceled.
+
+> **Prompt User**: "You cannot continue without acknowledging the License Agreement.”
+
+## Begin Validate Person
+
+The dataflow diagram for this process is shown below:
+
+![Person Validation flow](https://www.complianceascode.net/wp-content/uploads/2021/11/NoCode-Person-Validation-1.png)
+
+Once the user has accepted the three agreements, the Person Validation process begins.
 
 ### Initial API Call
 
-This, in turn, kicks off the API call to find out what we know about this user based on his or her email address.
+This kicks off with the API call to find out what we know about this user based on his or her email address.
 
 > **API Call**: GET /PersonByEmail;
 
@@ -42,7 +123,7 @@ If the request is queued you’ll need to present the user with some form of dia
 
 **Valid response**
 
-If a person has been found that matches the email address given, the API will return a valid response with the _some_ or _all_ of the data fields specified in the [Person schema](https://grcschema.org/Person).
+If a person has been found that matches the email address given, the API will return a valid response with _some_ or _all_ of the data fields specified in the [Person schema](https://grcschema.org/Person).
 
 > **API Response**: Person Information
 
