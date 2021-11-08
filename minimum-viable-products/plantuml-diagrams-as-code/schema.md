@@ -10,32 +10,7 @@ The schema for PlantUML diagrams is very simple. In essence, outside of the _cor
 
 The whole schema is below (not much to it). We’ve explained the main parts above, the rest can be found at [GRCSchema.org/PlantUML](https://grcschema.org/PlantUML):
 
-```
-{
-  "PlantUML": {
-    "@context": "http://grcschema.org/",
-    "@type": "PlantUML",
-    "diagram_type": "Activity",
-    "name": "Sign-In Process",
-    "element_id": "629",
-    "description": "@startuml\n:This;\n:That;\n@enduml",
-    "languagecode_alpha3": "ENG",
-    "@id": "https://ucfcac/api/PlantUML/629/",
-    "CoreMetaData": {
-      "@type": "CoreMetaData",
-      "checksum": "42",
-      "created_audit_id": "10265",
-      "date_created": "2021-09-02",
-      "date_modified": "2021-09-02",
-      "live_status": "1",
-      "modified_audit_id": "29754",
-      "notes": "none",
-      "superseded_by": "0",
-      "validated": "1"
-    }
-  }
-}
-```
+![PlantUML JSON](https://www.complianceascode.net/wp-content/uploads/2021/11/PlantUMLJSON.png)
 
 **Diagram Type** is drawn from a list of the available diagram types supported by PlantUML. The list, as of this publishing, is
 
