@@ -121,6 +121,18 @@ If the request is queued you’ll need to present the user with some form of dia
 
 > **Prompt**: Your request is queued. Please wait 5 min and click Validate Public Person again."
 
+#### **Invalid response**
+
+An invalid response can be returned if no information was found for any person using that email address.
+
+> **API Response**: Error = Unknown person
+
+There are a lot of reasons that the API might not find a user, too many to go into here. At this point what is required by the user is that the user provides _the minimum_ information the industry has agreed on to disambiguate _this_ person from _that_ person. For now, that means that the user has to add at least two social addresses (LinkedIn, Twitter, Facebook) and an office address.
+
+> **Prompt User**: "There is not enough social information to disambiguate you. You must submit two Social Addresses and an Office Address."
+
+Once the user has contributed at least that much information, they can continue.
+
 **Valid response**
 
 If a person has been found that matches the email address given, the API will return a valid response with _some_ or _all_ of the data fields specified in the [Person schema](https://grcschema.org/Person).
@@ -135,21 +147,11 @@ _If_ the No-Code application is storing User information in the same structure a
 
 > **Write**: available data to user/person table, updating User Profile visually;
 
+### Continuing with the validation process
+
 After that’s been done, the user will have to still validate all of the data that’s been returned by the API. **The user should be given some form of visual notification that each profile segment has to be validated individually prior to submission.**
 
 > **Prompt User**: "Validate each section of your profile"
-
-**Invalid response**
-
-An invalid response can be returned if no information was found for any person using that email address.
-
-> **API Response**: Error = Unknown person
-
-There are a lot of reasons that the API might not find a user, too many to go into here. At this point what is required by the user is that the user provides _the minimum_ information the industry has agreed on to disambiguate _this_ person from _that_ person. For now, that means that the user has to add at least two social addresses (LinkedIn, Twitter, Facebook) and an office address.
-
-> **Prompt User**: "There is not enough social information to disambiguate you. You must submit two Social Addresses and an Office Address."
-
-Once the user has contributed at least that much information, they can continue.
 
 ### Trapping for section saves
 

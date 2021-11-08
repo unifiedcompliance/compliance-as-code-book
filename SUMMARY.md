@@ -24,6 +24,7 @@
     * [User Stories](minimum-viable-products/federated-contributors/user-stories.md)
     * [Schemas](minimum-viable-products/federated-contributors/schemas.md)
     * [Dataflow for converting a User to a known Contributor](minimum-viable-products/federated-contributors/dataflow-for-converting-a-user-to-a-known-contributor.md)
+    * [Dataflow for converting an Account to a known Organization](minimum-viable-products/federated-contributors/dataflow-for-converting-an-account-to-a-known-organization.md)
   * [PlantUML Diagrams as Code](minimum-viable-products/plantuml-diagrams-as-code/README.md)
     * [Use Cases](minimum-viable-products/plantuml-diagrams-as-code/use-cases.md)
     * [Schema](minimum-viable-products/plantuml-diagrams-as-code/schema.md)
