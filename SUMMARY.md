@@ -14,6 +14,7 @@
     * [Frames, Panes, Windows, Pages](no-code-design-elements/basics/frames-panes-windows-pages.md)
     * [Window Basics](no-code-design-elements/basics/window-basics.md)
     * [Landing Pages](no-code-design-elements/basics/landing-pages.md)
+    * [PlantUML Pages](no-code-design-elements/basics/plantuml-pages.md)
 * [Minimum Viable Products](minimum-viable-products/README.md)
   * [The Standardized Account](minimum-viable-products/the-standardized-account/README.md)
     * [User Stories](minimum-viable-products/the-standardized-account/user-stories.md)
