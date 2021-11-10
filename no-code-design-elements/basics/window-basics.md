@@ -31,9 +31,11 @@ There are two items that should be displayed – user and account information.
 
 Main navigation is to the left, and secondary navigation runs across the top of the window.
 
-![Basic navigation (closed)](<../../.gitbook/assets/7 (1)>)
+![Basic Navigation](https://www.complianceascode.net/wp-content/uploads/2021/11/Basic-Navigation.png)
 
 1.  This is the area for the main vertical menu, if there is to be one. When the top icon is clicked it will expand to show the names of the vertical icons. Left vertical navigation has the following items associated with our various tools so far:
+
+    \-Home
 
     \-Personnel
 
@@ -62,7 +64,7 @@ Main navigation is to the left, and secondary navigation runs across the top of 
 
 ## **Expanded basic navigation**
 
-![Basic navigation (expanded)](../../.gitbook/assets/8)
+![Expanded Basic Navigation](https://www.complianceascode.net/wp-content/uploads/2021/11/Expanded-Basic-Navigation.png)
 
 1. All names of primary menu items will be in bold. The fonts will be sized no less than 14 points for readability. When expanded, the vertical menu will show disclosure triangles for those items that have sub-menus.
 2. Sub-menu items will be indented and not in bold but at the same font size. The selected items will always be in the product’s primary highlight color.
