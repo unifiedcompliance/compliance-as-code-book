@@ -1,10 +1,10 @@
 # PlantUML Pages
 
-Plant UML pages are specifically designed to utilize the UCF's Plant UML Plugin for bubble.io and other no-code applications. The window below highlights the two fields necessary for PlantUML to function, and how those fields should be displayed.
+Plant UML pages are specifically designed to utilize the UCF's Plant UML Plugin for bubble.io and other no-code applications. The window below highlights the **two fields** necessary for PlantUML to function, and how those fields should be displayed.
 
 ![PlantUML implementation](https://www.complianceascode.net/wp-content/uploads/2021/11/PlantUML-Plugin.png)
 
-BOTH files should stretch horizontally and vertically with the page as it stretches.
+**Both** fields should stretch horizontally and vertically with the page as it stretches.
 
 1. This is the graph display field and is drawn using GraphViz. Notice at the bottom right it has a plus/minus set of icons in order to increase or decrease the view’s zoom.
 2. This is the text entry field in which the UML content is entered. This field should be scrollable.
