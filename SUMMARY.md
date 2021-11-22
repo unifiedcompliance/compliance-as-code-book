@@ -30,3 +30,5 @@
     * [Use Cases](minimum-viable-products/plantuml-diagrams-as-code/use-cases.md)
     * [Schema](minimum-viable-products/plantuml-diagrams-as-code/schema.md)
     * [Wireframes](minimum-viable-products/plantuml-diagrams-as-code/wireframes.md)
+  * [Custom Dictionaries](minimum-viable-products/custom-dictionaries/README.md)
+    * [User Stories](minimum-viable-products/custom-dictionaries/user-stories.md)
