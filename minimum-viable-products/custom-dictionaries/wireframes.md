@@ -66,6 +66,12 @@ The Term Basics window allows adding/subtracting a term from local custom dictio
 6. **Non-standard Terms** is a hyperlink-enabled list of all terms that are considered non-standard (such as common mis-spellings, etc.) of this term.
 7. **Other Forms** presents the various forms verbs and nouns can take (past, present, etc. for verbs, plural, possessive for nouns). These are vary useful in natural language processing.
 
+#### Adding Terms to a custom dictionary or List
+
+When clicking the **Add** button to add a term to either a custom dictionary or a custom list, the user must also select one or more definitions to add to that dictionary or list. In this case, a dialog must be presented for the user to make that selection.
+
+![Selecting definitions to add with the term](https://www.complianceascode.net/wp-content/uploads/2021/11/Add-Term-Definitions.png)
+
 #### Non-standard Terms
 
 The non-standard terms page is a very limited version of the basic page.
