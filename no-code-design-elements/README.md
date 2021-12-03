@@ -2,7 +2,7 @@
 
 ### No-Code Design elements
 
-Often, the terms **data** and **information** are used interchangeably. They shouldn’t be. There is a difference between the two. **Data** can be a number, symbol, character, word, codes, graphs, etc. **Information** is **data** put into context. **Information **exists when data are processed, interpreted, organized, structured or presented so as to make that data meaningful or useful.
+Often, the terms **data** and **information** are used interchangeably. They shouldn’t be. There is a difference between the two. **Data** can be a number, symbol, character, word, codes, graphs, etc. **Information** is **data** put into context. **Information** exists when data are processed, interpreted, organized, structured or presented so as to make that data meaningful or useful.
 
 And **design** is a key part of making data useful.
 

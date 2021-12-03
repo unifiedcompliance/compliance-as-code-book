@@ -38,9 +38,9 @@ The PlantUML Library contains a listing of all of the available diagrams that th
 * **Group** is drawn from the list of local groups that the diagram can be assigned to. Or, _All_ is to be used if no group is assigned. This is really just for filtering the various diagrams.
 * **Select** is a radio button in this diagram and the way that the user selects the record for an action.
 
-2\. ** Search** is an open-text search field that _can be_ constrained by a drop-down filter.
+2\. **Search** is an open-text search field that _can be_ constrained by a drop-down filter.
 
-3.** Record management** buttons should include the following:
+3\. **Record management** buttons should include the following:
 
 * **Open** to open the selected record.
 * **Duplicate** would then bring up a dialog to name the duplicate record before duplicating it.

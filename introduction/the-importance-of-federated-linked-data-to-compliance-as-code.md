@@ -46,7 +46,7 @@ Take, for example, the world of job descriptions. We all have our own jobs where
 * Open Skills Network (OSN) ’s database of skills and job descriptions[6](file:///Applications/iA%20Writer.app/Contents/Frameworks/Kit.framework/Versions/A/Resources/Templates/Copy%20Formatted.iatemplate/Contents/Resources/#fn6-31157).
 * The myriad job descriptions being written by software tools like **Indeed** and **Jobvite**[7](file:///Applications/iA%20Writer.app/Contents/Frameworks/Kit.framework/Versions/A/Resources/Templates/Copy%20Formatted.iatemplate/Contents/Resources/#fn7-31157).
 
-Do these libraries work with each other? ONET derives its data from the SOC. OSN derives_ _some_ _of its data from ONET. NIST’s system doesn’t work with any of them, and neither do Jobvite or Indeed. Does this cause the fracturing of data? Sure does! These organizations will never merge. And yet, what they produce could be made stronger if a modicum of sharing occurred.
+Do these libraries work with each other? ONET derives its data from the SOC. OSN derives __ some __ of its data from ONET. NIST’s system doesn’t work with any of them, and neither do Jobvite or Indeed. Does this cause the fracturing of data? Sure does! These organizations will never merge. And yet, what they produce could be made stronger if a modicum of sharing occurred.
 
 A federated approach is needed so that people and organizations can get together, do stuff, and separate again, without having to negotiate the same set of arrangements over and over. So, the choices for sharing data are linking data and federating data.
 
