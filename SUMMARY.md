@@ -33,3 +33,4 @@
   * [Custom Dictionaries](minimum-viable-products/custom-dictionaries/README.md)
     * [User Stories](minimum-viable-products/custom-dictionaries/user-stories.md)
     * [Wireframes](minimum-viable-products/custom-dictionaries/wireframes.md)
+* [SuperScript](superscript.md)
