@@ -5,12 +5,17 @@
 The schema for PlantUML diagrams is very simple. In essence, outside of the _core_ schema elements diagramming as code has these _specific_ elements”
 
 * **name** the name of the file in question.
+* **diagram** the textual content of the diagram.
 * **description** the textual content of the diagram.
 * **diagram\_type** the type of the diagram, such as _Deployment, Class, Activity_, etc.
 
-The whole schema is below (not much to it). We’ve explained the main parts above, the rest can be found at [GRCSchema.org/PlantUML](https://grcschema.org/PlantUML):
+The whole schema is below (not much to it). We’ve explained the main parts above, the rest can be found at [GRCSchema.org/PlantUML](https://grcschema.org/PlantUML)
 
-![PlantUML JSON](https://www.complianceascode.net/wp-content/uploads/2021/11/PlantUMLJSON.png)
+## The content and the license
+
+As you can see in the diagram below, the structure for the content is very simple. In addition to the fields defined above, the **CoreMetaData** allows tracking for updates to the diagrams, while the **license** fields provide the necessary content for the share-alike licenses that the diagrams will be assigned (meaning you’ll be able to use them as you see fit).
+
+![PlantUML Content](https://www.complianceascode.net/wp-content/uploads/2021/12/PlantUMLJSONpt1.png)
 
 **Diagram Type** is drawn from a list of the available diagram types supported by PlantUML. The list, as of this publishing, is
 
@@ -30,6 +35,10 @@ The whole schema is below (not much to it). We’ve explained the main parts abo
 * YAML
 * WBS
 * ERD
+
+![Contributors](https://www.complianceascode.net/wp-content/uploads/2021/12/PlantUMLJSONpt2.png)
+
+Beyond that, the **Contributors** portion of the schema tracks _who_ created and updated each of the diagrams.
 
 When sharing these documents within a federated system, the schemas for an _Account1, Organization2,_ and _Person3_ must also be taken into consideration.
 
