@@ -6,7 +6,7 @@ In this section we will cover colors, user & account information, and navigation
 
 Colors should be set as applicable styles within the wireframe, and changeable by each organization. There are three items to consider:
 
-![Window color basics](../../.gitbook/assets/5)
+![Window color basics](<../../.gitbook/assets/5 (1)>)
 
 1. The clients should be able to upload their logo.
 2. The clients should be able to have a primary brand color used for highlighting, fonts, headlines, etc.

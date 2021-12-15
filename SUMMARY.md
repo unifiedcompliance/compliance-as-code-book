@@ -33,3 +33,5 @@
   * [Custom Dictionaries](minimum-viable-products/custom-dictionaries/README.md)
     * [User Stories](minimum-viable-products/custom-dictionaries/user-stories.md)
     * [Wireframes](minimum-viable-products/custom-dictionaries/wireframes.md)
+  * [Authority Document Catalog](minimum-viable-products/authority-document-catalog/README.md)
+    * [Cataloging Authority Documents](minimum-viable-products/authority-document-catalog/cataloging-authority-documents.md)
