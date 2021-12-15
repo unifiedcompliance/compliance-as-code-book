@@ -34,4 +34,5 @@
     * [User Stories](minimum-viable-products/custom-dictionaries/user-stories.md)
     * [Wireframes](minimum-viable-products/custom-dictionaries/wireframes.md)
   * [Authority Document Catalog](minimum-viable-products/authority-document-catalog/README.md)
+    * [What is an Authority Document?](minimum-viable-products/authority-document-catalog/what-is-an-authority-document.md)
     * [Source](minimum-viable-products/authority-document-catalog/cataloging-authority-documents.md)
