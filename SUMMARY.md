@@ -37,4 +37,5 @@
     * [What is an Authority Document?](minimum-viable-products/authority-document-catalog/what-is-an-authority-document.md)
     * [Creating a list of Authority Documents prior to the Federated Authority Document Library](minimum-viable-products/authority-document-catalog/creating-a-list-of-authority-documents-prior-to-the-federated-authority-document-library.md)
     * [Introduction to the Federated Authority Document Library](minimum-viable-products/authority-document-catalog/introduction-to-the-federated-authority-document-library.md)
+    * [User Stories](minimum-viable-products/authority-document-catalog/user-stories.md)
     * [Source](minimum-viable-products/authority-document-catalog/cataloging-authority-documents.md)
