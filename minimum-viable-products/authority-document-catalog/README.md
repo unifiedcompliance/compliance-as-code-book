@@ -2,7 +2,11 @@
 
 What is presented herein is the standard and methodology for a Federated Authority Document Library that is open to all organizations or individuals wishing to
 
-• search the library for known Authority Documents; • create and export JSON-LD based lists of Authority Documents found in the library; and • add or maintain records in the library.
+• search the library for known Authority Documents;&#x20;
+
+• create and export JSON-LD based lists of Authority Documents found in the library; and&#x20;
+
+• add or maintain records in the library.
 
 A single, vast, Authority Document library is needed for any practitioner within the Governance, Risk, and Compliance space because the number of documents organizations must follow to maintain compliance is growing at a fast pace. Until the establishment of this library, organizations wishing to create a list of documents they had to follow were forced into one of three situations:
 
