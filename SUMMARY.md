@@ -35,4 +35,5 @@
     * [Wireframes](minimum-viable-products/custom-dictionaries/wireframes.md)
   * [Authority Document Catalog](minimum-viable-products/authority-document-catalog/README.md)
     * [What is an Authority Document?](minimum-viable-products/authority-document-catalog/what-is-an-authority-document.md)
+    * [Creating a list of Authority Documents prior to the Federated Authority Document Library](minimum-viable-products/authority-document-catalog/creating-a-list-of-authority-documents-prior-to-the-federated-authority-document-library.md)
     * [Source](minimum-viable-products/authority-document-catalog/cataloging-authority-documents.md)
