@@ -39,4 +39,5 @@
     * [Introduction to the Federated Authority Document Library](minimum-viable-products/authority-document-catalog/introduction-to-the-federated-authority-document-library.md)
     * [User Stories](minimum-viable-products/authority-document-catalog/user-stories.md)
     * [Schema](minimum-viable-products/authority-document-catalog/schema.md)
+    * [Wireframes](minimum-viable-products/authority-document-catalog/wireframes.md)
     * [Source](minimum-viable-products/authority-document-catalog/cataloging-authority-documents.md)
