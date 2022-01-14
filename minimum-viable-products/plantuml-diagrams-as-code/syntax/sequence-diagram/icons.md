@@ -47,7 +47,7 @@ queue       queue
 
 ### Participant Colors
 
-Participants can be given specific colors by adding hex codes to the end of the participant declaration. Participants can be filled with gradients if two colors are used. The participant text can also be changed by using the "as" command. Notice on line seven that these colors can be used on any of the participant icons.
+Participants can be given specific colors by adding a standard color name or hex code to the end of the participant declaration. Participants can be filled with gradients if two colors are used. The participant text can also be changed by using the "as" command. Notice on line seven that these colors can be used on any of the participant icons.
 
 ```
 @startuml

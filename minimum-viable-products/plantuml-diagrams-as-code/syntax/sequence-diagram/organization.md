@@ -130,3 +130,121 @@ Zarek <- Maria : Text
 ```
 
 ![Formatted auto-numbers](../../../../.gitbook/assets/13FormattingAutoNumbers.png)
+
+### Multiple Pages
+
+Diagrams can be split into multiple pages using the "newpage" command.
+
+```
+@startuml
+
+'Declare participants
+participant Maria
+participant Sean
+participant Zarek
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+Sean -> Zarek : Text
+
+'This causes a break in pages when images are generated.
+newpage
+
+Sean <- Zarek : Text
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+@enduml
+```
+
+![First page](../../../../.gitbook/assets/15NewPageSplit.png) ![Second Page](../../../../.gitbook/assets/15NewPageSplit\_001.png)
+
+### Grouping Sequences
+
+There are seven methods for grouping in the sequence diagram. The "else" command can be used as a divider inside of all group types. All of the group types are closed with the "end" command. The first six types use the exact same syntax, are atuomatically labeled, and have an optional header. The "group" command has the option of changing the label as well as the optional header.
+
+* alt
+* opt
+* loop
+* par
+* break
+* critical
+* group
+
+```
+@startuml
+
+'Declare participants
+participant Maria
+participant Sean
+participant Zarek
+
+Maria -> Sean : Text
+
+'The alt command begins a group with the "alt" label
+'This can be replaced with any of the other group types
+alt Optional Header
+
+Maria <- Sean : Text
+
+'The else command is used as a divider
+'It also has an optional Header
+else Also an Optional Header
+
+Sean -> Zarek : Text
+Sean <- Zarek : Text
+
+'You can use multiple else commands
+else
+
+    'This begins a group with a label of "Pancake"
+    'And a header of "Syrup"
+    group Pancake [Syrup]
+
+    Zarek -> Maria : Text
+    Zarek <- Maria : Text
+    
+    'This closes the group labeled "Pancake"
+    end
+
+'This closes the initial alt group
+end
+
+@enduml
+```
+
+![Two Grouping Options](../../../../.gitbook/assets/16Grouping.png)
+
+
+
+### Dividers
+
+The diagram is divided by using four equal signs with an optional title in the middle.
+
+```
+@startuml
+
+'Declare participants
+participant Maria
+participant Sean
+participant Zarek
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+'This divider has no title
+====
+
+Sean -> Zarek : Text
+Sean <- Zarek : Text
+
+'This divider has a title
+==Optional Title==
+
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+    
+@enduml
+```
+
+![Divider Examples](../../../../.gitbook/assets/17Divider.png)
