@@ -248,3 +248,74 @@ Zarek <- Maria : Text
 ```
 
 ![Divider Examples](../../../../.gitbook/assets/17Divider.png)
+
+### Spacing
+
+You can use the pipe key to add vertical space to a sequence diagram.
+
+```
+@startuml
+
+'Declare participants
+participant Maria
+participant Sean
+participant Zarek
+
+Maria -> Sean : Text
+
+'There is no added spacing here
+
+Maria <- Sean : Text
+
+'This will add 50 extra pixels between the above and below sequences
+||50||
+
+Sean -> Zarek : Text
+
+'This the short cut for adding 25 pixels
+|||
+
+Sean <- Zarek : Text
+
+'This is smaller and almost not noticeable
+||1||
+
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+@enduml
+```
+
+![Vertical spacing](../../../../.gitbook/assets/25OrganizationSpacing.png)
+
+### Delays
+
+You can use three periods to show a delay in a sequence diagram.
+
+```
+@startuml
+
+'Declare participants
+participant Maria
+participant Sean
+participant Zarek
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+'There is a delay here
+...
+
+Sean -> Zarek : Text
+Sean <- Zarek : Text
+
+'As well as here
+...
+
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+@enduml
+```
+
+![Delay](../../../../.gitbook/assets/26OrganizationDelays.png)

@@ -210,3 +210,76 @@ Zarek <- Maria : Text
 ```
 
 ![Emphasized note text](../../../../.gitbook/assets/22NoteText.png)
+
+### Images In Notes
+
+Images can be added to notes. They can also be resized. ****&#x20;
+
+```
+@startuml
+
+'Declare participants
+participant Maria
+participant Sean
+participant Zarek
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+'This note has an image
+note across
+This note has an image <img:https://www.unifiedcompliance.com/wp-content/themes/tardigrade//images/cch_logo_icon.png>
+end note
+
+Sean -> Zarek : Text
+Sean <- Zarek : Text
+
+'This note has a smaller image
+note across: This note has a smaller image <img:https://www.unifiedcompliance.com/wp-content/themes/tardigrade//images/cch_logo_icon.png{scale=0.5}>
+
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+'This note has an image
+'note across: This note has a smaller image <img:/ucf.png>
+'Need to come back and figure out how to use a local image.
+
+@enduml
+```
+
+![Images in notes](../../../../.gitbook/assets/23NoteImages.png)
+
+### References
+
+References are added with the command "ref over." Note there is no "across" command for references. While some font emphasis and coloring options from notes will work in references, this is not the intended purpose for references.
+
+```
+@startuml
+
+'Declare participants
+participant Maria
+participant Sean
+participant Zarek
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+'This makes a reference over Sean
+ref over Sean: Text
+
+Sean -> Zarek : Text
+Sean <- Zarek : Text
+
+'This makes a multiline reference over multiple participants
+ref over Maria, Zarek
+Multiline
+Text
+end ref
+
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+@enduml
+```
+
+![References](../../../../.gitbook/assets/24References.png)
