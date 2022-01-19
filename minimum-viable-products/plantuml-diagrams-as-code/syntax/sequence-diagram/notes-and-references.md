@@ -94,9 +94,9 @@ note Right of Zarek: Right Note Text
 
 ![Notes for participants](../../../../.gitbook/assets/19NotesOnParticipants.png)
 
-### Note Shape And Color
+### Note Shape
 
-Note shape is adjusted by placing an "h" or "r" at the front of the "note" command. Color is adjusted by placing a standard color name or hex code immediately after the positioning commands.
+Note shape is adjusted by placing an "h" or "r" at the front of the "note" command.&#x20;
 
 ```
 @startuml
@@ -106,21 +106,20 @@ participant Maria
 participant Sean
 participant Zarek
 
-'This is a hexagon shaped note defined by "hnote"
-hnote over Maria: Over Note Text
+'This is a standard shaped note
+note over Maria: Note Text
 
 Maria -> Sean : Text
 Maria <- Sean : Text
 
-'This is a rectangle shaped note define by "rnote"
-'It also has a cyan backgroun
-rnote over Sean #cyan: Note Text
+'This is a rectangle shaped note defined by "rnote"
+rnote over Sean: Note Text
 
 Sean -> Zarek : Text
 Sean <- Zarek : Text
 
-'This is a red, hexagon, multiline note
-hnote across #FF0000
+'This is a hexagon multiline note
+hnote across
 Multiline
 Text
 end hnote
@@ -131,6 +130,83 @@ Zarek <- Maria : Text
 @enduml
 ```
 
-![Notes in different shapes and colors](../../../../.gitbook/assets/20NoteShapeAndColor.png)
+![Multiple Note Shapes](../../../../.gitbook/assets/20NoteShape.png)
 
-###
+### Note Color
+
+The background color is adjusted by placing a standard color name or hex code immediately after the positioning commands. The font color is changed similar to HTML.&#x20;
+
+```
+@startuml
+
+'Declare participants
+participant Maria
+participant Sean
+participant Zarek
+
+'This is a purple to black gradient background with white text
+note over Maria #561D5E/000000: <color #FFFFFF>Over Note Text</color>
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+'This has a cyan background
+note over Sean #cyan: Note Text
+
+Sean -> Zarek : Text
+Sean <- Zarek : Text
+
+'This is a red red background, multiline note
+'With various font colors
+note across #FF0000
+<back:blue>Multiline</back>
+<color:yellow>Text</color>
+<back:blue><color:pink>With Many Colors</color></back>
+end note
+
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+@enduml
+```
+
+![Multicolored Notes](../../../../.gitbook/assets/21NoteColor.png)
+
+### Emphasized Note Text
+
+Text emphasis can be added with Creole or markup syntax. Note that with the markup style the emphasis color can be changed.
+
+```
+@startuml
+
+'Declare participants
+participant Maria
+participant Sean
+participant Zarek
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+'These are emphasis options with Creole
+note across: **Bold** //Italics// ""Monospaced"" --Stricken-- __Underlined__ ~~Waves~~
+
+Sean -> Zarek : Text
+Sean <- Zarek : Text
+
+'These are emphasis options with mark up
+note across
+<b>Bold</b>
+<i>Italics</i>
+<font:monospaced>Monospaced</font>
+<s:blue>Stricken with blue line</s>
+<u:#561D5E>Purple underlined </u> Not underlined
+<w:red>Red waves</w>
+end note
+
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+@enduml
+```
+
+![Emphasized note text](../../../../.gitbook/assets/22NoteText.png)
