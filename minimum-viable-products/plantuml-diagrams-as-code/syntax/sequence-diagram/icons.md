@@ -1,6 +1,6 @@
 # Icons
 
-### Participants
+### Participant Declaration
 
 The icons in a sequence diagram are called participants. These can be declared by simply typing "participant" followed by the name of the participant.
 
@@ -90,3 +90,67 @@ participant  "**Bold** \n//Italics// \n__underline__ \n--strikethrough-- \n~~wav
 ```
 
 ![Long text, multiline, and creole formatted participant text](<../../../../.gitbook/assets/07 ParticipantTextFormatting.png>)
+
+### Participants Creating Participants
+
+Participants can create other participants not just communicate with them. This is done by using the create command before a sequence line. Sequences are more thoroughly covered in the Connectors and Terminators section.
+
+```
+@startuml
+
+'Declare participants
+participant Maria
+participant Sean
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+'This sets up the next sequence line to be a creator
+create Zarek
+
+'This line shows Sean creating Zarek
+Sean -> Zarek : Text
+
+'This line shows communication from Sean to Zarek
+Sean -> Zarek : Text
+
+Sean <- Zarek : Text
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+@enduml
+```
+
+![Participant Sean creates participant Zarek](../../../../.gitbook/assets/31ParticipantsCreateParticipants.png)
+
+### Participant Stereotypes and Spots
+
+A stereotype can be added to a participant. Spots are added inside the stereotype with parentheses. Spots can be colored by adding hex code. Standard color names are not supported for spots.
+
+```
+@startuml
+
+'Declare participants
+'This participant has a stereotype
+participant Maria << Middle Child >>
+
+'This participant has a cyan colored spot with a lower case Y in it
+participant Sean << (y,#00FFFF) >>
+
+'This participant has a red colored spot with a capital letter O in it
+'They also have a stereotype
+participant Zarek << (O,#FF0000) The Oldest >>
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+Sean -> Zarek : Text
+Sean <- Zarek : Text
+
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+@enduml
+```
+
+![Stereotypes and spots](../../../../.gitbook/assets/32Stereotypes.png)

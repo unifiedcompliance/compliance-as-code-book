@@ -215,6 +215,50 @@ end
 
 ![Two Grouping Options](../../../../.gitbook/assets/16Grouping.png)
 
+### Boxes
+
+Participants can be encompassed inside of a box. The box has an optional title.
+
+```
+@startuml
+
+'Declare participants
+
+'This begins a box around Maria and Sean
+box
+participant Maria
+participant Sean
+
+'This ends the box around Maria and Sean
+end box
+
+'This box has a title
+box Besties
+participant Zarek
+participant Ivy
+end box
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+Sean -> Zarek : Text
+Sean <- Zarek : Text
+
+Zarek -> Ivy : Text
+Zarek <- Ivy : Text
+
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+@enduml
+```
+
+![Boxes](../../../../.gitbook/assets/33OrganizationBoxes.png)
+
+### Box Colors
+
+Box backgrounds can be given specific colors by adding a standard color name or hex codes. Gradients can be achieved with two colors. Box titles can be colored with HTML syntax.
+
 
 
 ### Dividers
@@ -290,7 +334,7 @@ Zarek <- Maria : Text
 
 ### Delays
 
-You can use three periods to show a delay in a sequence diagram.
+You can use three periods to show a delay in a sequence diagram. Delays have an optional text field.&#x20;
 
 ```
 @startuml
@@ -309,8 +353,8 @@ Maria <- Sean : Text
 Sean -> Zarek : Text
 Sean <- Zarek : Text
 
-'As well as here
-...
+'This delay has text
+... 3 years later ...
 
 Zarek -> Maria : Text
 Zarek <- Maria : Text
@@ -318,4 +362,4 @@ Zarek <- Maria : Text
 @enduml
 ```
 
-![Delay](../../../../.gitbook/assets/26OrganizationDelays.png)
+![Delays](../../../../.gitbook/assets/26OrganizationDelays.png)

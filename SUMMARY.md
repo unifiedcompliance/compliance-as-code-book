@@ -36,6 +36,7 @@
         * [Connectors and Terminators](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/connectors-and-terminators.md)
         * [Organization](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/organization.md)
         * [Notes And References](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/notes-and-references.md)
+        * [Lifelines](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/lifelines.md)
   * [Custom Dictionaries](minimum-viable-products/custom-dictionaries/README.md)
     * [User Stories](minimum-viable-products/custom-dictionaries/user-stories.md)
     * [Wireframes](minimum-viable-products/custom-dictionaries/wireframes.md)
