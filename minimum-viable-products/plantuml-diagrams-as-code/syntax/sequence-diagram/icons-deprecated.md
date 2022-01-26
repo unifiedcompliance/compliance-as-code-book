@@ -1,4 +1,4 @@
-# Icons
+# Icons #Deprecated
 
 ### Participant Declaration
 
@@ -93,7 +93,7 @@ participant  "**Bold** \n//Italics// \n__underline__ \n--strikethrough-- \n~~wav
 
 ### Participants Creating Participants
 
-Participants can create other participants not just communicate with them. This is done by using the create command before a sequence line. Sequences are more thoroughly covered in the [Connectors and Terminators](connectors-and-terminators.md) section.
+Participants can create other participants not just communicate with them. This is done by using the create command before a sequence line. Sequences are more thoroughly covered in the [Connectors and Terminators](connectors-and-terminators-deprecated.md) section.
 
 ```
 @startuml
