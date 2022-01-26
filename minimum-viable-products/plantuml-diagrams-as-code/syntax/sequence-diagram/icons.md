@@ -93,7 +93,7 @@ participant  "**Bold** \n//Italics// \n__underline__ \n--strikethrough-- \n~~wav
 
 ### Participants Creating Participants
 
-Participants can create other participants not just communicate with them. This is done by using the create command before a sequence line. Sequences are more thoroughly covered in the Connectors and Terminators section.
+Participants can create other participants not just communicate with them. This is done by using the create command before a sequence line. Sequences are more thoroughly covered in the [Connectors and Terminators](connectors-and-terminators.md) section.
 
 ```
 @startuml
@@ -122,6 +122,37 @@ Zarek <- Maria : Text
 ```
 
 ![Participant Sean creates participant Zarek](../../../../.gitbook/assets/31ParticipantsCreateParticipants.png)
+
+#### Shortcut
+
+Participants can also be created using the "\*\*" shortcut.
+
+```
+@startuml
+
+'Declare participants
+participant Maria
+participant Sean
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+'This line shows Sean creating Zarek
+Sean -> Zarek ** : Text
+
+'This line shows communication from Sean to Zarek
+Sean -> Zarek : Text
+
+Sean <- Zarek : Text
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+@enduml
+```
+
+![Participant Sean creates participant Zarek with shortcut](../../../../.gitbook/assets/31SCParticipantsCreateParticipants.png)
+
+
 
 ### Participant Stereotypes and Spots
 
@@ -154,3 +185,77 @@ Zarek <- Maria : Text
 ```
 
 ![Stereotypes and spots](../../../../.gitbook/assets/32Stereotypes.png)
+
+### Renaming Participants
+
+Participants can be renamed essentially giving them a variable name. This can makes participants with long names easier to call for sequences. This is accomplished with the "as" command.
+
+```
+@startuml
+
+'Declare participants with variable names using "as"
+participant "Maria The Closer" as Mia
+participant "Sean The New Guy" as Sean
+participant "Zarek \nThe Guy With \nCurly Hair" as Z
+
+Mia -> Sean : Text
+Mia <- Sean : Text
+
+Sean -> Z : Text
+Sean <- Z : Text
+
+Z -> Mia : Text
+Z <- Mia : Text
+
+@enduml
+```
+
+![Renamed participants](../../../../.gitbook/assets/36RenamingParticipants.png)
+
+### Undeclared Participants
+
+You can create a sequence diagram without declaring participants. However, the participants will only have default properties. The participants are automatically generated as they appear in the sequences.
+
+```
+@startuml
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+Sean -> Zarek : Text
+Sean <- Zarek : Text
+
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+@enduml
+```
+
+![Undeclared Participants](../../../../.gitbook/assets/37UndeclaredParticipants.png)
+
+### Participant Visibility
+
+It is possible to hide the participants' footboxes. It is also possible to hide unlinked participants. You can do both of these with the "hide" command.
+
+```
+@startuml
+
+'This removes the participants footbox
+hide footbox
+
+'This hides unlinked participants see line 12
+hide unlinked
+
+'Declare participants
+participant Maria
+participant Sean
+participant Zarek
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+@enduml
+```
+
+![Hidden participants](../../../../.gitbook/assets/39ParticipantVisibility.png)
+

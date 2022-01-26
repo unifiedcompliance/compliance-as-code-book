@@ -1,8 +1,104 @@
-# Notes And References
+# Titles, Notes, And References
+
+### Titles
+
+Titles are created with the title command. They can be single line or multiline. Titles support Creole and Markup syntax for emphasis and coloring. See [Text Formatting](text-formatting.md) under Sequence Diagram.
+
+```
+@startuml
+
+'This line creates a title the "\n" adds a line break
+title Title Text\nGoes Here
+
+'Declare participants
+participant Maria
+participant Sean
+participant Zarek
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+Sean -> Zarek : Text
+Sean <- Zarek : Text
+
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+@enduml
+```
+
+![Title using a line break](../../../../.gitbook/assets/35TitleOneLine.png)
+
+#### End Title
+
+This multiline title uses the "end title" command.
+
+```
+@startuml
+
+'This creates a multiline title closed with the "end title" command
+title 
+Title Text
+Goes Here
+end title
+
+'Declare participants
+participant Maria
+participant Sean
+participant Zarek
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+Sean -> Zarek : Text
+Sean <- Zarek : Text
+
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+@enduml
+```
+
+![Title using "end title"](../../../../.gitbook/assets/35TitleOneLine.png)
+
+### Images In Titles
+
+Images can be added to titles. They can also be resized. ****&#x20;
+
+```
+@startuml
+
+'This title has text images
+title 
+An Image
+<img:https://www.unifiedcompliance.com/wp-content/themes/tardigrade//images/cch_logo_icon.png>
+
+A Resized Image
+<img:https://www.unifiedcompliance.com/wp-content/themes/tardigrade//images/cch_logo_icon.png{scale=0.5}>
+end title
+
+'Declare participants
+participant Maria
+participant Sean
+participant Zarek
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+Sean -> Zarek : Text
+Sean <- Zarek : Text
+
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+@enduml
+```
+
+![A title with images](../../../../.gitbook/assets/38TitleImage.png)
 
 ### Notes For Sequence Arrows
 
-Notes written below a sequence arrow will appear next to that arrow on the diagram. Notes can be positioned left or right of their sequence arrow. You must choose left or right. There is no default position. Multiline notes can be created by using the "end note" command. Notice that blank lines are recorded in the multiline note. Multiline notes can also be created with "\n" line breaks.
+Notes written below a sequence arrow will appear next to that arrow on the diagram. Notes can be positioned left or right of the sequence arrow. You must choose left or right. There is no default position. Multiline notes can be created by using the "end note" command. Notice that blank lines are recorded in the multiline note. Multiline notes can also be created with "\n" line breaks.
 
 ```
 @startuml

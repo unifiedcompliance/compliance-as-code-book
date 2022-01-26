@@ -1,4 +1,4 @@
-# Lifelines
+# Lifeline Activation
 
 ### Activation and Destruction
 
@@ -37,6 +37,42 @@ destroy Zarek
 ```
 
 ![Activation and destruction of lifelines](../../../../.gitbook/assets/27LifelineActivationDestruction.png)
+
+#### Shortcut
+
+The below short cuts exist for lifeline activation and deactivation. This allows for mixing activation and deactivation on the same line. Compare the previous lines 16-22 to lines 17-18 below. At the time of this writing there is no short cut for destroying a source as is done in the above line 27.
+
+* \++ Activate Target
+* \--  Deactivate source
+* !!   Destroy Target
+
+```
+@startuml
+
+'Declare participants
+participant Maria
+participant Sean
+participant Zarek
+
+'This incoming message activates Maria's Timeline
+[-> Maria ++ : Text
+
+'This activates Sean's lifeline
+Maria -> Sean ++ : Text
+
+'This destroys Maria's lifeline
+Maria <- Sean !! : Text
+
+'This deactivates Sean's lifeline and activates Zarek's
+Sean -> Zarek --++ : Text
+
+'This outgoing message deactivtes Zarek's timeline
+Zarek ->]  -- : Text
+
+@enduml
+```
+
+![Activation and destruction of lifelines with shortcuts](../../../../.gitbook/assets/27SCLifelineActivationDestruction.png)
 
 ### Nesting
 
@@ -126,7 +162,7 @@ return Sean returns to Maria
 
 ### Colors
 
-Lifelines can be given colors by adding a standard color name or hex code to the end of the activate line. In the case of auto-activation the color property is placed to the left of the colon on the sequence line.
+Lifelines can be given colors by adding a standard color name or hex code to the end of the activate line. In the case of auto-activation the color property is placed to the left of the colon on the sequence line. Note colors can be used with shortcuts as well.
 
 ```
 @startuml
@@ -136,10 +172,8 @@ participant Maria
 participant Sean
 participant Zarek
 
-Maria -> Sean : Text
-
 'This will activate a lifeline for Sean that is cyan
-activate Sean #cyan
+Maria -> Sean ++ #cyan: Text
 
 Sean -> Zarek : Text
 deactivate Sean
@@ -149,7 +183,6 @@ activate Zarek #FF0000
 
 Zarek -> Maria : Text
 deactivate Zarek
-
 
 autoactivate on
 

@@ -257,7 +257,41 @@ Zarek <- Maria : Text
 
 ### Box Colors
 
-Box backgrounds can be given specific colors by adding a standard color name or hex codes. Gradients can be achieved with two colors. Box titles can be colored with HTML syntax.
+Box backgrounds can be given specific colors by adding a standard color name or hex codes. Gradients can be achieved with two colors. Box titles can be formatted with Creole and Markup formatting. See [Text Formatting](text-formatting.md) under Sequence Diagram. Box titles do not support bold emphasis as the default title is already bold.
+
+```
+@startuml
+
+'Declare participants
+
+'This box has a purple to cyan gradient
+box Acquaintances #561D5E/cyan 
+participant Maria
+participant Sean
+end box
+
+'This box is red
+box Besties #red
+participant Zarek
+participant Ivy
+end box
+
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+Sean -> Zarek : Text
+Sean <- Zarek : Text
+
+Zarek -> Ivy : Text
+Zarek <- Ivy : Text
+
+Zarek -> Maria : Text
+Zarek <- Maria : Text
+
+@enduml
+```
+
+![Boxes with colors](../../../../.gitbook/assets/34OrganizationBoxColor.png)
 
 
 
