@@ -35,6 +35,7 @@
         * [Lifelines](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/lifelines.md)
         * [Icons #Deprecated](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/icons-deprecated.md)
         * [Messages](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/messages.md)
+        * [ExecutionSpecification](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/executionspecification.md)
         * [Connectors and Terminators #Deprecated](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/connectors-and-terminators-deprecated.md)
         * [Titles, Notes, And References #Deprecated](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/titles-notes-and-references-deprecated.md)
         * [Lifeline Activation #Deprecated](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/lifeline-activation-deprecated.md)

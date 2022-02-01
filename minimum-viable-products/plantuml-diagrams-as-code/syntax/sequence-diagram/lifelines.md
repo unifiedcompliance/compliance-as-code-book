@@ -95,7 +95,7 @@ participant "Zarek \nThe Guy With \nCurly Hair"
 
 ### Display Name
 
-The **display\_name** property follows the "as" keyword. It can be used to display text in the head that is entirely different from the **name**. The **display\_name** property supports creole syntax for emphasis and markup language for color. Oddly PlantUML does not support emphasis with markup in the lifeline head. This lack of markup options is not in alignment with all PlantUML text fields. Luckily we can combine markup and creole. See [Text Formatting](text-formatting.md) for a list of creole and markup options.
+The **display\_name** property follows the "as" keyword. It can be used to display text in the head that is entirely different from the **name**. The **display\_name** property supports creole syntax for emphasis and markup language for color. You can define colors with a standard color name or hex code. Oddly PlantUML does not support emphasis with markup in the lifeline head. This lack of markup options is not in alignment with all PlantUML text fields. Luckily we can combine markup and creole. See [Text Formatting](text-formatting.md) for a list of creole and markup options.
 
 #### Example: Display Name
 
@@ -119,7 +119,7 @@ participant Zarek as "<color:#FF0000>**Zarek**</color>"
 
 ### Formatted Name
 
-The **formatted\_name** property replaces **name** and **display\_name**. Similar to **display\_name** it supports creole syntax for emphasis and markup language for color.  Once again PlantUML does not support emphasis with markup in the lifeline head. However we can still combine markup and creole. See [Text Formatting](text-formatting.md) for a list of creole and markup options.
+The **formatted\_name** property replaces **name** and **display\_name**. Similar to **display\_name** it supports creole syntax for emphasis and markup language for color. You can define colors with a standard color name or hex code. Once again PlantUML does not support emphasis with markup in the lifeline head. However we can still combine markup and creole. See [Text Formatting](text-formatting.md) for a list of creole and markup options.
 
 #### Example: Formatted Name
 
@@ -144,3 +144,103 @@ participant "<color:#FF0000>**Zarek**</color>"
 ### Variable Name
 
 A **variable\_name** is just that, a variable. You can assign a lifeline to a variable using the "as" keyword. This practice eases utilization a lifeline with a **formatted\_name**. Otherwise, you have to type the entire lifeline name, including formatting, every time you use that lifeline. To show this we will pass a few messages between our lifelines. Messages will not be explained here. See the [messages](messages.md) section for an in-depth explanation.
+
+#### Example: Variable Name
+
+```
+@startuml
+'Example: Variable Name
+
+'Declare a lifeline with a formatted_name and a variable_name.
+participant "**Juanito**" as Sean
+
+'Declare a lifeline with a formatted_name only.
+participant "<color:#561D5E>Mija Mia</color>"
+
+'Declare a lifeline with a formatted_name and a variable_name.
+participant "<color:#FF0000>**Zarek**</color>" as Zarek
+
+'Send a message from Sean to Mia. It's fairly ugly and will quickly become cumbersome.
+Sean -> "<color:#561D5E>Mija Mia</color>"
+
+'Send a message from Juanito to Zarek. 
+Sean -> Zarek
+
+@enduml
+```
+
+![Variable Name](<../../../../.gitbook/assets/06\_Lifelines\_variable\_name copy.png>)
+
+### Background Color
+
+The **background\_color** property allows you to change the background color of the lifeline head. You can define colors with a standard color name or hex code. Create a gradient by using two colors. Notice that these colors can be used on any **participant\_type.**
+
+**Example: Background Color**
+
+```
+@startuml
+'Example: Backround Color
+
+'This makes Sean's background color cyan.
+participant Sean #Cyan
+
+'This makes Zarek's background red.
+actor Zarek #FF0000
+
+'The portion in quotes changes Maria's text color. 
+'The hex codes make a purple to black gradient in her background.
+queue Maria as "<color:#White>Mia" #561D5E/000000
+
+@enduml
+```
+
+![Background Color](../../../../.gitbook/assets/07\_Lifelines\_background\_color.png)
+
+### Stereotype
+
+The **stereotype** property gives the ability to add a stereotype to the lifeline head. You can emphasize stereotype text with creole syntax and color it with markup. It is also possible to embed a colored circle with an internal character, or both. Define colors with a standard color name or hex code.
+
+#### Example: Stereotype
+
+```
+@startuml
+'Example: Stereotype
+
+'Declare a participant with a cyan colored spot with a lower case Y in the spot.
+participant Sean << (y,#00FFFF) >>
+
+'Declare a participant with a stereotype that is bold and purple.
+participant Maria << <color:#561D5E>**Middle Child**</color> >>
+
+'Declare a participant with a red colored spot with a capital letter O in it
+'Make it also have a stereotype
+participant Zarek << (O,#FF0000) The Oldest >>
+
+@enduml
+```
+
+![Stereotypes](../../../../.gitbook/assets/08\_Lifelines\_stereotype.png)
+
+### Order Number
+
+The **order\_number** property allows you to arrange lifelines regardless of their order in the code.
+
+#### Example: Order Number
+
+```
+@startuml
+'Example: Order Number
+
+'Declare this lifeline first, but make it appear.
+participant "Maria the middle child" order 2
+
+'Make this lifeline appear last.
+participant "Sean the youngest" order 3
+
+'Make this lifeline appear first.
+participant "Zarek the oldest" order 1
+
+@enduml
+```
+
+![Order Number](../../../../.gitbook/assets/09\_Lifelines\_order\_number.png)
