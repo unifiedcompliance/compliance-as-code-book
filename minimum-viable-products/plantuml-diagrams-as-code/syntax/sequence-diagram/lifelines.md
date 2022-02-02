@@ -1,8 +1,8 @@
 # Lifelines
 
-Lifelines are the basic building block for sequence diagrams. They are the senders and receivers of messages in the sequence diagram. The lifeline consists of a head with a name and a line drawn vertically down from the head. The default head is a rectangle with a name in it. PlantUML draws a foot as well. The foot is nice aesthetically but is not an official part of UML. We will leave it in our examples for aesthetic reasons.
+Lifelines are the basic building block for sequence diagrams. They represent the participants that send and receive messages in sequence diagrams. The lifeline consists of a head with a name and a line drawn vertically down from the head. The default head is a rectangle with a name in it. PlantUML draws a foot as well. The foot is nice aesthetically but is not an official part of UML. We will leave it in our examples for aesthetic reasons.
 
-## Declaring Lifelines
+## Declaration
 
 Use the "participant" command followed by a name to declare a default participant. Lifelines will appear left to right by default.&#x20;
 
@@ -22,7 +22,7 @@ participant Zarek
 
 ![Declaring Lifelines](../../../../.gitbook/assets/01\_Lifelines\_declaringLifelines.png)
 
-## Lifeline Properties
+## Properties
 
 Properties following the participant\_type affect the format of the lifeline head. You are only required to use the participant\_type and name properties. Later, in the shortcut section you will notice that you do not have to declare participants. This helps if you are putting together a quick sequence diagram without any bells or whistles. There is some wiggle room with property order. For the sake of consistency and best practice we will keep them in the below order throughout this book. Below is a list of lifeline properties.&#x20;
 
@@ -231,7 +231,7 @@ The **order\_number** property allows you to arrange lifelines regardless of the
 @startuml
 'Example: Order Number
 
-'Declare this lifeline first, but make it appear.
+'Declare this lifeline first, but make it appear second.
 participant "Maria the middle child" order 2
 
 'Make this lifeline appear last.
@@ -244,3 +244,38 @@ participant "Zarek the oldest" order 1
 ```
 
 ![Order Number](../../../../.gitbook/assets/09\_Lifelines\_order\_number.png)
+
+## Participants Creating New Lifelines
+
+A participant can create another participant, therefor starting a new lifeline. To do this use the **create** command on the line before the creation message. You can also use the **\*\*** shortcut command immediately following the **name** of the created lifeline in the message line. To comply with UML standards, be sure to draw the creation message with a dashed line and an open arrow head. See lines 11 and 16 below. Messages are thoroughly covered in the [messages](messages.md) section.&#x20;
+
+The new lifeline will not visually exist in the sequence diagram until _created_. However, if you want to adjust the new lifelines properties you will need to declare the lifeline ahead of time. Undeclared lifelines that are created with the **create** command have default properties.
+
+#### Example: Participants Creating New Lifelines
+
+```
+@startuml
+'Example: Participants Creating New Lifelines
+
+participant Sean
+
+'Declare Maria as an actor with a purple background.
+actor Maria #561D5E
+
+'Make Sean create Maria.
+create Maria
+Sean -->> Maria: Creation Message
+Sean -> Maria: Text
+
+'Make Maria create Zarek.
+'Use the shortcut method.
+Maria -->> Zarek **: Creation Message
+Maria -> Zarek: Text
+
+Zarek --> Maria: Text
+Maria --> Sean : Text
+
+@enduml
+```
+
+![Participants Creating New Lifelines](../../../../.gitbook/assets/Lifelines10\_creation.png)

@@ -2,9 +2,9 @@
 
 ExecutionSpecifications are thin rectangles drawn along the lifeline that show the start and finish of an action that is being executed.&#x20;
 
-## ExecutionSpecification Command Words
+## Commands
 
-ExecutionSpecification uses the command words shown below.
+ExecutionSpecification uses the commands shown below.
 
 * **activate** - starts drawing the occurrence of an ExecutionSpecification
 * **deactivate** - finishes drawing the occurrence of an ExecutionSpecification
@@ -164,3 +164,80 @@ Sean --> Zarek !! : Text
 ```
 
 ![Shortcuts](../../../../.gitbook/assets/ExecutionSpecification04\_shortcuts.png)
+
+## Color
+
+ExecutionSpecifications only have one property, **color**. You can define colors with a standard color name or hex code. This works with all of the commands that start an ExecutionSpecification. However the syntax varies. When using the commands **activate** or **autoactivate,** place the **color** immediately after the activated lifeline name. When using **++**, place the **color** after right after the **++**.
+
+#### Example: ExecutionSpecification Color
+
+```
+@startuml
+'Example: ExecutionSpecification Color
+
+participant Sean
+participant Maria
+participant Zarek
+
+'Start an ExecutionSpecification for Sean that is cyan.
+'Use the shortcut method.
+[-> Sean ++ #cyan: Text
+
+'Start an ExecutionSpecification for Maria that has a gradient.
+'Use the activate method and make the color purple.
+Sean -> Maria : Text
+activate Maria #561D5E
+
+'Start an ExecutionSpecification for Zarek that is red.
+'Use autoactivate.
+autoactivate on
+Maria -> Zarek #FF0000: Text
+
+return Text
+return Text
+return Text
+
+@enduml
+```
+
+![ExecutionSpecification Color](../../../../.gitbook/assets/ExecutionSpecification05\_color.png)
+
+## Nesting
+
+You can nest ExecutionSpecifications by activating a lifeline while it still has an active ExecutionSpecification.
+
+#### Example: ExecutionSpecification Nesting
+
+```
+@startuml
+'Example: ExecutionSpecification Nesting
+
+participant Sean
+participant Zarek
+
+'Start Sean's primary ExecutionSpecification
+[-> Sean : Text
+activate Sean
+
+'Start Sean's secondary ExecutionSpecification
+Sean -> Sean : Internal Text
+activate Sean
+
+'Start Zarek's ExecutionSpecification.
+Sean -> Zarek : Text
+activate Zarek
+
+'Finish Zarek's ExecutionSpecification.
+'Finish Sean's secondary ExecutionSpecification
+Zarek --> Sean : Text
+deactivate Zarek
+deactivate Sean
+
+'Finish Sean's primary ExecutionSpecification
+[<-- Sean : Text
+deactivate Sean
+
+@enduml
+```
+
+![ExecutionSpecification Nesting](../../../../.gitbook/assets/ExecutionSpecification06\_nesting.png)
