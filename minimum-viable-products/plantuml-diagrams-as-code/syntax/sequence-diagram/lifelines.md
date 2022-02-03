@@ -4,7 +4,7 @@ Lifelines are the basic building block for sequence diagrams. They represent the
 
 ## Declaration
 
-Use the "participant" command followed by a name to declare a default participant. Lifelines will appear left to right by default.&#x20;
+Use the "participant" keyword followed by a **name** to declare a default lifeline. Lifelines automatically appear left to right in order of declaration.
 
 #### Example: Declaring Lifelines
 
