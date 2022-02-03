@@ -245,11 +245,41 @@ participant "Zarek the oldest" order 1
 
 ![Order Number](../../../../.gitbook/assets/09\_Lifelines\_order\_number.png)
 
+## Undeclared Lifelines
+
+You can create a sequence diagram without declaring lifelines. However, the lifelines will only have default properties. Lifelines are automatically generated as they appear in messages.
+
+#### Example: Undeclared Lifelines
+
+```
+@startuml
+'Example: Undeclared Lifelines
+
+'Send some messages without declaring any lifelines.
+Sean  ->  Maria : Text
+Sean  <-- Maria : Text
+
+Maria ->  Zarek : Text
+Maria <-- Zarek : Text
+
+Zarek ->  Sean : Text
+Zarek <-- Sean : Text
+
+@enduml
+```
+
+![Undeclared Lifelines](../../../../.gitbook/assets/Lifelines11\_undeclared\_lifelines.png)
+
 ## Participants Creating New Lifelines
 
-A participant can create another participant, therefor starting a new lifeline. To do this use the **create** command on the line before the creation message. You can also use the **\*\*** shortcut command immediately following the **name** of the created lifeline in the message line. To comply with UML standards, be sure to draw the creation message with a dashed line and an open arrow head. See lines 11 and 16 below. Messages are thoroughly covered in the [messages](messages.md) section.&#x20;
+A participant can create another participant, therefor starting a new lifeline. The creation commands are below.
 
-The new lifeline will not visually exist in the sequence diagram until _created_. However, if you want to adjust the new lifelines properties you will need to declare the lifeline ahead of time. Undeclared lifelines that are created with the **create** command have default properties.
+* **create** - creates a lifeline on the following message line
+* **\*\*** - shortcut for create that is used on the message line
+
+Use the **create** command on the line before the creation message. Use the **\*\*** shortcut command immediately following the **name** of the created lifeline in the message line. To comply with UML standards, be sure to draw the creation message with a dashed line and an open arrow head. See lines 11 and 16 below. Messages are thoroughly covered in the [messages](messages.md) section.&#x20;
+
+The new lifeline will not visually exist in the sequence diagram until _created_. However, if you want to adjust the new lifelines properties you will need to declare the lifeline ahead of time. Undeclared lifelines that are created with the **create** command have default properties just like the undeclared lifelines example above.
 
 #### Example: Participants Creating New Lifelines
 
@@ -279,3 +309,36 @@ Maria --> Sean : Text
 ```
 
 ![Participants Creating New Lifelines](../../../../.gitbook/assets/Lifelines10\_creation.png)
+
+## Visibility
+
+It is possible to hide the lifeline foot. It is also possible to hide lifelines that do not send or receive messages. You can do both the following **hide** commands.
+
+* **hide footbox** - hides the lifeline foot from the sequence diagram drawing
+* **hide unlinked** - hides all inactive lifelines
+
+#### Example: Lifeline Visibility
+
+```
+@startuml
+'Example: Lifeline Visibility
+
+'Remove the lifeline feet.
+hide footbox
+
+'Hide inactive lifelines.
+hide unlinked
+
+'Declare three lifelines.
+participant Maria
+participant Sean
+participant Zarek
+
+'Send messages between only two lifelines.
+Maria -> Sean : Text
+Maria <- Sean : Text
+
+@enduml
+```
+
+![Lifeline Visibility](../../../../.gitbook/assets/Lifelines12\_visibility.png)
