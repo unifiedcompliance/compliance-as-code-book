@@ -58,19 +58,108 @@ The minimum requirements for a message are **sender**, **line\_type**, **head\_t
 
 * **sender** - the entity sending the message, usually a participant's lifeline
 * **line\_type** - determines if the message arrow has a solid or dashed line
-* **color** - sets the color of the message arrow
-* **head\_type** - determines the shape of the arrow head
+* **arrow\_color** - sets the color of the message arrow
+* **arrow\_head** - determines the shape of the arrow head
 * **receiver** - the entity receiving the message at the pointy end of the arrow, usually a participants lifeline
 * **message\_text** - the text that appears with the message arrow
 
 ### Senders & Receivers
 
-Senders and receivers are usually the participants with lifelines discussed in the previous section. There are a few exceptions. Messages that come from or go to places outside the scope of the current diagram have gates as their sender or receiver at the edge of the diagram. Other messages may get lost or we may not know where they come from. These lost and found messages are sent or received from a circle. See the list of senders and receivers below.
+Senders and receivers are usually the participants with lifelines discussed in the previous section. There are a few exceptions. Messages that come from or go to places outside the scope of the current diagram have gates as their sender or receiver at the edge of the diagram. Other messages may get lost or we may not know where they come from. Per UML standards these lost and found messages are sent or received from a circle. PlantUML doesn't have a standalone command for this, so we have to combine gates with our circle. UML calls for a solid circle but PlantUML only supports an open circle.
+
+**Senders** and **receivers** that are not lifelines with **names** must touch the **arrow\_head**. See the list of **senders** and **receivers** below.
 
 * **name** - the name of a lifeline
 * \[ - signifies a gate touching the left side of the sequence diagram can be a sender or receiver
 * ] - signifies a gate touching the right side of the diagram can be a sender or receiver
-* o - used as the **sender** of a found message or the **receiver** of a lost message, this is a lower-case letter o
+* o- used as the **sender** of a found message or the **receiver** of a lost message, this is a lower-case letter o
+* ? - a special character used to shorten the length of a message arrow
 
 #### Example: Sender & Receiver
 
+```
+@startuml
+'Example: Messages Sender & Receiver
+
+'Make Sean receive a message from a left gate
+[-> Sean : Text
+
+'Send a message and response between Sean and Maria.
+Sean -> Maria : Text
+Sean <- Maria  : Response Text
+
+'Send a message from Sean to a left gate.
+Sean ->[ :Text
+
+'Send a found message to Maria from the right.
+]o-> Maria: Text
+
+'Send a lost message from Maria to the right.
+Maria ->o] : Text
+
+'Send a message with a shortened arrow from Sean to the right.
+Sean ->? : Text
+
+'Send a message with a shortenedd arrow to Maria from the left.
+?-> Maria : Text
+
+@enduml
+```
+
+![Sender & Receiver](../../../../.gitbook/assets/Messages03\_sender\_receiver.png)
+
+### Line Type
+
+There are two basic **line\_types**, solid and dashed. Solid lines are for basic messages. Dashed lines are for replies and lifeline creation messages. Creation messages are covered in the [Participants Creating New Lifelines](lifelines.md#participants-creating-new-lifelines) section of [Lifelines](lifelines.md).
+
+* "-" - creates a solid line
+* "--" - creates a dashed line
+
+#### Example: Line Type
+
+```
+@startuml
+'Example: Messages Line Type
+
+'Send a message from Sean to Maria.
+Sean  ->  Maria : Text
+
+'Sendd a reply from Maria to Sean.
+Sean  <-- Maria : Text
+
+@enduml
+```
+
+![Line Type](../../../../.gitbook/assets/Messages04\_line\_type.png)
+
+### Arrow Color
+
+You can define **arrow\_color** with a standard color name or hex code placed between the **line\_type** and **arrow\_head**. Enclose the **color** with square brackets. Note that the circle for lost and found messages will be the same color as the arrow.
+
+#### Example: Arrow Color
+
+```
+@startuml
+'Example: Messages Arrow Color
+
+'Send a message with a cyan colored arrow from Sean to Maria.
+Sean -[#cyan]>  Maria : Text
+
+'Send a reply message with a purple arrow from Maria to Sean.
+Sean <[#561D5E]-- Maria : Text
+
+'Send a lost message with a red arrow from Zarek to the right
+Zarek -[#FF0000]>o] : Text
+
+@enduml
+```
+
+![Arrow Color](../../../../.gitbook/assets/Messages05\_arrow\_color.png)
+
+### Arrow Head
+
+UML standards for sequence diagrams describe two options for **arrow\_heads**. A filled **arrow\_head** represents a synchronous message. An open **arrow\_head** represents an asynchronous message. PlantUML provides us with several more options. These will be attached to a **line\_type** in the following list for easier visualization.
+
+
+
+### Message Text
