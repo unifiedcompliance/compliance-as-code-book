@@ -132,7 +132,7 @@ Sean  <-- Maria : Text
 
 ![Line Type](../../../../.gitbook/assets/Messages04\_line\_type.png)
 
-### Arrow Color
+### Arrow Colors
 
 You can define **arrow\_color** with a standard color name or hex code placed between the **line\_type** and **arrow\_head**. Enclose the **color** with square brackets. Note that the circle for lost and found messages will be the same color as the arrow.
 
@@ -156,10 +156,47 @@ Zarek -[#FF0000]>o] : Text
 
 ![Arrow Color](../../../../.gitbook/assets/Messages05\_arrow\_color.png)
 
-### Arrow Head
+### Arrow Heads
 
-UML standards for sequence diagrams describe two options for **arrow\_heads**. A filled **arrow\_head** represents a synchronous message. An open **arrow\_head** represents an asynchronous message. PlantUML provides us with several more options. These will be attached to a **line\_type** in the following list for easier visualization.
+UML standards for sequence diagrams describe three options for **arrow\_heads**. A filled **arrow\_head** represents a synchronous message. An open **arrow\_head** represents an asynchronous message. An X or cross represents an object deletion message. For more on object deletion messages see [ExecutionSpecification](executionspecification.md). PlantUML provides us with several more options for increased personalization. These will be attached to a reply **line\_type** in the following list for easier visualization. Be mindful the backslashes in the example as they are still escape characters in the **message\_text**.
 
+* \-- > filled **arrow\_head** right
+* \-- >> open **arrow\_head** right
+* \-- \ top half of filled **arrow\_head** right
+* \-- / bottom half of filled **arrow\_head** right
+* \-- \\\ top half of open arrow\_head right
+* \-- // bottom half of open **arrow\_head** right
+* < -- filled **arrow\_head** left
+* << -- open **arrow\_head** left
+* / -- top half of filled **arrow\_head** left
+* \ -- bottom half of filled **arrow head** left
+* // -- top half of open **arrow\_head** left
+* \\\ -- bottom half of open **arrow head** left
+* \-- X object deletion message
 
+#### Example: Arrow Heads
+
+```
+@startuml
+'Example: Messages Arrow Head
+
+Sean  -->   Maria : -->
+Sean  -->>  Maria : -->>
+Sean  --\   Maria : --\\
+Sean  --/   Maria : --/
+Sean  --\\  Maria : --\\\\
+Sean  --//  Maria : --//
+Maria <--   Zarek : <--
+Maria <<--  Zarek : <<--
+Maria /--   Zarek : /--
+Maria \--   Zarek : \--
+Maria //--  Zarek : //--
+Maria \\--  Zarek : \\--
+Maria --X   Zarek : --X
+
+@enduml
+```
+
+![Arrow Heads](../../../../.gitbook/assets/Messages06\_arrow\_head.png)
 
 ### Message Text

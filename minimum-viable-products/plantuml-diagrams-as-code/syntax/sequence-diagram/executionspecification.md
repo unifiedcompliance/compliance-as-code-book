@@ -241,3 +241,5 @@ deactivate Sean
 ```
 
 ![ExecutionSpecification Nesting](../../../../.gitbook/assets/ExecutionSpecification06\_nesting.png)
+
+## Object Deletion Message
