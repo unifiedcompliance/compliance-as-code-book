@@ -24,7 +24,7 @@ participant Zarek
 
 ## Properties
 
-Properties following the participant\_type affect the format of the lifeline head. You are only required to use the participant\_type and name properties. Later, in the shortcut section you will notice that you do not have to declare participants. This helps if you are putting together a quick sequence diagram without any bells or whistles. There is some wiggle room with property order. For the sake of consistency and best practice we will keep them in the below order throughout this book. Below is a list of lifeline properties.&#x20;
+Properties following the participant\_type affect the format of the lifeline head. You are only required to use the **participant\_type** and **name** properties to declare a lifeline. There is some wiggle room with property order. For the sake of consistency and best practice we will keep them in the below order throughout this book. Below is a list of lifeline properties.&#x20;
 
 * **participant\_type** - determines the head shape based on its classifier
 * **name** - the text that appears in the head of the lifeline
@@ -247,7 +247,7 @@ participant "Zarek the oldest" order 1
 
 ## Undeclared Lifelines
 
-You can create a sequence diagram without declaring lifelines. However, the lifelines will only have default properties. Lifelines are automatically generated as they appear in messages.
+You can create a sequence diagram without declaring lifelines. However, the lifelines will only have default properties. Lifelines are automatically generated as they appear in messages. This can be useful if you are putting together a quick sequence diagram without any bells or whistles.
 
 #### Example: Undeclared Lifelines
 
