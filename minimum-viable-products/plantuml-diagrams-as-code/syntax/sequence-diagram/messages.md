@@ -52,7 +52,7 @@ Maria -> Zarek
 
 
 
-## Properties
+## Message Properties
 
 The minimum requirements for a message are **sender**, **line\_type**, **head\_type**, and **receiver**. As we did with lifelines we will keep all message properties except **message\_text** in the below order throughout this book. Keep in mind the order is sender to receiver as shown above, not necessarily left to right. The **message\_text** property is always furthest to the right.
 
@@ -200,3 +200,64 @@ Maria --X   Zarek : --X
 ![Arrow Heads](../../../../.gitbook/assets/Messages06\_arrow\_head.png)
 
 ### Message Text
+
+Place **message\_text** at the end of the message after a colon. You can format message\_text with creole syntax for emphasis and markup language for color and emphasis. You can define colors with a standard color name or hex code. Use **\n** for manual line breaks. For automatic line breaks see **maxMessageSize** in the [Skin Parameters](skin-parameters.md) section. See [Text Formatting](text-formatting.md) for a list of creole and markup options.
+
+```
+@startuml
+'Example: Message Text
+
+'Send a message from Sean to Maria with a bold message.
+'Use creole.
+Sean  ->  Maria : **Text**
+
+'Send a reply to Sean with purple text.
+'Use markup. 
+Sean  <-- Maria : <color #561D5E>Text</color>
+
+'Send a message from Maria to Zarek with stricken purple text.
+'Use creole for bold and markup for the color.
+Maria ->  Zarek : <color #561D5E>--Text--</color>
+
+'Send a reply to Maria with a bold red message.
+'Use only markup.
+Maria <-- Zarek : <b><color:#FF0000>Text</color></b>
+
+'Send a multiline message from Zarek to Sean.
+Zarek ->  Sean : Multiline \nText
+
+@enduml
+```
+
+![Message Text](../../../../.gitbook/assets/Messages07\_message\_text.png)
+
+## Autonumber
+
+You can assign your messages sequential numbers automatically with the **autonumber** command.
+
+#### Example: Autonumber
+
+```
+@startuml
+'Example: Messages Autonumber
+
+'Activate the autonumber method.
+autonumber
+
+'Send a few messages back and forth.
+Sean  ->  Maria : Text
+Sean  <-- Maria : Text
+
+Maria ->  Zarek : Text
+Maria <-- Zarek : Text
+
+Zarek ->  Sean : Text
+Zarek <-- Sean : Text
+
+@enduml
+```
+
+![Autonumber](../../../../.gitbook/assets/Messages08\_autonumber.png)
+
+## Autonumber Properties
+
