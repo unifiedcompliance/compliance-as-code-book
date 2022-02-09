@@ -52,7 +52,7 @@ Maria -> Zarek
 
 
 
-## Message Properties
+## Properties
 
 The minimum requirements for a message are **sender**, **line\_type**, **head\_type**, and **receiver**. As we did with lifelines we will keep all message properties except **message\_text** in the below order throughout this book. Keep in mind the order is sender to receiver as shown above, not necessarily left to right. The **message\_text** property is always furthest to the right.
 
@@ -65,15 +65,15 @@ The minimum requirements for a message are **sender**, **line\_type**, **head\_t
 
 ### Senders & Receivers
 
-Senders and receivers are usually the participants with lifelines discussed in the previous section. There are a few exceptions. Messages that come from or go to places outside the scope of the current diagram have gates as their sender or receiver at the edge of the diagram. Other messages may get lost or we may not know where they come from. Per UML standards these lost and found messages are sent or received from a circle. PlantUML doesn't have a standalone command for this, so we have to combine gates with our circle. UML calls for a solid circle but PlantUML only supports an open circle.
+Senders and receivers are usually the participants with lifelines discussed in the previous section. There are a few exceptions. Messages that come from or go to places outside the scope of the current diagram have gates as their sender or receiver at the edge of the diagram. Other messages may get lost or we may not know where they come from. Per UML standards these lost and found messages are sent or received from a circle. PlantUML doesn't have a standalone command for this, so we have to combine gates with our circle. UML calls for a solid circle but PlantUML only supports an open circle. At the time of this writing PlantUML does not properly display found messages originating from the right side gate.
 
 **Senders** and **receivers** that are not lifelines with **names** must touch the **arrow\_head**. See the list of **senders** and **receivers** below.
 
 * **name** - the name of a lifeline
-* \[ - signifies a gate touching the left side of the sequence diagram can be a sender or receiver
-* ] - signifies a gate touching the right side of the diagram can be a sender or receiver
-* o- used as the **sender** of a found message or the **receiver** of a lost message, this is a lower-case letter o
-* ? - a special character used to shorten the length of a message arrow
+* **\[** - signifies a gate touching the left side of the sequence diagram can be a sender or receiver
+* **]** - signifies a gate touching the right side of the diagram can be a sender or receiver
+* **o**- used as the **sender** of a found message or the **receiver** of a lost message, this is a lower-case letter o
+* **?** - a special character used to shorten the length of a message arrow
 
 #### Example: Sender & Receiver
 
@@ -91,8 +91,8 @@ Sean <- Maria  : Response Text
 'Send a message from Sean to a left gate.
 Sean ->[ :Text
 
-'Send a found message to Maria from the right.
-]o-> Maria: Text
+'Send a found message to Maria from the left.
+[o-> Maria : Text
 
 'Send a lost message from Maria to the right.
 Maria ->o] : Text
@@ -100,20 +100,20 @@ Maria ->o] : Text
 'Send a message with a shortened arrow from Sean to the right.
 Sean ->? : Text
 
-'Send a message with a shortenedd arrow to Maria from the left.
+'Send a message with a shortened arrow to Maria from the left.
 ?-> Maria : Text
 
 @enduml
 ```
 
-![Sender & Receiver](../../../../.gitbook/assets/Messages03\_sender\_receiver.png)
+![Senders & Receivers](../../../../.gitbook/assets/Messages03\_sender\_receiver.png)
 
 ### Line Type
 
 There are two basic **line\_types**, solid and dashed. Solid lines are for basic messages. Dashed lines are for replies and lifeline creation messages. Creation messages are covered in the [Participants Creating New Lifelines](lifelines.md#participants-creating-new-lifelines) section of [Lifelines](lifelines.md).
 
-* "-" - creates a solid line
-* "--" - creates a dashed line
+* "**-**" - creates a solid line
+* "**--**" - creates a dashed line
 
 #### Example: Line Type
 
@@ -230,34 +230,3 @@ Zarek ->  Sean : Multiline \nText
 ```
 
 ![Message Text](../../../../.gitbook/assets/Messages07\_message\_text.png)
-
-## Autonumber
-
-You can assign your messages sequential numbers automatically with the **autonumber** command.
-
-#### Example: Autonumber
-
-```
-@startuml
-'Example: Messages Autonumber
-
-'Activate the autonumber method.
-autonumber
-
-'Send a few messages back and forth.
-Sean  ->  Maria : Text
-Sean  <-- Maria : Text
-
-Maria ->  Zarek : Text
-Maria <-- Zarek : Text
-
-Zarek ->  Sean : Text
-Zarek <-- Sean : Text
-
-@enduml
-```
-
-![Autonumber](../../../../.gitbook/assets/Messages08\_autonumber.png)
-
-## Autonumber Properties
-

@@ -35,6 +35,7 @@
         * [Lifelines](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/lifelines.md)
         * [Messages](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/messages.md)
         * [ExecutionSpecification](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/executionspecification.md)
+        * [Autonumber](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/autonumber.md)
         * [Text Formatting](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/text-formatting.md)
         * [Skin Parameters](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/skin-parameters.md)
         * [Organization](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/organization.md)
