@@ -254,7 +254,86 @@ Zarek <-- Sean : Text
 
 ### Text Format
 
+The **text\_format** can affect the sequential number and the **message**. You can alter **text\_format** with creole syntax for emphasis and markup language for color and emphasis. You can define colors with a standard color name or hex code. See [Text Formatting](text-formatting.md) for a list of creole and markup options.&#x20;
+
+#### Example: Text Format
+
+```
+@startuml
+'Example: Autonumber Text Format
+
+'Activate the autonumber method.
+'Make the sequential number underlined with creole.
+autonumber "__#__"
+
+'Send a message from Sean to Maria and a reply.
+Sean  ->  Maria : Text
+Sean  <-- Maria : Text
+
+'Start a new autonumber method.
+'Add a message and make it purple with markup.
+autonumber "<font color=561D5E>Message Here </font>"
+
+'Send a message from Maria to Zarek and a reply.
+Maria ->  Zarek : Text
+Maria <-- Zarek : Text
+
+'Start a new autonumber method.
+'Add a message and reserve three digits.
+'Make it all bold and cyan with markup.
+autonumber "<font color=cyan><b>Message Here 000 </b></font>"
+
+'Send a message from Zarek to Sean and a reply.
+Zarek ->  Sean : Text
+Zarek <-- Sean : Text
+
+@enduml
+```
+
+![Text Format](../../../../.gitbook/assets/Autonumber08\_text\_format.png)
+
 ## Specific Sequence
+
+You can build a specific sequence similar to version numbers with the **autonumber** method. By using any combination of four delimiters( **. , : ;** ). The specific sequence can be two or three digits. The specific sequence takes the place of the **start\_number**. By default the last digit will increment with each message. The **inc** command followed by the letters **A** or **B** allows you to manually increment the other digits. When **A** or **B** are incremented all digits to the right will automatically reset to one. Specific sequence does not support any **autonumber** **format** properties.
+
+```
+@startuml
+'Example: Autonumber Specific Sequence
+
+'Activate the autonumber method.
+'Make a three digit specific sequence with two different delimiters.
+autonumber 1;1:1
+
+'Send a message from Sean to Maria and a reply.
+Sean  ->  Maria : Text
+Sean  <-- Maria : Text
+
+'Increase the second digit
+autonumber inc B
+
+'Send a message from Maria to Zarek and a reply.
+Maria ->  Zarek : Text
+Maria <-- Zarek : Text
+
+'Start a new autonumber method.
+''Make a three digit specific sequence with periods.
+autonumber 1.1.1
+
+'Send a message from Zarek to Sean and a reply.
+Zarek ->  Sean : Text
+Zarek <-- Sean : Text
+
+'Increase the first digit
+autonumber inc A
+
+'Send a message from Sean to Maria and a reply.
+Sean  ->  Maria : Text
+Sean  <-- Maria : Text
+
+@enduml
+```
+
+![Specific Sequence](../../../../.gitbook/assets/Autonumber09\_specific\_sequence.png)
 
 ## As a Variable
 
