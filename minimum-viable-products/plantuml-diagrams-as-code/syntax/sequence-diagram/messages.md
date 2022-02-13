@@ -171,8 +171,9 @@ UML standards for sequence diagrams describe three options for **arrow\_heads**.
 * / -- top half of filled **arrow\_head** left
 * \ -- bottom half of filled **arrow head** left
 * // -- top half of open **arrow\_head** left
-* \\\ -- bottom half of open **arrow head** left
+* \\\ -- bottom half of open **arrow\_head** left
 * \-- X object deletion message
+* < -- > bidirectional arrows are possible with all **arrow\_heads**
 
 #### Example: Arrow Heads
 
@@ -193,11 +194,12 @@ Maria \--   Zarek : \--
 Maria //--  Zarek : //--
 Maria \\--  Zarek : \\--
 Maria --X   Zarek : --X
+Sean  <-->  Zarek : <-->
 
 @enduml
 ```
 
-![Arrow Heads](../../../../.gitbook/assets/Messages06\_arrow\_head.png)
+![Arrow Heads](<../../../../.gitbook/assets/Messages06\_arrow\_head (1).png>)
 
 ### Message Text
 

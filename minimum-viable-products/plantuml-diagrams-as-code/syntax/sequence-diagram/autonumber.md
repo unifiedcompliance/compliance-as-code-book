@@ -337,3 +337,31 @@ Sean  <-- Maria : Text
 
 ## As a Variable
 
+You can use the variable **%autonumber%** anywhere in your sequence diagram after starting the **autonumber** method. It will display the current value of the sequential number. For more on notes see the [notes](notes.md) section.
+
+#### Example: As a Variable
+
+```
+@startuml
+'Example: Autonumber As a Variable
+
+'Activate the autonumber method.
+autonumber
+
+'Send a message from Sean to Maria and a reply.
+'Put the sequence number in the message_text.
+'Make the message text cyan.
+Sean  ->  Maria : <color:#cyan>Text %autonumber%</color>
+Sean  <-- Maria : <color:#cyan>Text %autonumber%</color>
+
+'Add a note with the autonumber value in the note.
+note across : The current autonumber value is %autonumber%.
+
+'Send a message from Maria to Zarek and a reply.
+Maria ->  Zarek : Text
+Maria <-- Zarek : Text
+
+@enduml
+```
+
+![Autonumber as a Variable](../../../../.gitbook/assets/Autonumber10\_variable.png)
