@@ -171,7 +171,9 @@ Zarek <-- Sean : Message Text
 
 ### Text
 
-The **text** property provides the text that is displayed in the note. This is also where the **text** is formatted. Note **text** supports creole syntax for emphasis and markup language for color and emphasis. You can define colors with a standard color name or hex code. The **text** property does not support bold, italics, or monospace in markup. You must use creole for these. The **#** is optional for hex codes in this portion of markup. It appears to be optional&#x20;
+The **text** property provides the text that is displayed in the note. This is also where the **text** is formatted. Note **text** supports creole syntax for emphasis and markup language for color and emphasis. You can define colors with a standard color name or hex code. The **text** property does not support bold, italics, or monospace in markup. You must use creole for these. The **#** is optional for hex codes in this portion of markup. It appears to be optional in all \<color> tags as well.&#x20;
+
+Multiline text can be achieved with the **end note** command.&#x20;
 
 #### Example: Note Text
 
