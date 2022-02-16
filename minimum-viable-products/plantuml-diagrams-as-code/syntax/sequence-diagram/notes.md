@@ -1,6 +1,6 @@
 # Notes
 
-Notes are exactly that. They give you the ability to digitally stick notes onto your diagram.
+Notes are exactly that. They give you the ability to digitally stick notes onto your diagram. References&#x20;
 
 ## Declaration
 
@@ -173,7 +173,7 @@ Zarek <-- Sean : Message Text
 
 The **text** property provides the text that is displayed in the note. This is also where the **text** is formatted. Note **text** supports creole syntax for emphasis and markup language for color and emphasis. You can define colors with a standard color name or hex code. The **text** property does not support bold, italics, or monospace in markup. You must use creole for these. The **#** is optional for hex codes in this portion of markup. It appears to be optional in all \<color> tags as well.&#x20;
 
-Multiline text can be achieved with the **end note** command.&#x20;
+Multiline text can be achieved with the **end note** command. For multiline text remove the : and begin the **text** on the line below the **shape** property. You can use as many lines as necessary. End the note on the last line with the **end note** command. Empty lines will be displayed on the note.
 
 #### Example: Note Text
 
@@ -196,7 +196,56 @@ Maria ->  Zarek : Message Text
 Maria <-- Zarek : Message Text
 
 'Make a note with bold red text.
-rnote over Maria, Zarek : <color #FF0000>**Note Text**</color>
+rnote over Maria, Zarek : <color FF0000>**Note Text**</color>
+
+'Send a message from Zarek to Sean and a reply.
+Zarek ->  Sean : Message Text
+Zarek <-- Sean : Message Text
+
+'Make a note with multiple lines of text.
+'Leave one empty line.
+note across
+Multiline
+
+Note
+Text
+end note
+
+@enduml
+```
+
+![Note Text](../../../../.gitbook/assets/Notes05\_text.png)
+
+## Images In Notes
+
+You can place images in note **text** with the **\<img>** markup tag. You can adjust the size of the image with the **{scale}** property.
+
+#### Example: Note Images
+
+```
+@startuml
+'Example: Note Images
+
+'Send a message from Sean to Maria and a reply.
+Sean  ->  Maria : Message Text
+Sean  <-- Maria : Message Text
+
+'Make a note with an image in it.
+note across
+This note has an image 
+<img:https://www.unifiedcompliance.com/wp-content/themes/tardigrade//images/cch_logo_icon.png>
+end note
+
+'Send a message from Maria to Zarek and a reply.
+Maria ->  Zarek : Message Text
+Maria <-- Zarek : Message Text
+
+'Make another note with the same image.
+'Change the size of the image.
+note across
+This note has a smaller image
+<img:https://www.unifiedcompliance.com/wp-content/themes/tardigrade//images/cch_logo_icon.png{scale=0.5}>
+end note
 
 'Send a message from Zarek to Sean and a reply.
 Zarek ->  Sean : Message Text
@@ -205,6 +254,42 @@ Zarek <-- Sean : Message Text
 @enduml
 ```
 
-## Images In Notes
+![Note Images](../../../../.gitbook/assets/Notes06\_images.png)
 
-## Aligned Notes
+## Note Alignment
+
+You can place multiple notes on the same level by placing a **/** in front of all but the first note. Alignment only works with the **left of**, **right of**, and **over** positions. And, you can only refer to a specific **lifeline** once when placing notes at the same level. For example you cannot use **left of** Sean and **over** Sean in the same alignment.
+
+#### Example: Note Alignment
+
+```
+@startuml
+'Example: Note Alignment
+
+'Send a message from Sean to Maria and a reply.
+Sean  ->  Maria : Message Text
+Sean  <-- Maria : Message Text
+
+'Make notes over Sean and Maria.
+'Align them at the same level.
+hnote over Sean: Message Text
+/ hnote over Maria: Message Text
+
+'Send a message from Maria to Zarek and a reply.
+Maria ->  Zarek : Message Text
+Maria <-- Zarek : Message Text
+
+'Make three notes.
+'Align them at the same level.
+note left of Sean: Message Text
+/ note left of Maria: Message Text
+/ note over Zarek: Message Text
+
+'Send a message from Zarek to Sean and a reply.
+Zarek ->  Sean : Message Text
+Zarek <-- Sean : Message Text
+
+@enduml
+```
+
+![Note Alignment](../../../../.gitbook/assets/Notes07\_aligned.png)
