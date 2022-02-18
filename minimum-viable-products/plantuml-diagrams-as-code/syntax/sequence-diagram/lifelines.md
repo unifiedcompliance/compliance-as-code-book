@@ -95,7 +95,7 @@ participant "Zarek \nThe Guy With \nCurly Hair"
 
 ### Display Name
 
-The **display\_name** property follows the "as" keyword. It can be used to display text in the head that is entirely different from the **name**. The **display\_name** property supports creole syntax for emphasis and markup language for color. You can define colors with a standard color name or hex code. Oddly PlantUML does not support emphasis with markup in the lifeline head. This lack of markup options is not in alignment with all PlantUML text fields. Luckily we can combine markup and creole. See [Text Formatting](text-formatting.md) for a list of creole and markup options.
+The **display\_name** property follows the "as" keyword. It can be used to display text in the head that is entirely different from the **name**. The **display\_name** property supports creole syntax for emphasis and markup language for color. You can define colors with a standard color name or hex code. Oddly PlantUML does not support emphasis with markup in the lifeline head. This lack of markup options is not in alignment with all PlantUML text fields. Luckily we can combine markup and creole. See [Text Formatting](../text-formatting.md) for a list of creole and markup options.
 
 #### Example: Display Name
 
@@ -119,7 +119,7 @@ participant Zarek as "<color:#FF0000>**Zarek**</color>"
 
 ### Formatted Name
 
-The **formatted\_name** property replaces **name** and **display\_name**. Similar to **display\_name** it supports creole syntax for emphasis and markup language for color. You can define colors with a standard color name or hex code. Once again PlantUML does not support emphasis with markup in the lifeline head. However we can still combine markup and creole. See [Text Formatting](text-formatting.md) for a list of creole and markup options.
+The **formatted\_name** property replaces **name** and **display\_name**. Similar to **display\_name** it supports creole syntax for emphasis and markup language for color. You can define colors with a standard color name or hex code. Once again PlantUML does not support emphasis with markup in the lifeline head. However we can still combine markup and creole. See [Text Formatting](../text-formatting.md) for a list of creole and markup options.
 
 #### Example: Formatted Name
 

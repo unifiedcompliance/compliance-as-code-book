@@ -254,7 +254,7 @@ Zarek <-- Sean : Text
 
 ### Text Format
 
-The **text\_format** can affect the sequential number and the **message**. You can alter **text\_format** with creole syntax for emphasis and markup language for color and emphasis. You can define colors with a standard color name or hex code. See [Text Formatting](text-formatting.md) for a list of creole and markup options.&#x20;
+The **text\_format** can affect the sequential number and the **message**. You can alter **text\_format** with creole syntax for emphasis and markup language for color and emphasis. You can define colors with a standard color name or hex code. See [Text Formatting](../text-formatting.md) for a list of creole and markup options.&#x20;
 
 #### Example: Text Format
 
