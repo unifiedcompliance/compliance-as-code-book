@@ -203,7 +203,7 @@ Sean  <-->  Zarek : <-->
 
 ### Message Text
 
-Place **message\_text** at the end of the message after a colon. You can format message\_text with creole syntax for emphasis and markup language for color and emphasis. You can define colors with a standard color name or hex code. Use **\n** for manual line breaks. For automatic line breaks see **maxMessageSize** in the [Skin Parameters](../skin-parameters.md) section. See [Text Formatting](../text-formatting.md) for a list of creole and markup options.
+Place **message\_text** at the end of the message after a colon. You can format **message\_text** with creole syntax for emphasis and markup language for color and emphasis. You can define colors with a standard color name or hex code. Use **\n** for manual line breaks. For automatic line breaks see **maxMessageSize** in the [Skin Parameters](../skin-parameters.md) section. See [Text Formatting](../text-formatting.md) for a list of creole and markup options.
 
 ```
 @startuml
