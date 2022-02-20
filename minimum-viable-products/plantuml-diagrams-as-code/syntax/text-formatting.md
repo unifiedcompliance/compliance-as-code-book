@@ -19,3 +19,7 @@ HTML Code here
 ```
 
 HTML Image here
+
+
+
+Point out specifically which text properties do and don't account for vertical and horizontal empty space.
