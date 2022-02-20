@@ -1,6 +1,6 @@
 # Organization
 
-PlantUML provides many organizational options for sequence diagrams. There are tools for visually grouping information. It even has a nice page break option in case you need to print, make a pdf, or a presentation.
+PlantUML provides many organizational options for sequence diagrams. There are tools for visually grouping and separating information. It even has a nice page break option in case you need to print, make a pdf, or a presentation.
 
 ## Title
 
@@ -165,7 +165,7 @@ Zarek <-- Sean : Text
 
 ## Dividers
 
-You can add dividers to a sequence diagram with four equal signs. The divider has an optional text field. To utilize **text** place it in the middle of the equal signs. The divider supports ||| To create a multiline **divider** use manual **\n** line breaks. The **divider** supports creole syntax for emphasis and markup language for color and emphasis. You can define colors with a standard color name or hex code. The default font for dividers is bold so adding code for bold emphasis will do nothing.
+You can add dividers to a sequence diagram with four equal signs. The divider has an optional text field. To utilize **text** place it in the middle of the equal signs. To create a multiline **divider** use manual **\n** line breaks. The **divider** supports creole syntax for emphasis and markup language for color and emphasis. You can define colors with a standard color name or hex code. The default font for **dividers** is bold so adding code for bold emphasis will do nothing.
 
 #### Example: Dividers
 
@@ -197,11 +197,213 @@ Zarek <-- Sean : Text
 
 ![Dividers](../../../../.gitbook/assets/Organization06\_Divider.png)
 
-## Spacing
+## Vertical Spacing
+
+You can add vertical space between messages with the pipe character. Three consecutive pipe characters will add a default amount of 25 pixels between messages. To customize the added amount use four pipes with a whole number in the middle.
+
+#### Example: Vertical Spacing
+
+```
+@startuml
+'Example: Vertical Spacing
+
+'Send a message from Sean to Maria and a reply.
+Sean  ->  Maria : Text
+Sean  <-- Maria : Text
+
+'Add 25 pixels of vertical spacing.
+|||
+
+'Send a message from Maria to Zarek and a reply.
+Maria ->  Zarek : Text
+Maria <-- Zarek : Text
+
+'Add 50 pixels of vertical spacing
+||50||
+
+'Send a message from Zarek to Sean and a reply.
+Zarek ->  Sean : Text
+Zarek <-- Sean : Text
+
+@enduml
+```
+
+![Vertical Spacing](../../../../.gitbook/assets/Organization07\_spacing.png)
 
 ## Delays
 
+You can show a **delay** on your diagram with three consecutive periods. You can add **text** to the **delay** by using six periods with your chosen **text** in the middle. To create a multiline **delay** use manual **\n** line breaks. **Delays** support creole syntax for emphasis and markup language for color and emphasis. You can define colors with a standard color name or hex code.
+
+Notice that when you use delays, the **lifeline** changes from the default dashed line into a solid line.
+
+#### Example: Delays
+
+```
+@startuml
+'Example: Delays
+
+'Send a message from Sean to Maria and a reply.
+Sean  ->  Maria : Text
+Sean  <-- Maria : Text
+
+'Add a delay to the diagram.
+...
+
+'Send a message from Maria to Zarek and a reply.
+Maria ->  Zarek : Text
+Maria <-- Zarek : Text
+
+'Add a delay with text to the diagram.
+... 3 years later ...
+
+'Send a message from Zarek to Sean and a reply.
+Zarek ->  Sean : Text
+Zarek <-- Sean : Text
+
+'Add a delay with multiline text.
+'Add emphasis and color.
+... <font color=561D5E><b>5 years</b></font> \n__later__ ...
+
+@enduml
+```
+
+![Delays](../../../../.gitbook/assets/Organization08\_delays.png)
+
+
+
+## DurationConstraint
+
+**DurationConstraints** consist of four parts. First you must change the **!pragma teoz** setting to **true**. Second, place an anchor at the start point. Anchors are created with a {string} inside of curly braces. Anchors are placed at the beginning of a message line. Third, place an anchor at the at the end point of the **durationConstraint**. Finally you will define which anchors are the beginning and end of each **durationConstraint** and place the **text**.
+
+To create a multiline **durationConstraint** use manual **\n** line breaks. The **durationConstraint** supports creole syntax for emphasis and markup language for color and emphasis. You can define colors with a standard color name or hex code. The default font for **durationConstraint** is bold so adding code for bold emphasis will do nothing.
+
+#### Example: DurationConstraint
+
+```
+@startuml
+'Example: DurationConstraint
+
+'Change the setting to allow for durationConstraints.
+!pragma teoz true
+
+'Send four messages/replies with start and end point anchors.
+{start1} Sean  ->  Maria : Go do this thing please
+{start2} Maria ->  Zarek : You do the thing
+{end2}   Maria <-- Zarek : Done
+{end1}   Sean  <-- Maria : Finished
+
+'Define the start and end anchors of the durationConstraints.
+'Use multiline text. 
+'Add emphasis and color.
+{start1} <-> {end1} : __Duration__ \nText
+{start2} <-> {end2} : <font color=561D5E><b>Shorter</b></font> Duration Text
+
+@enduml
+```
+
+![DurationConstraint](../../../../.gitbook/assets/Organization09\_duration\_constraint.png)
+
 ## Boxes
 
-## Time Duration
+Boxes are useful for visual organization. They simply draw a box around participant lifelines that you want to group together.
 
+### Defining Boxes
+
+**Boxes** are defined with the **box** and **end box** commands. Place the respective commands above and below the declared **lifelines** you want the **box** to encompass.
+
+#### Example: Defining Boxes
+
+```
+@startuml
+'Example: Defining Boxes
+
+'Place a box around Sean and Maria.
+box
+participant Sean
+participant Maria
+end box
+
+'Send some messages and replies.
+Sean  ->  Maria : Text
+Sean  <-- Maria : Text
+Maria ->  Zarek : Text
+Maria <-- Zarek : Text
+Zarek ->  Sean : Text
+Zarek <-- Sean : Text
+
+@enduml
+```
+
+![Defining Boxes](../../../../.gitbook/assets/Organization10\_box\_declaration.png)
+
+### Box Title
+
+**Boxes** have an optional **title** field that will appear at the top of the **box**. If used, this field comes immediately after the **box** command. To create a multiline **title** use manual **\n** line breaks. The **title** supports creole syntax for emphasis and markup language for color and emphasis. You can define colors with a standard color name or hex code. The default font for **title** is bold so adding code for bold emphasis will do nothing.
+
+#### Example: Box Title
+
+```
+@startuml
+'Example: Box Text
+
+'Place a box around Sean and Maria.
+'Add text.
+box Box Text
+participant Sean
+participant Maria
+end box
+
+'Place a box around Zarek and Ivy.
+'Add multline text.
+'Add emphasis and color.
+box <font color=561D5E>Box</font>\n__Text__
+participant Zarek
+participant Ivy
+end box
+
+'Send some messages and replies.
+Sean  ->  Maria : Text
+Sean  <-- Maria : Text
+Zarek ->  Ivy : Text
+Zarek <-- Ivy : Text
+
+@enduml
+```
+
+![Box Title](../../../../.gitbook/assets/Organization11\_box\_text.png)
+
+### Box Color
+
+**Boxes** have an optional **color** property. You can change the **color** by adding a standard color name or hex code after a hash mark. The **color** property is always the last property on the box line. You can use two colors separated by a forward slash to make a gradient.
+
+#### Example: Box Color
+
+```
+@startuml
+'Example: Box Color
+
+'Place a box around Sean and Maria.
+'Add text and a background color.
+box Box Text #00FFFF
+participant Sean
+participant Maria
+end box
+
+'Place a box around Zarek and Ivy.
+'Add multline text.
+'Add a gradient background color.
+box Box\nText #Red/00FF00
+participant Zarek
+participant Ivy
+end box
+
+'Send some messages and replies.
+Sean  ->  Maria : Text
+Sean  <-- Maria : Text
+Zarek ->  Ivy : Text
+Zarek <-- Ivy : Text
+
+@enduml
+```
+
+![Box Color](../../../../.gitbook/assets/Organization12\_box\_color.png)
