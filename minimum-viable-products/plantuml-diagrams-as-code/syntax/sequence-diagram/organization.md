@@ -407,3 +407,31 @@ Zarek <-- Ivy : Text
 ```
 
 ![Box Color](../../../../.gitbook/assets/Organization12\_box\_color.png)
+
+## Mainframe
+
+Mainframe draws a box around the entire diagram. It has a mandatory **title** field. To create a multiline **title** use manual **\n** line breaks. The **title** supports creole syntax for emphasis and markup language for color and emphasis. You can define colors with a standard color name or hex code.&#x20;
+
+#### Example: Mainframe
+
+```
+@startuml
+'Example: Organization Mainframe
+
+'Declare a mainframe with a multiline title.
+'Use creole and markup to emphasize and color the title.
+mainframe **Mainframe** \n<font color=561D5E><i>Text</i></font>
+
+'Send some messages and replies.
+Sean  ->  Maria : Text
+Sean  <-- Maria : Text
+Maria ->  Zarek : Text
+Maria <-- Zarek : Text
+Zarek ->  Sean : Text
+Zarek <-- Sean : Text
+
+@enduml
+```
+
+![Mainframe](../../../../.gitbook/assets/Organization13\_mainframe.png)
+

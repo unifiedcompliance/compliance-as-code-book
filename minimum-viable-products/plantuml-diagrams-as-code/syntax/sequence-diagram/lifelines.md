@@ -12,7 +12,7 @@ Use the "participant" keyword followed by a **name** to declare a default lifeli
 @startuml 
 'Example: Declaring Lifelines
 
-'Declare the default lifeline and name it.
+'Declare default lifelines and name them.
 participant Sean
 participant Maria
 participant Zarek
@@ -24,7 +24,7 @@ participant Zarek
 
 ## Properties
 
-Properties following the participant\_type affect the format of the lifeline head. You are only required to use the **participant\_type** and **name** properties to declare a lifeline. There is some wiggle room with property order. For the sake of consistency and best practice we will keep them in the below order throughout this book. Below is a list of lifeline properties.&#x20;
+Properties following the **participant\_type** affect the format of the lifeline head. You are only required to use the **participant\_type** and **name** properties to declare a lifeline. There is some wiggle room with property order. For the sake of consistency and best practice we will keep them in the below order throughout this book. Below is a list of lifeline properties.&#x20;
 
 * **participant\_type** - determines the head shape based on its classifier
 * **name** - the text that appears in the head of the lifeline
@@ -143,7 +143,7 @@ participant "<color:#FF0000>**Zarek**</color>"
 
 ### Variable Name
 
-A **variable\_name** is just that, a variable. You can assign a lifeline to a variable using the "as" keyword. This practice eases utilization a lifeline with a **formatted\_name**. Otherwise, you have to type the entire lifeline name, including formatting, every time you use that lifeline. To show this we will pass a few messages between our lifelines. Messages will not be explained here. See the [messages](messages.md) section for an in-depth explanation.
+A **variable\_name** is just that, a variable. You can assign a lifeline to a variable using the "as" keyword. This practice eases utilization of a lifeline with a **formatted\_name**. Otherwise, you have to type the entire lifeline name, including formatting, every time you use that lifeline. To show this we will pass a few messages between our lifelines. Messages will not be explained here. See the [messages](messages.md) section for an in-depth explanation.
 
 #### Example: Variable Name
 
@@ -151,13 +151,13 @@ A **variable\_name** is just that, a variable. You can assign a lifeline to a va
 @startuml
 'Example: Variable Name
 
-'Declare a lifeline with a formatted_name and a variable_name.
+'Declare lifeline Sean with a formatted_name and a variable_name.
 participant "**Juanito**" as Sean
 
-'Declare a lifeline with a formatted_name only.
+'Declare lifeline Mija Mia with a formatted_name only.
 participant "<color:#561D5E>Mija Mia</color>"
 
-'Declare a lifeline with a formatted_name and a variable_name.
+'Declare lifeline Zarek with a formatted_name and a variable_name.
 participant "<color:#FF0000>**Zarek**</color>" as Zarek
 
 'Send a message from Sean to Mia. It's fairly ugly and will quickly become cumbersome.
@@ -179,17 +179,17 @@ The **background\_color** property allows you to change the background color of 
 
 ```
 @startuml
-'Example: Backround Color
+'Example: Background Color
 
-'This makes Sean's background color cyan.
+'Declare lifeline Sean with a cyan background_color.
 participant Sean #Cyan
 
-'This makes Zarek's background red.
+'Declare lifeline Zarek with a red background_color.
 actor Zarek #FF0000
 
-'The portion in quotes changes Maria's text color. 
-'The hex codes make a purple to black gradient in her background.
-queue Maria as "<color:#White>Mia" #561D5E/000000
+'Declare lifeline Maria with a purple to black gradient background_color.
+'Changes Maria's text color to white.
+queue Maria as "<color:#White>Mia</color>" #561D5E/000000
 
 @enduml
 ```

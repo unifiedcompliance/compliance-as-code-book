@@ -67,7 +67,9 @@ The minimum requirements for a message are **sender**, **line\_type**, **head\_t
 
 Senders and receivers are usually the participants with lifelines discussed in the previous section. There are a few exceptions. Messages that come from or go to places outside the scope of the current diagram have gates as their sender or receiver at the edge of the diagram. Other messages may get lost or we may not know where they come from. Per UML standards these lost and found messages are sent or received from a circle. PlantUML doesn't have a standalone command for this, so we have to combine gates with our circle. UML calls for a solid circle but PlantUML only supports an open circle. At the time of this writing PlantUML does not properly display found messages originating from the right side gate.
 
-**Senders** and **receivers** that are not lifelines with **names** must touch the **arrow\_head**. See the list of **senders** and **receivers** below.
+**Senders** and **receivers** that are not lifelines with **names** must touch the **arrow\_head**. See the list of **senders** and **receivers** below.&#x20;
+
+A message can have the same **sender** and **receiver**.
 
 * **name** - the name of a lifeline
 * **\[** - signifies a gate touching the left side of the sequence diagram can be a sender or receiver
@@ -84,9 +86,11 @@ Senders and receivers are usually the participants with lifelines discussed in t
 'Make Sean receive a message from a left gate
 [-> Sean : Text
 
-'Send a message and response between Sean and Maria.
+'Send a message from Sean to Maria.
 Sean -> Maria : Text
-Sean <- Maria  : Response Text
+
+'Send a message from Maria to herself.
+Maria -> Maria: Text
 
 'Send a message from Sean to a left gate.
 Sean ->[ :Text
@@ -106,7 +110,7 @@ Sean ->? : Text
 @enduml
 ```
 
-![Senders & Receivers](../../../../.gitbook/assets/Messages03\_sender\_receiver.png)
+![Sender and Receiver](<../../../../.gitbook/assets/Messages03\_sender\_receiver (1).png>)
 
 ### Line Type
 
