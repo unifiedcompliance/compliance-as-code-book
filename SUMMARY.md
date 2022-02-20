@@ -31,6 +31,7 @@
     * [Schema](minimum-viable-products/plantuml-diagrams-as-code/schema.md)
     * [Wireframes](minimum-viable-products/plantuml-diagrams-as-code/wireframes.md)
     * [Syntax](minimum-viable-products/plantuml-diagrams-as-code/syntax/README.md)
+      * [Getting Started](minimum-viable-products/plantuml-diagrams-as-code/syntax/getting-started.md)
       * [Sequence Diagram](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/README.md)
         * [Lifelines](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/lifelines.md)
         * [Messages](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/messages.md)
