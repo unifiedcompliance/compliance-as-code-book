@@ -30,6 +30,7 @@
     * [Use Cases](minimum-viable-products/plantuml-diagrams-as-code/use-cases.md)
     * [Schema](minimum-viable-products/plantuml-diagrams-as-code/schema.md)
     * [Wireframes](minimum-viable-products/plantuml-diagrams-as-code/wireframes.md)
+    * [Installing your own instance of PlantUML](minimum-viable-products/plantuml-diagrams-as-code/installing-your-own-instance-of-plantuml.md)
     * [Syntax](minimum-viable-products/plantuml-diagrams-as-code/syntax/README.md)
       * [Getting Started](minimum-viable-products/plantuml-diagrams-as-code/syntax/getting-started.md)
       * [Sequence Diagram](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/README.md)
