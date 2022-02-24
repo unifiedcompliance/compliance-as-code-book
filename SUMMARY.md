@@ -41,6 +41,7 @@
         * [Notes](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/notes.md)
         * [Interactions](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/interactions.md)
         * [Organization](minimum-viable-products/plantuml-diagrams-as-code/syntax/sequence-diagram/organization.md)
+      * [Use Case Diagram](minimum-viable-products/plantuml-diagrams-as-code/syntax/use-case-diagram.md)
       * [Text Formatting](minimum-viable-products/plantuml-diagrams-as-code/syntax/text-formatting.md)
       * [Skin Parameters](minimum-viable-products/plantuml-diagrams-as-code/syntax/skin-parameters.md)
   * [Custom Dictionaries](minimum-viable-products/custom-dictionaries/README.md)
