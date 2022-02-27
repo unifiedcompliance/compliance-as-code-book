@@ -40,7 +40,9 @@ The **business** property may come before or after **name**. The last four prope
 
 ### Name
 
-The **name** is simply text that appears below the actor icon. The **name** can be a single word it can be a string. Multiword strings must be inside of colons. The string method supports line breaks as well as markup for color and emphasis. If you use markup for color in the **name** property it will override the **text\_color** property. You can define colors with a standard color name or hex code.
+The **name** is simply text that appears below the actor icon. The **name** can be a single word it can be a string. Multiword strings must be inside of colons. The string method supports line breaks as well as markup for color and emphasis. You can define colors with a standard color name or hex code.
+
+Note: If color formatting is used inside of the **name** property it will override **text\_color**. See [Text Color](actor.md#text-color) for example.
 
 #### Example: Actor Name
 
@@ -138,7 +140,7 @@ actor Ivy <<Cashier>>
 
 ### Fill Color
 
-The **fill\_color** is defined by a standard color name or hex code. It determines the interior color of the actor icon. For the standard stick figure this is the interior of the head. If you use this property it must come immediately after a hash (**#**) sign and touch the hash sign.
+The **fill\_color** is defined by a standard color name or hex code. It determines the interior color of the actor icon. For the standard stick figure this is the interior of the head. If you use this property _at all_ it must come immediately after a hash (**#**) sign and touch the hash sign. If any other properties follow this place a semicolon (**;**) between them. No spaces are needed.
 
 #### Example: Actor Fill Color
 
@@ -159,6 +161,77 @@ actor Ivy #00FF00
 
 ### Line Color
 
+The **line\_color** is defined by a standard color name or hex code. It determines the color of the line that defines the outer edge of the actor icon. This is the body, arms, legs, and outside of the head on a standard stick figure. If you use this property _alone_ it must come after a hash (**#**) sign and touch the hash sign. If any other properties follow this place a semicolon (**;**) between them. No spaces are needed.
+
+#### Example: Actor Line Color
+
+```
+@startuml
+'Example: Actor Line Color
+
+'Create an actor with a line_color. 
+:Zarek: #line:red
+
+'Create an actor with a line_color.
+actor Ivy #line:00FF00
+
+@enduml
+```
+
+![Actor Line Color](../../../../.gitbook/assets/UseCase06\_actor\_line\_color.png)
+
 ### Line Type
 
+The **line\_type** defines the texture of the exterior line of the actor. This is the body, arms, legs, and outside of the head on a standard stick figure. If you use this property _alone_ it must come after a hash (**#**) sign and touch the hash sign. If any other properties follow this place a semicolon (**;**) between them. No spaces are needed.
+
+The line\_types are as follows.
+
+* line.bold
+* line.dashed
+* line.dotted
+
+#### Example: Actor Line Type
+
+```
+@startuml
+'Example: Actor Line Type
+
+'Create an actor with a bold line.
+:Zarek: #line.bold
+
+'Create an actor with a bold line.
+actor Ivy #line.dashed
+
+'Create an actor with a bold line.
+:Maria: #line.dotted
+
+@enduml
+```
+
+![Actor Line Type](../../../../.gitbook/assets/UseCase07\_actor\_line\_type.png)
+
 ### Text Color
+
+The **text\_color** is defined by a standard color name or hex code. It determines the color of the **name** and the **stereotype**. If you use this property _alone_ it must come after a hash (**#**) sign and touch the hash sign. If any other properties follow this place a semicolon (**;**) between them. No spaces are needed.
+
+Note: If color formatting is used inside of the **name** property it will override **text\_color**.
+
+#### Example: Actor Text Color
+
+```
+@startuml
+'Example: Actor Text Color
+
+'Create an actor with a text_color.
+'Assign a stereotype.
+actor Zarek <<Stocker>> #text:red
+
+'Create an actor and use markup for color.
+'Change the text_color to a different color than the name.
+'Assign a stereotype.
+:<font color=561D5E>Ivy</font>: <<Cashier>> #text:00FF00
+
+@enduml
+```
+
+![Actor Text Color](../../../../.gitbook/assets/UseCase08\_actor\_text\_color.png)
