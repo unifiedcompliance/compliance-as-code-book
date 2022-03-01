@@ -199,10 +199,10 @@ The line\_types are as follows.
 'Create an actor with a bold line.
 :Zarek: #line.bold
 
-'Create an actor with a bold line.
+'Create an actor with a dashed line.
 actor Ivy #line.dashed
 
-'Create an actor with a bold line.
+'Create an actor with a dotted line.
 :Maria: #line.dotted
 
 @enduml
