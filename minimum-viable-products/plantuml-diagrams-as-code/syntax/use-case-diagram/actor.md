@@ -140,7 +140,7 @@ actor Ivy <<Cashier>>
 
 ### Fill Color
 
-The **fill\_color** is defined by a standard color name or hex code. It determines the interior color of the actor icon. For the standard stick figure this is the interior of the head. If you use this property _at all_ it must come immediately after a hash (**#**) sign and touch the hash sign. If any other properties follow this place a semicolon (**;**) between them. No spaces are needed.
+The **fill\_color** is defined by a standard color name or hex code. It determines the interior color of the **use\_case** icon. If you use this property _at all_ it must come immediately after a hash (**#**) sign and touch the hash sign. If any other properties follow this place a semicolon (**;**) between them. No spaces are needed.
 
 #### Example: Actor Fill Color
 
