@@ -235,3 +235,24 @@ actor Zarek <<Stocker>> #text:red
 ```
 
 ![Actor Text Color](../../../../.gitbook/assets/UseCase08\_actor\_text\_color.png)
+
+### With All Properties
+
+#### Example: Actor With All Properties
+
+```
+@startuml
+'Example: Actor With All Properties
+
+'Create an actor with all properties.
+'Use colons.
+:<font color=561D5E><b>Zarek</b></font>:/ as Z <<Stocker>> #561D5E;line:blue;line.bold;text:B0B0B0;
+
+'Create an actor with all properties.
+'Use the actor command.
+actor/ :<font color=FFFFFF>Ivy</font>: as I <<Cashier>> #561D5E;line:blue;line.dashed;text:B0B0B0;
+
+@enduml
+```
+
+![Actor With All Properties](../../../../.gitbook/assets/Actor10\_all\_properties.png)

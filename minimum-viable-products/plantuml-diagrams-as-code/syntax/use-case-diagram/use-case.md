@@ -1,5 +1,7 @@
 # Use Case
 
+
+
 The **use\_case** is the meat of use case diagrams. It is a set of behaviors that will be performed by an actor or actors in the diagram.
 
 ## Declaration
@@ -250,6 +252,7 @@ usecase (Clock In) <<General Duty>> #text:red
 
 'Create a use_case with all properties with the usecase command.
 usecase/ (<font color=FFFFFF>Stock Shelves</font>) as stock <<Cashier Duty>> #561D5E;line:blue;line.bold;text:B0B0B0;
+
 @enduml
 ```
 
