@@ -40,7 +40,7 @@ The **business** property may come before or after **name**. The last four prope
 
 ### Name
 
-The **name** is simply text that appears below the actor icon. The **name** can be a single word it can be a string. Multiword strings must be inside of colons. The string method supports line breaks as well as markup for color and emphasis. You can define colors with a standard color name or hex code.
+The **name** is simply text that appears below the actor icon. The **name** can be a single word or it can be a string. Multiword strings must be inside of colons. The string method supports line breaks as well as markup for color and emphasis. You can define colors with a standard color name or hex code.
 
 Note: If color formatting is used inside of the **name** property it will override **text\_color**. See [Text Color](actor.md#text-color) for example.
 
