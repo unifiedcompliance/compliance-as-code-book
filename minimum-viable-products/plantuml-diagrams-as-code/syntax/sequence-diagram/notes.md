@@ -1,6 +1,6 @@
 # Notes
 
-Notes are exactly that. They give you the ability to digitally stick notes onto your diagram. References&#x20;
+Notes are exactly that. They give you the ability to digitally stick notes onto your diagram.
 
 ## Declaration
 
@@ -30,11 +30,11 @@ Zarek <-- Sean : Text
 @enduml
 ```
 
-![Note Declaration](../../../../.gitbook/assets/Notes01\_declaration.png)
+![Note Declaration](<../../../../.gitbook/assets/Notes01\_declaration (1).png>)
 
 ## Properties
 
-Notes contain four properties. The **shape**, **position**, and **text** properties are required.&#x20;
+Sequence diagram notes contain four properties. The **shape**, **position**, and **text** properties are required.&#x20;
 
 * **shape** - determines the shape of the note
 * **position** - determines the location of the note
@@ -181,14 +181,14 @@ Multiline text can be achieved with the **end note** command. For multiline text
 @startuml
 'Example: Note Text
 
-'Make a note with underlined text. Use creole.
+'Make a note with bold text. Use creole.
 note over Sean : **Note Text**
 
 'Send a message from Sean to Maria and a reply.
 Sean  ->  Maria : Message Text
 Sean  <-- Maria : Message Text
 
-'Make a note with a purple text. Use markup.
+'Make a note with purple text. Use markup.
 hnote over Maria, Zarek : <color #561D5E>Note Text</color>
 
 'Send a message from Maria to Zarek and a reply.
