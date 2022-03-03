@@ -45,7 +45,7 @@
         * [Use Case](minimum-viable-products/plantuml-diagrams-as-code/syntax/use-case-diagram/use-case.md)
         * [Actor](minimum-viable-products/plantuml-diagrams-as-code/syntax/use-case-diagram/actor.md)
         * [Associations](minimum-viable-products/plantuml-diagrams-as-code/syntax/use-case-diagram/associations.md)
-        * [Packages & Classifiers](minimum-viable-products/plantuml-diagrams-as-code/syntax/use-case-diagram/packages-and-classifiers.md)
+        * [Organization](minimum-viable-products/plantuml-diagrams-as-code/syntax/use-case-diagram/organization.md)
         * [Notes](minimum-viable-products/plantuml-diagrams-as-code/syntax/use-case-diagram/notes.md)
       * [Text Formatting](minimum-viable-products/plantuml-diagrams-as-code/syntax/text-formatting.md)
       * [Skin Parameters](minimum-viable-products/plantuml-diagrams-as-code/syntax/skin-parameters.md)
