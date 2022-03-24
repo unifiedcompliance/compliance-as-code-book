@@ -338,30 +338,84 @@ class "Personal Care" #text:561D5E
 
 ### Body
 
-Explanation
+The body of the class displays the attributes and methods that belong to the class. The body automatically sorts attributes and methods into their predefined areas. Attributes and methods will be discussed in their own chapter.
 
-#### Example:&#x20;
+#### Example: Class Body
 
 ```
-// Some code
+@startuml
+'Example: Class Text Color
+
+'Create a class with a body.
+'Add one attribute and one method.
+class Store {
+    attribute
+    method()
+}
+
+@enduml
 ```
 
-<\<Image>>
+![Class Body](../../../../.gitbook/assets/Classes13\_body.png)
 
 ### With All Properties
 
-#### Example:&#x20;
+#### Example: Class With All Properties
 
 ```
-// Some code
+@startuml
+'Example: Class With All Properties
+
+class "class_name" as alias <generic> << (N,orchid) stereotype>> #back:blue/red;header:purple;line:white;line.dotted;text:white {
+    attribute
+    method()
+}
+
+@enduml
 ```
 
-<\<Image>>
+![Class With All Properties](../../../../.gitbook/assets/Classes99\_everything.png)
 
 ## Other Entities
 
-*
-* diamond
-* <>
-* circle
-* ()
+There are two other entities that are declared similar to classes. Both have a shorthand version for declaration. The diamond does not display the class **name**.
+
+* **diamond** - class type command for creating a diamond entity
+* **<>** - shorthand for creating a diamond
+* **circle** - class type command for creating a circle entity
+* **()** - shorthand for creating a circle
+
+## Properties
+
+Circle entities support the below list of class properties as seen in the above classes description. Diamond entities only support **type** and **name**.
+
+* **type** - determines the type of class, circle or diamond
+* **name** - name of the class, will not display for diamonds
+* **body\_color** - determines the fill color of the class body
+* **line\_color** - determines the color of the line that draws the class&#x20;
+* **line\_style** - determines the style of the line that draws the class
+* **text\_color** - determines the color of the text in the class
+
+#### Example: Circle and Diamond Entities
+
+```
+@startuml
+'Example: Circle and Diamond Entities
+
+'Create a circle.
+circle circle_name_1
+
+'Create a circle with shorthand.
+'Change all available properties.
+() circle_name_2 #back:blue/red;line:white;line.dotted;text:blue
+
+'Create a diamond.
+diamond diamond_name_1 
+
+'Create a diamond with shorthand.
+<> diamond_name_2
+
+@enduml
+```
+
+![Circle and Diamond Entities](../../../../.gitbook/assets/Classes14\_circle.png)
