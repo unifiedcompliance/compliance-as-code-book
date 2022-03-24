@@ -4,7 +4,7 @@
 
 Landing Pages for each section will describe the overall contents of the section, and the section’s uses.
 
-![Landing Page](<../../.gitbook/assets/0 (1) (1)>)
+![Landing Page](<../../.gitbook/assets/0 (1) (1) (1)>)
 
 1. The simplest of landing pages will have a 40 point centered title followed by 16 point text that explains the contents and usage of the section.
 

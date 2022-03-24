@@ -18,13 +18,13 @@ iMac – 1280 x 720
 
 For our purposes we will design for the desktop. But we have to make a slight modification because when designing for the user working in a browser on a desktop, you don’t get to use _all of that space._ For anyone who is saving bookmarks, their browser will steal 112 px of horizontal space within the format, leaving 912 px for horizontal space as shown below.
 
-![Standard desktop format](<../../.gitbook/assets/0 (1)>)
+![Standard desktop format](<../../.gitbook/assets/0 (1) (1)>)
 
 ### **Balsamiq**
 
 Balsamiq doesn’t have a concept of frames. Everything you do in Balsamiq is designed within their various pages _freeform_. But they _do_ have a **Window** element that you can drag into your page and design _within_. You’ll have to size it appropriately. Below is an example of the Balsamiq window with the appropriate sizing (1440 x 1013) that will produce the appropriate 1440 x 912 interior.
 
-![Balsamiq Window properly sized](<../../.gitbook/assets/1 (1) (1)>)
+![Balsamiq Window properly sized](<../../.gitbook/assets/1 (1) (1) (1)>)
 
 ### **Figma**
 
@@ -46,4 +46,4 @@ We’ve found that the most versatile column grid is a 12 column grid with a 64 
 
 A baseline grid is one that’s established from the baselines your typography sits on. These appear as visual aids in your design spanning the width of your design and repeating vertically at an even internal. In many design systems, such as [Google’s Material Design](https://material.io/design/layout/spacing-methods.html#baseline), the baseline grid is a foundational part of defining type size and line-height parings, as well as spacing for margins and padding. We overlay this on top of the column grid as shown below.
 
-![8 px baseline grid overlayed on 12 column grid](<../../.gitbook/assets/4 (1) (1)>)
+![8 px baseline grid overlayed on 12 column grid](<../../.gitbook/assets/4 (1) (1) (1)>)

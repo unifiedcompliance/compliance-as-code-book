@@ -66,3 +66,5 @@
     * [Schema](minimum-viable-products/authority-document-catalog/schema.md)
     * [Wireframes](minimum-viable-products/authority-document-catalog/wireframes.md)
     * [Source](minimum-viable-products/authority-document-catalog/cataloging-authority-documents.md)
+  * [Import Test for Vicki](minimum-viable-products/import-test-for-vicki/README.md)
+    * [Gitbook Add an AD](minimum-viable-products/import-test-for-vicki/gitbook-add-an-ad.md)
