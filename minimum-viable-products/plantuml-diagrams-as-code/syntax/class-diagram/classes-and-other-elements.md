@@ -20,6 +20,10 @@ class Name
 
 ![Declaring Classes](../../../../.gitbook/assets/Classes01\_declaration.png)
 
+## Shorthand
+
+
+
 ## Properties
 
 Classes have 11 properties. The only mandatory properties are **type** and **name**.
