@@ -124,7 +124,7 @@ left to right direction
 
 #### Character Drawings
 
-**Direction** can be determined by the number of hyphens in the drawing as well as placement of the greater than or less than sign.
+**Direction** can be determined by the number of dashes in the drawing as well as placement of the greater than or less than sign.
 
 * &#x20; **-- >**  draws a downward arrow
 * **- >**     draws an arrow to the right
