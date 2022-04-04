@@ -389,48 +389,28 @@ Car -right[#561D5E,dashed,thickness=4]- "1..*" Fuel : needs >
 
 ## Written Relationships
 
-extends
+Some relationships can be written as the class is declared. These written relationships are "extends" and "implements."
 
-implements
-
-
-
-## Specific Relationships
-
-class\_1::attribute --> class\_2::attribute&#x20;
-
-
-
-move this to entities
-
-
-
-## inheritance
-
-the only skinparam covered here
+#### Example: Written Relationships
 
 ```
 @startuml
-'Example: Practice
-@startuml
+'Example: Written Relationships
 
-skinparam groupInheritance 3
+'Create one class and one interface.
+class ClassA
+interface Interface1
 
-A1 <|-- B1
+'Create a class that extends ClassA.
+class ClassB extends ClassA
 
-A2 <|-- B2
-A2 <|-- C2
+'Create a class that implements Class1.
+class Class2 implements Interface1
 
-A3 <|-- B3
-A3 <|-- C3
-A3 <|-- D3
-
-A4 <|-- B4
-A4 <|-- C4
-A4 <|-- D4
-A4 <|-- E4
 @enduml
 ```
+
+![Written Relationships](../../../../.gitbook/assets/WrittenRelationships99\_everything.png)
 
 
 
