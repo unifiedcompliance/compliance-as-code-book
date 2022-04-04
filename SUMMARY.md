@@ -48,7 +48,7 @@
         * [Organization](minimum-viable-products/plantuml-diagrams-as-code/syntax/use-case-diagram/organization.md)
         * [Notes](minimum-viable-products/plantuml-diagrams-as-code/syntax/use-case-diagram/notes.md)
       * [Class Diagram](minimum-viable-products/plantuml-diagrams-as-code/syntax/class-diagram/README.md)
-        * [Classes and Other Elements](minimum-viable-products/plantuml-diagrams-as-code/syntax/class-diagram/classes-and-other-elements.md)
+        * [Classes and Other Entities](minimum-viable-products/plantuml-diagrams-as-code/syntax/class-diagram/classes-and-other-entities.md)
         * [Attributes and Methods](minimum-viable-products/plantuml-diagrams-as-code/syntax/class-diagram/attributes-and-methods.md)
         * [Relationships](minimum-viable-products/plantuml-diagrams-as-code/syntax/class-diagram/relationships.md)
         * [Organization](minimum-viable-products/plantuml-diagrams-as-code/syntax/class-diagram/organization.md)

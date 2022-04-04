@@ -1,30 +1,10 @@
 # Organization
 
-## Visibility
-
-Hide and Remove
-
-## Packages
-
-6 types
-
-fill color
-
-??line color
-
-??text color
-
-## Name Spaces
-
-## Page Breaks
-
-page 2x2
-
-
-
 ## Inheritance
 
 the only skinparam covered here
+
+same code changing line 5, two examples
 
 ```
 @startuml
@@ -49,3 +29,53 @@ A4 <|-- E4
 @enduml
 ```
 
+## Packages
+
+name \<html?>
+
+6 types
+
+fill color, head and body?
+
+line color
+
+text color
+
+body
+
+## Name Spaces
+
+name \<html?>
+
+color, head and body?
+
+line color
+
+text color
+
+body
+
+## Visibility
+
+Hide and Show specifics
+
+Hide and Show members
+
+remove classes
+
+remove unlinked
+
+## Class Position
+
+show bad position
+
+show good position
+
+show good position with hidden connections
+
+## Page Breaks
+
+Take biggest previous picture and split into 6
+
+\[ ]\[ ]\[ ]\
+\[ ]\[ ]\[ ]
