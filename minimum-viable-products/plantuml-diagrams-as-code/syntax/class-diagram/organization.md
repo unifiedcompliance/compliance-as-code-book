@@ -1,8 +1,8 @@
 # Organization
 
-## Inheritance
+## Group Inheritance
 
-the only skinparam covered here
+The majority of skin parameters will be covered in their own chapter. However, group inheritance has a very specific use for organizing class diagrams. If multiple classes point to the same class the relationship arrow can be
 
 same code changing line 5, two examples
 
