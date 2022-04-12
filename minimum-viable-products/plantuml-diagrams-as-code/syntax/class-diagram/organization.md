@@ -185,25 +185,249 @@ package Database <<Database>> {
 
 ![Package Types](../../../../.gitbook/assets/Organization04\_package\_types.png)
 
-### fill color, head and body?
+### Body Color
 
-### line color
+The **body\_color** property determines the fill color of the drawn package entity. The **body\_color** is defined by a standard color name or hex code. Create a gradient by using two colors. If you use this property _alone_ it must come after a hash (**#**) sign and touch the hash sign. If any other properties follow this place a semicolon (**;**) between them. No spaces are needed.
 
-### text color
+#### Example: Package Body Color
 
-### body
+```
+@startuml
+'Example: Package Body Color
 
-## Name Spaces
+'Create a package with a name and a class.
+'Assign a body_color.
+package Package1 #009EA1 {
+  class Class1
+}
 
-name \<html?>
+'Create a package with a name and a class.
+'Assign a gradient to body_color.
+package Package2 #009EA1/white {
+  class Class2
+}
 
-color, head and body?
+@enduml
+```
 
-line color
+![Package Body Color](../../../../.gitbook/assets/Organization05\_package\_fill\_color.png)
 
-text color
+### Line Color
 
-body
+The **line\_color** property determines the color of the line that draws the box of the class. The **line\_color** is defined by a standard color name or hex code. Create a gradient by using two colors. If you use this property _alone_ it must come after a hash (**#**) sign and touch the hash sign. If any other properties follow this place a semicolon (**;**) between them. No spaces are needed.
+
+Note: **Line\_color** gradients do not perform well on packages. They only affect the line under the package **name**.
+
+#### Example: Package Line Color
+
+```
+@startuml
+'Example: Package Line Color
+
+'Create a package with a name and a class.
+'Assign a line_color.
+package Package1 #line:561D5E {
+  class Class1
+}
+
+'Create a package with a name and a class.
+'Assign a gradient to line_color.
+package Package2 #line:561D5E/white {
+  class Class2
+}
+
+@enduml
+```
+
+![Package Line Color](../../../../.gitbook/assets/Organization06\_package\_line\_color.png)
+
+### Line Style
+
+The **line\_style** property determines the type of line that draws the box of the class. The **line\_style** is defined by one of the three options below. If you use this property _alone_ it must come after a hash (**#**) sign and touch the hash sign. If any other properties follow this place a semicolon (**;**) between them. No spaces are needed.
+
+* line.dashed
+* line.dotted
+* line.bold
+
+#### Example: Package Line Style
+
+```
+@startuml
+'Example: Package Line Style
+
+'Create a package with a name and a class.
+'Make the line_style bold.
+package Package1 #line.bold {
+  class Class1
+}
+
+'Create a package with a name and a class.
+'Make the line_style dashed.
+package Package2 #line.dashed {
+  class Class2
+}
+
+'Create a package with a name and a class.
+'Make the line_style dotted.
+package Package3 #line.dotted {
+  class Class3
+}
+
+@enduml
+```
+
+![Package Line Style](../../../../.gitbook/assets/Organization07\_package\_line\_style.png)
+
+### Body
+
+The **body** of the package displays the classes that belong to the package. Classes that belong to the package should be written inside the **body** of the package. Relationships can be written inside or outside of the package body.&#x20;
+
+#### Example: Package Body
+
+```
+@startuml
+'Example: Package Body
+
+'Create a package with a name and two classes.
+'Create a relationship between the classes inside the package.
+package PackageA {
+  class ClassA1
+  class ClassA2
+
+  ClassA1 -- ClassA2
+}
+
+'Create a second package with a name and a class.
+package PackageB {
+  class ClassB1
+}
+
+'Create a relationship between a class from the first package and a class from the second class.
+ClassA1 - ClassB1
+
+@enduml
+```
+
+![Package Body](../../../../.gitbook/assets/Organization08\_package\_body.png)
+
+### With All Properties
+
+#### Example: Packages With All Properties
+
+```
+@startuml
+'Example: Packages With All Properties
+
+package __PackageA__ <<Database>> #E6E6E7;line:009EA1;line.dashed {
+  class ClassA1
+  class ClassA2
+
+  ClassA1 -- ClassA2
+}
+
+package "<color #E6E6E7><i>Package B</i></color>" <<Cloud>> #561D5E|191C1F;line:E6E6E7;line.bold {
+  class ClassB1
+}
+
+ClassA1 - ClassB1
+
+@enduml
+```
+
+![Packages With All Properties](../../../../.gitbook/assets/Organization09\_package\_all\_properties.png)
+
+## Namespaces
+
+Namespaces are similar to packages. However, namespaces allow multiple packages to contain classes with the same name. This is not possible with packages. Relationships between classes inside of namespaces must use fully qualified names for the classes in the form of **namespace\_name**.**class\_name.**
+
+Namespaces do not have as many properties as packages.
+
+#### Example: Namespace Declaration
+
+```
+@startuml
+'Example: Namespace Declaration
+
+'Create a namespace with a name and a class.
+namespace Home1 {
+  class Resident
+}
+
+'Create a second namespace with a different name and an identically named class.
+namespace Home2 {
+  class Resident
+}
+
+'Create a relationship between the two identically named classes.
+Home1.Resident - Home2.Resident
+
+@enduml
+```
+
+![](../../../../.gitbook/assets/Organization09\_namespace.png)
+
+### Name
+
+The **name** is text that appears in the head of the package. The **name** must be a single word without spaces or special characters other than creole characters for underlining. Single word supports creole syntax for underlining however those creole characters are officially part of the **name**. See [Text Formatting](../text-formatting.md) for a list of creole.
+
+#### Example: Namespace Name
+
+```
+@startuml
+'Example: Namespace Names
+
+'Create a namespace with a name and a class.
+namespace Home1 {
+  class Resident
+}
+
+'Create a second namespace with a different name and an identically named class.
+'Use creole to underline the name.
+namespace __Home2__ {
+  class Resident
+}
+
+'Create a relationship between the two identically named classes.
+Home1.Resident - __Home2__.Resident
+
+@enduml
+```
+
+![Namespace Names](../../../../.gitbook/assets/Organization11\_namespace\_name.png)
+
+### Body Color
+
+The **body\_color** property determines the fill color of the drawn namespace entity. The **body\_color** is defined by a standard color name or hex code. Create a gradient by using two colors. This property must come after a hash (**#**) sign and touch the hash sign.
+
+#### Example: Namespace Body Color
+
+```
+@startuml
+'Example: Namespace Body Color
+
+'Create a namespace with a name and a class.
+'Add a body_color.
+namespace Home1 #E6E6E7{
+  class Resident
+}
+
+'Create a second namespace with a different name and an identically named class.
+'Use a gradient for the body color.
+namespace Home2 #E6E6E7/561D5E {
+  class Resident
+}
+
+'Create a relationship between the two identically named classes.
+Home1.Resident - Home2.Resident
+
+@enduml
+```
+
+![Namespace Body Color](../../../../.gitbook/assets/Organization12\_namespace\_bodycolor.png)
+
+### Body
+
+The **body** of the namespace displays the classes that belong to the namespace. Classes that belong to the namespace should be written inside the **body** of the namespace. Relationships can be written inside or outside of the namespace **body**.&#x20;
 
 ## Visibility
 
