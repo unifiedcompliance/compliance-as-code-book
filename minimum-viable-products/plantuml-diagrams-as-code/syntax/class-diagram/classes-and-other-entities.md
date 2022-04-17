@@ -1,4 +1,4 @@
-# Classes and Other Elements
+# Classes and Other Entities
 
 Classes are the basic component of class diagrams. They describe the structure and features of the related objects on a class diagram.
 
@@ -360,7 +360,7 @@ class Store {
 @enduml
 ```
 
-![Class Body](../../../../.gitbook/assets/Classes13\_body.png)
+![Class Body](<../../../../.gitbook/assets/Classes13\_body (1).png>)
 
 ### With All Properties
 

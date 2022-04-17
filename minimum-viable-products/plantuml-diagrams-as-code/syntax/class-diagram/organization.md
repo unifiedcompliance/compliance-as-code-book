@@ -429,6 +429,102 @@ Home1.Resident - Home2.Resident
 
 The **body** of the namespace displays the classes that belong to the namespace. Classes that belong to the namespace should be written inside the **body** of the namespace. Relationships can be written inside or outside of the namespace **body**.&#x20;
 
+#### Example: Namespace Body
+
+```
+@startuml
+'Example: Namespace Body
+
+'Create a namespace with a name and two classes.
+'Create a relationship between the classes inside the namespace.
+namespace Home1 {
+  class Resident
+  class Owner
+
+'Create a relationship between both classes in this namespace.
+  Resident -- Owner
+}
+
+'Create a second namespace with a different name and one identically named class.
+namespace Home2 {
+  class Resident
+}
+
+'Create a relationship between the two identically named classes.
+Home1.Resident - Home2.Resident
+
+@enduml
+```
+
+![Name Space Body](../../../../.gitbook/assets/Organization13\_namespace\_body.png)
+
+### With All Properties
+
+#### Example: Namespace With All Properties
+
+```
+@startuml
+'Example: Namespace With All Properties
+
+namespace Home1 #E6E6E7{
+  class Resident
+  class Owner
+
+  Resident -- Owner
+}
+
+namespace Home2 #E6E6E7/561D5E{
+  class Resident
+}
+
+Home1.Resident - Home2.Resident
+
+@enduml
+```
+
+![Namespace With All Properties](../../../../.gitbook/assets/Organization14\_namespace\_all\_properties.png)
+
+### Automatic Namespace Creation
+
+You can create namespaces automatically with the **namespaceSeparator** setting. When activating the setting pick two special characters and those will be your separator. The example below recreates the example from the namespace **body** property.
+
+To turn off automatic namespace creation set the **namespaceSeparator** setting to "none".
+
+Note: The namespaceSeparator must be used to identify specific classes now, instead of the default period between namespace and class.
+
+#### Example: Automatic Namespace Creation
+
+```
+@startuml
+'Example: Automatic Namespace Creation
+
+'Designate a namespaceSeparator.
+set namespaceSeparator ::
+
+'Create a namespace with two classes.
+class Home1::Resident
+class Home1::Owner
+
+'Create a relationship between both classes in this namespace.
+Home1::Resident -- Home1::Owner
+
+'Create a second namespace with one identically named class.
+class Home2::Resident
+
+'Create a relationship between the two identically named classes.
+Home1::Resident - Home2::Resident
+
+'Turn off automatic namespace creation.
+set namespaceSeparator none
+
+'Try to create another namespace and class similar to the previous namespaces and classes.
+class Home3::Resident
+
+@enduml
+```
+
+![Automatic Namespace Creation](../../../../.gitbook/assets/Organization15\_namespace\_automation.png)
+
 ## Visibility
 
 Hide and Show specifics
