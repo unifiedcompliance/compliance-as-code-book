@@ -527,13 +527,91 @@ class Home3::Resident
 
 ## Visibility
 
-Hide and Show specifics
+There are three ways to affect the visibility of entities in a class diagram.&#x20;
 
-Hide and Show members
+* hide - hides parts of the class diagram
+* remove - removes parts from the class diagram
+* show - shows a part of a class that might otherwise be hidden
 
-remove classes
+### Hide Classes
 
-remove unlinked
+You can hide parts of the class diagram. This prevents them from displaying but they will still take up space on the diagram.
+
+Note: We will be changing the background color to more easily track the size of the diagram. Skin parameters will be covered in their own section.
+
+#### Example: Hidden Classes
+
+```
+@startuml
+'Example: Four Classes
+skinparam BackgroundColor #E6E6E7
+
+'Create four classes, each with a method and a property.
+class Class1 {
+  Method_1()
+  Property_1
+}
+
+class Class2 {
+  Method_2()
+  Property_2
+}
+
+class Class3 {
+  Method_3()
+  Property_3
+}
+
+class Class4 {
+  Method_4()
+  Property_4
+}
+
+@enduml
+```
+
+![Four Classes](../../../../.gitbook/assets/Organization16\_1\_hide.png)
+
+In the following code we will hide Class2 and Class4. Notice how the size of the diagram does not change.
+
+```
+@startuml
+'Example: Two Hidden Classes
+skinparam BackgroundColor #E6E6E7
+
+'Create four classes, each with a method and a property.
+class Class1 {
+  Method_1()
+  Property_1
+}
+
+class Class2 {
+  Method_2()
+  Property_2
+}
+
+class Class3 {
+  Method_3()
+  Property_3
+}
+
+class Class4 {
+  Method_4()
+  Property_4
+}
+
+'Hide Class2 and Class4.
+hide Class2
+hide Class4
+
+@enduml
+```
+
+![Two Hidden Classes](../../../../.gitbook/assets/Organization16\_2\_hide.png)
+
+### Hide Other Entities
+
+You can use hide on smaller pieces of the class diagram like relationships, attributes, methods, and class header circles.
 
 ## Class Position
 

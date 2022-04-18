@@ -6,7 +6,7 @@ The class **body** contains the  attributes and methods of the class. These are 
 
 Attributes and methods are declared with an **asset\_type** followed by **text**. Notice how the method text is placed in the lower portion of the class body even though it is above the attribute text in the code.
 
-#### Example: Declaring Attributes and Method
+#### Example: Declaring Attributes and Methods
 
 ```
 @startuml
