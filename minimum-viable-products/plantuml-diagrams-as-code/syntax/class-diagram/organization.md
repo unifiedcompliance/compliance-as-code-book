@@ -527,103 +527,253 @@ class Home3::Resident
 
 ## Visibility
 
-There are three ways to affect the visibility of entities in a class diagram.&#x20;
+There are three ways to affect the visibility of entities in a class diagram. PlantUML adjusts visibility from the top down. This allows you to hide a large unneeded portion of the diagram and just show what you need.
 
-* hide - hides parts of the class diagram
-* remove - removes parts from the class diagram
+* hide - hides parts of the class diagram, the parts still take up space in the diagram
 * show - shows a part of a class that might otherwise be hidden
+* remove - removes parts from the class diagram, they no longer take up space
 
-### Hide Classes
+#### Example: Visibility Starting Point
 
-You can hide parts of the class diagram. This prevents them from displaying but they will still take up space on the diagram.
+Use the following code as the starting point for the rest of the visibility examples.
 
 Note: We will be changing the background color to more easily track the size of the diagram. Skin parameters will be covered in their own section.
 
-#### Example: Hidden Classes
-
 ```
 @startuml
-'Example: Four Classes
+'Example: Visibility Starting Point
 skinparam BackgroundColor #E6E6E7
 
-'Create four classes, each with a method and a property.
-class Class1 {
+class Class1 <<Top>> {
   Method_1()
   Property_1
 }
 
-class Class2 {
-  Method_2()
-  Property_2
-}
+interface Interface2 <<Top>>
 
 class Class3 {
   Method_3()
   Property_3
 }
 
-class Class4 {
-  Method_4()
-  Property_4
-}
+enum Enum4
+
+Class1 -  Interface2
+Class1 -- Class3
 
 @enduml
 ```
 
-![Four Classes](../../../../.gitbook/assets/Organization16\_1\_hide.png)
+![Visibility Starting Point](../../../../.gitbook/assets/Organization16\_1\_hide.png)
 
-In the following code we will hide Class2 and Class4. Notice how the size of the diagram does not change.
+### Hiding Showing and Removing Classes
+
+You can change the visibility of a class by following the key word with the class **name**. You can change the visibility of several classes at a time by replacing the class name with a **stereotype**.
+
+#### Example: Hiding, Showing, and Removing Classes
+
+Notice how the below code leaves space for Interface2 because it is only hidden. However the part of the diagram containing Class3 is completely removed because we removed Class3.
 
 ```
 @startuml
-'Example: Two Hidden Classes
+'Example: Hiding Showing and Removing Classes
 skinparam BackgroundColor #E6E6E7
 
-'Create four classes, each with a method and a property.
-class Class1 {
+class Class1 <<Top>> {
   Method_1()
   Property_1
 }
 
-class Class2 {
-  Method_2()
-  Property_2
-}
+interface Interface2 <<Top>>
 
 class Class3 {
   Method_3()
   Property_3
 }
 
-class Class4 {
-  Method_4()
-  Property_4
-}
+enum Enum4
 
-'Hide Class2 and Class4.
-hide Class2
-hide Class4
+Class1 -  Interface2
+Class1 -- Class3
+
+'Hide all <<Top> stereotypes.
+hide <<Top>>
+
+'Unhide or show Class1.
+show Class1
+
+'Remove Class3.
+remove Class3
 
 @enduml
 ```
 
-![Two Hidden Classes](../../../../.gitbook/assets/Organization16\_2\_hide.png)
+![Hiding Showing and Removing Classes](<../../../../.gitbook/assets/Organization16\_2\_hide (1).png>)
 
-### Hide Other Entities
+### Hiding and Showing Parts of Classes
 
-You can use hide on smaller pieces of the class diagram like relationships, attributes, methods, and class header circles.
+You can adjust visibility on parts of classes by placing their property type after the visibility keyword. The following items are adjustable. You can be specify which class to adjust if you place the **name** or **stereotype** of the class before the property type.
 
-## Class Position
+* **members** - this will adjust visibility of all fields, attributes and methods
+* **fields** or **attributes** - this will adjust visibility of all fields and attributes
+* **methods** - this will adjust visibility of all methods
+* **circle** - this will adjust the visibility of spots in the class heads
+* **stereotype** - this will adjust the visibility of stereotypes in the class head
 
-show bad position
+#### Example: Hiding and Showing Parts of Classes
 
-show good position
+```
+@startuml
+'Example: Hiding and Showing Parts of Classes
+skinparam BackgroundColor #E6E6E7
 
-show good position with hidden connections
+class Class1 <<Top>> {
+  Method_1()
+  Property_1
+}
+
+interface Interface2 <<Top>>
+
+class Class3 {
+  Method_3()
+  Property_3
+}
+
+enum Enum4
+
+Class1 -  Interface2
+Class1 -- Class3
+
+'Hide all fields, attributes, and methods.
+hide members
+
+'Hide the spots in all "Top" stereotypes.
+hide <<Top>> circle
+
+'Show the methods for Class1.
+show Class1 methods
+
+@enduml
+```
+
+![Hiding and Showing Parts of Classes](../../../../.gitbook/assets/Organization16\_3\_hide.png)
+
+### Hiding and Removing Empty and Unlinked Entities
+
+By adding the keywords "empty" and "@unlinked" you can hide or remove unneeded entities from the class diagram.
+
+#### Example: Empty and Unlinked Entities
+
+```
+@startuml
+'Example: Empty and Unlinked Entities
+skinparam BackgroundColor #E6E6E7
+
+class Class1 <<Top>> {
+  Method_1()
+  Property_1
+}
+
+interface Interface2 <<Top>>
+
+class Class3 {
+  Method_3()
+  Property_3
+}
+
+enum Enum4
+
+Class1 -  Interface2
+Class1 -- Class3
+
+'Hide all empty fields, attributes, and methods.
+hide empty members
+
+'Remove all classes that do not have any relationships.
+remove @unlinked
+
+@enduml
+```
+
+![Empty and Unlinked Entities](../../../../.gitbook/assets/Organization16\_4\_hide.png)
+
+### Positioning Classes With Hidden Relationships
+
+You can hide relationships with the key word "hidden". In the example [Visibility Starting Point](organization.md#example-visibility-starting-point) Enum4 sticks out to the right. This makes the diagram wider than is needed. You can manually move it under Interface2 by creating a relationship between them and then hiding the relationship.
+
+#### Example: Class Positioned With Hidden Relationship
+
+```
+@startuml
+'Example: Class Positioned With Hidden Relationship
+skinparam BackgroundColor #E6E6E7
+
+class Class1 <<Top>> {
+  Method_1()
+  Property_1
+}
+
+interface Interface2 <<Top>>
+
+class Class3 {
+  Method_3()
+  Property_3
+}
+
+enum Enum4
+
+Class1 -  Interface2
+Class1 -- Class3
+
+'Use a hidden relationship to place Enum4 under Interface2.
+Interface2 -[hidden]- Enum4
+
+@enduml
+```
+
+![Class Positioned With Hidden Relationship](../../../../.gitbook/assets/Organization16\_5\_position\_with\_hidden.png)
 
 ## Page Breaks
 
-Take biggest previous picture and split into 6
+If you need to split a diagram into multiple pages use the command "page" followed by the number of pages you want. The page number format is HxV where H is the number of pages horizontally and V is the number of pages vertically.&#x20;
 
-\[ ]\[ ]\[ ]\
-\[ ]\[ ]\[ ]
+When the images are generated they will be created from top to bottom and then left to right. A "page 3x2" named "Diagram" will produce six images with the below names that should be placed in the below order.
+
+|            |            |            |
+| ---------- | ---------- | ---------- |
+| Diagram    | Diagram\_2 | Diagram\_4 |
+| Diagram\_1 | Diagram\_3 | Diagram\_5 |
+
+#### &#x20;Example: Page Breaks 3x2
+
+```
+@startuml
+'Example: Page Breaks 3x2
+skinparam BackgroundColor #E6E6E7
+
+class Class1 <<Top>> {
+  Method_1()
+  Property_1
+}
+
+interface Interface2 <<Top>>
+
+class Class3 {
+  Method_3()
+  Property_3
+}
+
+enum Enum4
+
+Class1 -  Interface2
+Class1 -- Class3
+
+'Break the diagram into three columns and two rows.
+page 3x2
+
+@enduml
+```
+
+![](../../../../.gitbook/assets/Organization17\_page\_break.png) ![](../../../../.gitbook/assets/Organization17\_page\_break\_002.png) ![](../../../../.gitbook/assets/Organization17\_page\_break\_004.png)
+
+![](../../../../.gitbook/assets/Organization17\_page\_break\_001.png) ![Page Breaks 3x2](../../../../.gitbook/assets/Organization17\_page\_break\_003.png) ![](../../../../.gitbook/assets/Organization17\_page\_break\_005.png)
