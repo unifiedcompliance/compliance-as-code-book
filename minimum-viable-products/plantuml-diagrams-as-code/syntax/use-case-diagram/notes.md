@@ -25,7 +25,7 @@ note right of Zarek: Note Text
 @enduml
 ```
 
-![Note Declaration](../../../../.gitbook/assets/Notes01\_declaration.png)
+![Note Declaration](<../../../../.gitbook/assets/Notes01\_declaration (1).png>)
 
 ## Properties
 

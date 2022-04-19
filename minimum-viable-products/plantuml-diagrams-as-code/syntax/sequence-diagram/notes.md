@@ -30,7 +30,7 @@ Zarek <-- Sean : Text
 @enduml
 ```
 
-![Note Declaration](<../../../../.gitbook/assets/Notes01\_declaration (1).png>)
+![Note Declaration](<../../../../.gitbook/assets/Notes01\_declaration (1) (1).png>)
 
 ## Properties
 
