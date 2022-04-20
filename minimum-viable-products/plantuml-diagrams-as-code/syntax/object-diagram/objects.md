@@ -139,7 +139,7 @@ object "<color:#E6E6E7><i>My Object</i></color>" as MO <<A **Stereotype**>> #009
 
 ![Object With All Properties](../../../../.gitbook/assets/Objects007\_all\_props.png)
 
-## Fields
+### Fields
 
 There are two ways to add fields to the **body** of an object. One is by listing the field inside the body of the object when the object is created. The other is by assigning the field to the object by using the object **name** or **alias**. Quotation marks are not required for multi-word fields.&#x20;
 
@@ -175,3 +175,50 @@ MOO : The //Final// Field
 ```
 
 ![Adding Fields](<../../../../.gitbook/assets/Objects08\_fields (1).png>)
+
+## Map Table or Associative Array
+
+The map table or associative array is a special type of object that holds a table or array in the body. It contains all of the same properties as a standard object. The only difference is the structure of the fields or cells.
+
+#### Example: Map Table With All Properties
+
+```
+@startuml
+'Example: Map Table With All Properties
+
+map "<color:#E6E6E7><i>My Map Table</i></color>" as MT <<A **Stereotype**>> #009EA1 {
+ cell_1 => cell_2 
+}
+
+@enduml
+```
+
+![Map Table With All Properties](../../../../.gitbook/assets/MapArray01declaration.png)
+
+### Cells
+
+Cells work similar to fields but they have an arrow in the middle of them. The arrow separates the line into two cells in the map table. Cells also support creole and markup like fields. When formatting cell text, treat each side of the arrow separately.
+
+#### Example: Adding Cells
+
+```
+@startuml
+'Example: Adding Cells
+
+map MapTable {
+    cell_1 => cell_2
+
+}
+
+map "My Map Table" as MT {
+    <color:#561D5E><i>cell_1</i></color> => **cell_2**
+}
+
+MapTable : cell_3 => cell_4
+
+MT : <color:#561D5E><b>cell_3</b></color> => <color:#009EA1><b>cell_5</b></color>
+
+@enduml
+```
+
+![Adding Cells](../../../../.gitbook/assets/MapArray02\_cells.png)
