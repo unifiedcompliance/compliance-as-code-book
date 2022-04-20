@@ -1,6 +1,8 @@
 # Relations and Associations
 
-Relations
+## Relations
+
+Relations show a link between objects.
 
 Associations
 

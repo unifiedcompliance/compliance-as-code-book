@@ -30,7 +30,7 @@ Car - Wheel
 
 ## Parts of Relationships
 
-Classes are comprised of three parts. Label is the only optional part.
+Relationships are comprised of three parts. Label is the only optional part.
 
 * **entity** - the object for which a relationship can be described in a class diagram, must have at least two
 * **connection** - visual description of the relationship between entities

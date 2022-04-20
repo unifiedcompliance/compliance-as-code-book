@@ -55,7 +55,6 @@
         * [Notes](minimum-viable-products/plantuml-diagrams-as-code/syntax/class-diagram/notes.md)
       * [Object Diagram](minimum-viable-products/plantuml-diagrams-as-code/syntax/object-diagram/README.md)
         * [Objects](minimum-viable-products/plantuml-diagrams-as-code/syntax/object-diagram/objects.md)
-        * [Map Table or Associative Array](minimum-viable-products/plantuml-diagrams-as-code/syntax/object-diagram/map-table-or-associative-array.md)
         * [Relations and Associations](minimum-viable-products/plantuml-diagrams-as-code/syntax/object-diagram/relations-and-associations.md)
         * [Organization](minimum-viable-products/plantuml-diagrams-as-code/syntax/object-diagram/organization.md)
         * [Notes](minimum-viable-products/plantuml-diagrams-as-code/syntax/object-diagram/notes.md)
