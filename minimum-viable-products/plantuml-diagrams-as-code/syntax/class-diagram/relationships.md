@@ -38,7 +38,7 @@ Relationships are comprised of three parts. Label is the only optional part.
 
 ## Entities
 
-The connected entity can be a class, attribute, or method. Classes are defined by their **name**. Attributes and methods are defined by the class **name** that contains them followed by two semicolons (::) and the attribute or method **text**.
+The connected entity can be a class, attribute, or method. Classes are defined by their **name**. Attributes and methods are defined by the class **name** that contains them followed by two colons (::) and the attribute or method **text**.
 
 * class
 * attribute
@@ -71,7 +71,7 @@ Car::axle - Wheel
 
 ![Relationship Entities](../../../../.gitbook/assets/Relationships02\_entities.png)
 
-## Label
+## Labels
 
 Though it comes last in syntax we will explain **label** before **connection**. This is a purely aesthetic issue. While **label** is not required much of the **connection** is drawn poorly if there is no **label**. It gets squished together.
 
@@ -148,7 +148,7 @@ Car::axle - Wheel : > has
 
 ![Read Direction](../../../../.gitbook/assets/Relationships03\_label.png)
 
-## Connection
+## Connections
 
 The connection is the line between the entities. It can carry a lot of information. The only required portion of the connection is the dash (-) between the entities.
 
