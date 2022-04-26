@@ -153,7 +153,7 @@ Car::axle - Wheel : > has
 The connection is the line between the entities. It can carry a lot of information. The only required portion of the connection is the dash (-) between the entities.
 
 * **multiplicity** - defines number relationships between the entities, one may be on each end of the connection
-* **arrow\_head** - determines the shape of the arrow head, one may be on each end of the connection
+* **arrowhead** - determines the shape of the arrow head, one may be on each end of the connection
 * **line\_type** - determines the type of line between the **entities**
 * **line\_orientation** - determines the direction of the second entity in relation to the first entity
 * **line\_color** - determines the color of the line making the connection
@@ -234,7 +234,7 @@ Class Left
 Class Up
 Class Down
 
-'Creat relationships that point in all four directions.
+'Create relationships that point in all four directions.
 'Use the default method.
 Center - Right
 Left - Center
@@ -373,7 +373,6 @@ Car -[thickness=8]- Driver
 @startuml
 'Example: Relationships With All Properties
 
-'Create three classes
 class Car
 class Wheel
 class Fuel
