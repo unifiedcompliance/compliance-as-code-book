@@ -346,4 +346,155 @@ You can adjust visibility on parts of classes by placing their property type aft
 
 #### Example: Hiding and Showing Parts of Objects
 
-## Page Breaks?
+```
+@startuml
+'Example: Hiding and Showing Parts of Objects
+skinparam BackgroundColor #E6E6E7
+
+object Object1 <<Top>> {
+  Field_1
+  Field_2
+}
+
+object Object2 <<Top>>
+
+object Object3 {
+  Field_3
+  Field_4
+}
+
+object Object4
+
+Object1 -  Object2
+Object1 -- Object3
+
+'Hide all fields.
+hide fields
+
+'Hide the stereotype in all "Top" stereotypes.
+hide <<Top>> stereotype
+
+'Show the fields for Object1.
+show Object1 fields
+
+@enduml
+```
+
+![Hiding and Showing Parts of Objects](../../../../.gitbook/assets/Organization09\_3\_hide.png)
+
+### Hiding and Removing Unlinked Objects
+
+By adding the keyword "@unlinked" you can hide or remove unneeded entities from the class diagram.
+
+#### Example: Hiding and Removing Unlinked Objects
+
+```
+@startuml
+'Example: Hiding and Removing Unlinked Objects
+skinparam BackgroundColor #E6E6E7
+
+object Object1 <<Top>> {
+  Field_1
+  Field_2
+}
+
+object Object2 <<Top>>
+
+object Object3 {
+  Field_3
+  Field_4
+}
+
+object Object4
+
+Object1 -  Object2
+Object1 -- Object3
+
+'Remove all objects that do not have any relations.
+remove @unlinked
+
+@enduml
+```
+
+![Hiding and Removing Unlinked Objects](../../../../.gitbook/assets/Organization09\_4\_hide.png)
+
+### Positioning Object With Hidden Relation
+
+You can hide relations with the key word "hidden". In the example [Visibility Starting Point](organization.md#example-visibility-starting-point) Object4 sticks out to the right. This makes the diagram wider than is needed. You can manually move it under Object2 by creating a relation between them and then hiding the relation.
+
+#### Example: Positioning Object With Hidden Relation
+
+```
+@startuml
+'Example: Positioning Object With Hidden Relation
+skinparam BackgroundColor #E6E6E7
+
+object Object1 <<Top>> {
+  Field_1
+  Field_2
+}
+
+object Object2 <<Top>>
+
+object Object3 {
+  Field_3
+  Field_4
+}
+
+object Object4
+
+Object1 -  Object2
+Object1 -- Object3
+
+'Use a hidden relation to place Object4 under Object2.
+Object2 -[hidden]- Object4
+
+@enduml
+```
+
+![Positioning Object With Hidden Relation](../../../../.gitbook/assets/Organization09\_5\_hide.png)
+
+## Page Breaks
+
+If you need to split a diagram into multiple pages use the command "page" followed by the number of pages you want. The page number format is HxV where H is the number of pages horizontally and V is the number of pages vertically.&#x20;
+
+When the images are generated they will be created from top to bottom and then left to right. A "page 3x2" named "Diagram" will produce six images with the below names that should be placed in the below order.
+
+|            |            |            |
+| ---------- | ---------- | ---------- |
+| Diagram    | Diagram\_2 | Diagram\_4 |
+| Diagram\_1 | Diagram\_3 | Diagram\_5 |
+
+#### &#x20;Example: Page Breaks 3x2
+
+```
+@startuml
+'Example: Page Breaks 3x2
+skinparam BackgroundColor #E6E6E7
+
+object Object1 <<Top>> {
+  Field_1
+  Field_2
+}
+
+object Object2 <<Top>>
+
+object Object3 {
+  Field_3
+  Field_4
+}
+
+object Object4
+
+Object1 -  Object2
+Object1 -- Object3
+
+'Break the diagram into three columns and two rows.
+page 3x2
+
+@enduml
+```
+
+![](../../../../.gitbook/assets/Organization10\_page\_breaks.png) ![](../../../../.gitbook/assets/Organization10\_page\_breaks\_002.png) ![](../../../../.gitbook/assets/Organization10\_page\_breaks\_004.png)
+
+![](../../../../.gitbook/assets/Organization10\_page\_breaks\_001.png) ![Page Breaks 3x2](../../../../.gitbook/assets/Organization10\_page\_breaks\_003.png) ![](../../../../.gitbook/assets/Organization10\_page\_breaks\_005.png)

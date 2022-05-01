@@ -214,7 +214,7 @@ end note
 @enduml
 ```
 
-![Note Text](../../../../.gitbook/assets/Notes05\_text.png)
+![Note Text](<../../../../.gitbook/assets/Notes05\_text (1).png>)
 
 ## Images In Notes
 

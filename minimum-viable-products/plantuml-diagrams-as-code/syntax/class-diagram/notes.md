@@ -1,6 +1,6 @@
 # Notes
 
-Notes give you the ability to digitally stick notes onto your use class diagram.
+Notes give you the ability to digitally stick notes onto your class diagram.
 
 ## Declaration
 
@@ -26,6 +26,7 @@ class Class2 {
 'Create a relationship between the two classes.
 Class1 -> Class2 : A Relationship
 
+'Create a note.
 note left of Class1 : A Note
 
 @enduml
@@ -87,7 +88,7 @@ note bottom of Class2 : Yet Another Note
 @enduml
 ```
 
-![Note Orientation](../../../../.gitbook/assets/Notes02\_orientation.png)
+![Note Orientation](<../../../../.gitbook/assets/Notes02\_orientation (1).png>)
 
 ### Anchor
 
@@ -138,7 +139,7 @@ end note
 @enduml
 ```
 
-![Note Anchors](../../../../.gitbook/assets/Notes03\_anchors.png)
+![Note Anchors](<../../../../.gitbook/assets/Notes03\_anchors (1).png>)
 
 ### Fill Color
 
@@ -216,7 +217,7 @@ Class1 --> Class2 : A Relationship
 note left of Class1 : **A Note**
 
 'Create a multiline note on the previous relationship.
-'Use markup for color and emphais.
+'Use markup for color and emphasis.
 note on link 
   <color #576065>Another</color>
   <i>Note</i>
@@ -225,7 +226,7 @@ end note
 @enduml
 ```
 
-![Note Text](<../../../../.gitbook/assets/Notes05\_text (1).png>)
+![Note Text](<../../../../.gitbook/assets/Notes05\_text (1) (1).png>)
 
 ### With All Properties
 
@@ -258,7 +259,7 @@ end note
 @enduml
 ```
 
-![](../../../../.gitbook/assets/Notes06\_all\_properties.png)
+![Notes With All Properties](<../../../../.gitbook/assets/Notes06\_all\_properties (1).png>)
 
 
 
@@ -321,7 +322,7 @@ Class2 .. noteAlias_1
 @enduml
 ```
 
-![Attached Notes](../../../../.gitbook/assets/Notes07\_attached\_notes.png)
+![Attached Notes](<../../../../.gitbook/assets/Notes07\_attached\_notes (1).png>)
 
 ### Fill Color
 
@@ -369,4 +370,4 @@ Class2 .. noteAlias_1
 @enduml
 ```
 
-![Attached Notes Color](../../../../.gitbook/assets/Notes08\_attached\_notes\_color.png)
+![Attached Notes Color](<../../../../.gitbook/assets/Notes08\_attached\_notes\_color (1).png>)
