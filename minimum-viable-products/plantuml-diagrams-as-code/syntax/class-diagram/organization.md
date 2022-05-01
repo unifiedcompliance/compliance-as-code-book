@@ -150,6 +150,8 @@ package "<color #561D5E><i>Package 2</i></color>" {
 
 The **type** is set immediately after the **name,** wrapped in a double set of less than and greater than signs. There are six package **types**. The default package **type** is a folder.
 
+#### Example: Package Types
+
 ```
 'Example: Package Types
 
@@ -214,7 +216,7 @@ package Package2 #009EA1/white {
 
 ### Line Color
 
-The **line\_color** property determines the color of the line that draws the box of the class. The **line\_color** is defined by a standard color name or hex code. Create a gradient by using two colors. If you use this property _alone_ it must come after a hash (**#**) sign and touch the hash sign. If any other properties follow this place a semicolon (**;**) between them. No spaces are needed.
+The **line\_color** property determines the color of the line that draws the box of the package. The **line\_color** is defined by a standard color name or hex code. Create a gradient by using two colors. If you use this property _alone_ it must come after a hash (**#**) sign and touch the hash sign. If any other properties follow this place a semicolon (**;**) between them. No spaces are needed.
 
 Note: **Line\_color** gradients do not perform well on packages. They only affect the line under the package **name**.
 
@@ -568,7 +570,7 @@ Class1 -- Class3
 
 ### Hiding Showing and Removing Classes
 
-You can change the visibility of a class by following the key word with the class **name**. You can change the visibility of several classes at a time by replacing the class name with a **stereotype**.
+You can change the visibility of a class by following the key word with the class **name**. You can change the visibility of several classes at a time by replacing the class **name** with a **stereotype**.
 
 #### Example: Hiding, Showing, and Removing Classes
 
