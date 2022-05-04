@@ -32,7 +32,7 @@ object MyObject
 
 ### Name
 
-The **name** is text that appears in the head of the objectr. The **name** can be a single word without quotation marks or it can be a string with quotation marks. The string method supports emphasis with creole and markup language. The string method also supports colors with markup language. You can define colors with a standard color name or hex code. See [Text Formatting](../text-formatting.md) for a list of creole and markup options.
+The **name** is text that appears in the head of the object. The **name** can be a single word without quotation marks or it can be a string with quotation marks. The string method supports emphasis with creole and markup language. The string method also supports colors with markup language. You can define colors with a standard color name or hex code. See [Text Formatting](../text-formatting.md) for a list of creole and markup options.
 
 Note: if you use the string method you _must_ assign an **alias** to the object.
 
@@ -222,3 +222,4 @@ MT : <color:#561D5E><b>cell_3</b></color> => <color:#009EA1><b>cell_5</b></color
 ```
 
 ![Adding Cells](../../../../.gitbook/assets/MapArray02\_cells.png)
+
