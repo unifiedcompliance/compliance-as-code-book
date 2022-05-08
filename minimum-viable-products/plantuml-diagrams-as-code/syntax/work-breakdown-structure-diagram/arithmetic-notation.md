@@ -190,7 +190,7 @@ Note: **fill\_color** can not be used in conjunction with a false **box** node.
 
 **Text** supports emphasis with creole and markup language. It also supports colors with markup language. You can define colors with a standard color name or hex code. See [Text Formatting](../text-formatting.md) for a list of creole and markup options.
 
-You can create multiline text contained by a colon (:) and semicolon (;). All empty space between the colon and semicolon will be displayed in the **text**.
+You can create multiline text by using line breaks (\n).
 
 Node **text** also support icons from OpenIconic.
 
