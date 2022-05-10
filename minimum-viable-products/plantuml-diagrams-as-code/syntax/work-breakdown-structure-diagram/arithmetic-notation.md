@@ -8,7 +8,7 @@ Work Breakdown Structure Diagrams are created with nodes. Position of those node
 
 ## Node Declaration
 
-The basic node is declared by an asterisk followed by the text you wish to appear in the node.
+The basic node is declared by a plus sign followed by the text you wish to appear in the node.
 
 #### Example: Node Declaration
 
@@ -17,7 +17,7 @@ The basic node is declared by an asterisk followed by the text you wish to appea
 'Example: Node Declaration
 
 'Create a basic node.
-* Top
++ Top
 
 @endwbs
 ```
@@ -37,9 +37,7 @@ Nodes have six properties. The only required properties are the **depth** and **
 
 ### Depth
 
-Depth determines how far down the diagram a node appears. It is represented by a number of asterisks equal to the node's depth. The node will appear in a branch beneath the most recent node of one less depth.&#x20;
-
-Empty space before the **depth** asterisk will cause an error. Spaces before the **text** are ignored. This makes code organization a little tricky but can be performed by adding tabs or spaces in front of the text.
+Depth determines how far down the diagram a node appears. It is determined by the number of spaces that precede the plus sign. The number of spaces is equal to the node's depth. The node will appear in a branch beneath the most recent node of one less depth. Spaces before the **text** are ignored.&#x20;
 
 #### Example: Node Depth
 
@@ -48,24 +46,24 @@ Empty space before the **depth** asterisk will cause an error. Spaces before the
 'Example: Node Depth
 
 'Create a top level node.
-* Top Depth 0
++ Top Depth 0
 
 'Create a node at a depth of one.
-**  1st Branch Depth 1
+ + 1st Branch Depth 1
 
 'Create two nodes at a depth of two.
-***     A Depth 2
-***     B Depth 2
+  + A Depth 2
+  + B Depth 2
 
 'Repeat the 2nd and 3rd step.
-**  2nd Branch Depth 1
-***     C Depth 2
-***     D Depth 2
+ + 2nd Branch Depth 1
+  + C Depth 2
+  + D Depth 2
 
 'Repeat the 2nd and 3rd step.
-**  3rd Branch Depth 1
-***     E Depth 2
-***     F Depth 2
+ + 3rd Branch Depth 1
+  + E Depth 2
+  + F Depth 2
 
 @endwbs
 ```
@@ -74,7 +72,7 @@ Empty space before the **depth** asterisk will cause an error. Spaces before the
 
 ### Direction
 
-Replacing an asterisk with a dash will cause the node to move to the left of its branch. If this is done to multiple nodes they will be moved in order. We can show this by adding dashes to the previous depth diagram.
+Replacing a plus sign with a minus sign will cause the node to move to the left of its branch. If this is done to multiple nodes they will be moved in order. We can show this by adding minus signs to the previous depth diagram.
 
 #### Example: Node Direction
 
@@ -83,26 +81,26 @@ Replacing an asterisk with a dash will cause the node to move to the left of its
 'Example: Node Direction
 
 'Create a top level node.
-* Top Depth 0
++ Top Depth 0
 
 'Create a node at a depth of one.
-**  1st Branch Depth 1
+ + 1st Branch Depth 1
 
 'Create two nodes at a depth of two.
-***     A Depth 2
-***     B Depth 2
+  + A Depth 2
+  + B Depth 2
 
 'Repeat the 2nd and 3rd step.
-'Replace an asterisk (*) with a dash (-) at Depth 1.
-*-  2nd Branch Depth 1
-***     C Depth 2
-***     D Depth 2
+'Replace a plus sign (+) with a minus sign (-) at Depth 1.
+ - 2nd Branch Depth 1
+  + C Depth 2
+  + D Depth 2
 
 'Repeat the 2nd and 3rd step.
-'Replace an asterisk (*) with a dash (-) at Depth 2.
-**  3rd Branch Depth 1
-***     E Depth 2
-**-     F Depth 2
+'Replace a plus sign (+) with a minus sign (-) at Depth 2.
+ + 3rd Branch Depth 1
+  + E Depth 2
+  - F Depth 2
 
 @endwbs
 ```
@@ -111,7 +109,7 @@ Replacing an asterisk with a dash will cause the node to move to the left of its
 
 ### Boxes
 
-Every node has a boolean option determining if the node is contained within a **box**. The default is true. In order to remove the **box** you can place an underscore at the end of any depth property. This underscore is in addition to asterisks and dashes. It is not a replacement.
+Every node has a boolean option determining if the node is contained within a **box**. The default is true. In order to remove the **box** you can place an underscore at the end of any depth property. This underscore is in addition to plus or minus signs. It is not a replacement.
 
 Note: **fill\_color** can not be used in conjunction with a false **box** node.
 
@@ -122,26 +120,26 @@ Note: **fill\_color** can not be used in conjunction with a false **box** node.
 'Example: Node Boxes
 
 'Create a top level node.
-* Top Depth 0
++ Top Depth 0
 
 'Create a node at a depth of one.
-**  1st Branch Depth 1
-
+ + 1st Branch Depth 1
+ 
 'Create two nodes at a depth of two.
-***     A Depth 2
-***     B Depth 2
+  + A Depth 2
+  + B Depth 2
 
 'Repeat the 2nd and 3rd step.
 'Remove the box from the node at depth 1 .
-**_ 2nd Branch Depth 1
-***     C Depth 2
-***     D Depth 2
+ +_ 2nd Branch Depth 1
+  + C Depth 2
+  + D Depth 2
 
 'Repeat the 2nd and 3rd step.
 'Remove the boxes from the nodes at depth 2.
-**  3rd Branch Depth 1
-***_    E Depth 2
-***_    F Depth 2
+ + 3rd Branch Depth 1
+  +_ E Depth 2
+  +_ F Depth 2
 
 @endwbs
 ```
@@ -161,25 +159,26 @@ Note: **fill\_color** can not be used in conjunction with a false **box** node.
 'Example: Node Fill Color
 
 'Create a top level node.
-* Top Depth 0
++ Top Depth 0
 
 'Create a node at a depth of one.
-**  1st Branch Depth 1
+ + 1st Branch Depth 1
+ 
 'Create two nodes at a depth of two.
-***     A Depth 2
-***     B Depth 2
+  + A Depth 2
+  + B Depth 2
 
 'Repeat the 2nd and 3rd step.
 'Add color to the node at depth 1 .
-**[#DarkCyan] 2nd Branch Depth 1
-***     C Depth 2
-***     D Depth 2
+ +[#DarkCyan] 2nd Branch Depth 1
+  + C Depth 2
+  + D Depth 2
 
 'Repeat the 2nd and 3rd step.
 'Add color to the nodes at depth 2.
-**  3rd Branch Depth 1
-***[#CD1E1E]    E Depth 2
-***[#561D5E]    F Depth 2
+ + 3rd Branch Depth 1
+  +[#CD1E1E] E Depth 2
+  +[#561D5E] F Depth 2
 
 @endwbs
 ```
@@ -201,30 +200,28 @@ Node **text** also support icons from OpenIconic.
 'Example: Node Text
 
 'Create a top level node.
-'Put and Icon in the text.
-* Top Depth 0 <&person>
+'Put an Icon in the text.
++ Top Depth 0 <&person>
 
 'Create a node at a depth of one.
-**  1st Branch Depth 1
+ + 1st Branch Depth 1
+
 'Create two nodes at a depth of two.
 'Use multiline text in one node.
-***:A 
-
-    Depth 
-2;
-***     B Depth 2
+  + A \nDepth \n2
+  + B Depth 2
 
 'Repeat the 2nd and 3rd step.
 'Add emphasis to the text at depth 1 using creole.
-**  **2nd Branch** //Depth 1//
-***     C Depth 2
-***     D Depth 2
+ + **2nd Branch** //Depth 1//
+  + C Depth 2
+  + D Depth 2
 
 'Repeat the 2nd and 3rd step.
 'Add color and emphasis to the text at depth 2.
-**  3rd Branch Depth 1
-***    <color:#CD1E1E><b>E Depth 2</b></color>
-***    F Depth 2
+ + 3rd Branch Depth 1
+  + <color:#CD1E1E><b>E Depth 2</b></color>
+  + F Depth 2
 
 @endwbs
 ```
@@ -252,25 +249,26 @@ wbsDiagram {
 </style>
 
 'Create a top level node.
-* Top Depth 0 
++ Top Depth 0 
 
 'Create a node at a depth of one.
-**  1st Branch Depth 1
+ + 1st Branch Depth 1
+ 
 'Create two nodes at a depth of two.
-***     A Depth 2
-***     B Depth 2
+  + A Depth 2
+  + B Depth 2
 
 'Repeat the 2nd and 3rd step.
 'Add a style label to the node at depth 1.
-**  2nd Branch Depth 1 <<style_label>>
-***     C Depth 2
-***     D Depth 2
+ + 2nd Branch Depth 1 <<style_label>>
+  + C Depth 2
+  + D Depth 2
 
 'Repeat the 2nd and 3rd step.
 'Add style labels to the node at depth 2.
-**  3rd Branch Depth 1
-***     E Depth 2 <<style_label>>
-***     F Depth 2 <<style_label>>
+ + 3rd Branch Depth 1
+  + E Depth 2 <<style_label>>
+  + F Depth 2 <<style_label>>
 
 @endwbs
 ```
@@ -293,22 +291,19 @@ wbsDiagram {
 }
 </style>
 
-* Top Depth 0 
++ Top Depth 0 
 
-**  1st Branch Depth 1
-**-_            A Depth 2
-***:B 
+ + 1st Branch Depth 1
+  -_ A Depth 2
+  + B \nDepth \n2 <<style_label>>
 
-    **Depth** 
-2; <<style_label>>
+ + 2nd Branch Depth 1 
+  -_ C Depth 2
+  +[#561D5E] <color:#E6E6E7><b>D Depth 2</b></color>
 
-**  2nd Branch Depth 1 
-**-_            C Depth 2
-***[#561D5E]    <color:#E6E6E7><b>D Depth 2</b></color>
-
-**  3rd Branch Depth 1
-**-_            E Depth 2
-***[#DarkCyan]  <color:#E6E6E7><b>F Depth 2</b></color>
+ + 3rd Branch Depth 1
+  -_ E Depth 2
+  +[#DarkCyan] <color:#E6E6E7><b>F Depth 2</b></color>
 
 @endwbs
 ```
