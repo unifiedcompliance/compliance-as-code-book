@@ -58,7 +58,7 @@ There’s where we are at, and where we want to be. Once we know what the proble
 
 ### The GRCSchema.org schema
 
-This schema is the structure you’ll need to understand going forward. This won’t be an _in-depth_ look at the schema, but rather an overview of the [key points](https://docs.grcschema.org)[\[2\]](broken-reference).
+This schema is the structure you’ll need to understand going forward. This won’t be an _in-depth_ look at the schema, but rather an overview of the [key points](https://docs.grcschema.org/)[\[2\]](broken-reference).
 
 ### The tools/methods for how to get there
 
@@ -66,10 +66,10 @@ Here’s where we turn the pains into pain relievers. Here is where we also add 
 
 ### The Styles
 
-Once we understand the schema and the tools, if necessary, we’ll also go through key points of the styles in question when working with this schema. Yes, styles are important. Much like the schema, we won’t go into depth about the styles, as those are covered [online](https://stylemanual.grcschema.org)[\[3\]](broken-reference). We’ll focus on _specific aspects_ we need to deal with now.
+Once we understand the schema and the tools, if necessary, we’ll also go through key points of the styles in question when working with this schema. Yes, styles are important. Much like the schema, we won’t go into depth about the styles, as those are covered [online](https://stylemanual.grcschema.org/)[\[3\]](broken-reference). We’ll focus on _specific aspects_ we need to deal with now.
 
 ## Footnotes
 
 1. &#x20;[https://www.strategyzer.com/business-model-canvas/value-propositions](https://www.strategyzer.com/business-model-canvas/value-propositions) [↑](broken-reference)
-2. &#x20;All schemas for GRCschema.org are presented in JSON-LD format at [https://grcschema.org](https://grcschema.org) and fully documented at [https://docs.grcschema.org](https://docs.grcschema.org). [↑](broken-reference)
-3. &#x20;The full style manual is found at [https://stylemanual.grcschema.org](https://stylemanual.grcschema.org). [↑](broken-reference)
+2. &#x20;All schemas for GRCschema.org are presented in JSON-LD format at [https://grcschema.org](https://grcschema.org/) and fully documented at [https://docs.grcschema.org](https://docs.grcschema.org/). [↑](broken-reference)
+3. &#x20;The full style manual is found at [https://stylemanual.grcschema.org](https://stylemanual.grcschema.org/). [↑](broken-reference)

@@ -32,7 +32,7 @@ An immense amount of research went into the publication of this content. The res
     IFLA Study Group on the Functional Requirements for Bibliographic Records. n.d. FUNCTIONAL REQUIREMENTS FOR BIBLIOGRAPHIC RECORDS. [https://www.ifla.org/files/assets/cataloguing/frbr/frbr\_2008.pdf](https://www.ifla.org/files/assets/cataloguing/frbr/frbr\_2008.pdf).
 
     Žumer, Maja. 2007. “Functional Requirements for Bibliographic Records: FRBR: The End of the Road or a New Beginning.” Bulletin of the American Society for Information Science and Technology 33 (6): 27–29. [https://doi.org/10.1002/bult.2007.1720330608](https://doi.org/10.1002/bult.2007.1720330608). ↩︎
-2.  “RDA Toolkit.” n.d. Accessed December 8, 2020. [https://www.rdatoolkit.org/](https://www.rdatoolkit.org).
+2.  “RDA Toolkit.” n.d. Accessed December 8, 2020. [https://www.rdatoolkit.org/](https://www.rdatoolkit.org/).
 
     “Resource Description and Access (RDA).” n.d. Accessed December 3, 2020. [https://www.librarianshipstudies.com/2017/07/resource-description-and-access-rda.html](https://www.librarianshipstudies.com/2017/07/resource-description-and-access-rda.html).
 
