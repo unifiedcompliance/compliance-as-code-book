@@ -4,16 +4,21 @@ Actions are the primary item in an activity diagram.&#x20;
 
 ## Action Declaration
 
-Basic actions are declared by placing text between a colon and semicolon. If more than one action is created. An arrow is automatically drawn between them working from the top down.
+Basic actions are declared by placing text between a colon and semicolon. If more than one action is created. An arrow is automatically drawn between them working from the top down. However, you can manually draw the arrow between actions.
 
 #### Example: Action Declaration
 
 ```
 @startuml
-'Example: Action Declaration
+'Example: Arrow Declaration
 
-'Declare two actions.
+'Declare an action.
 :First Action;
+
+'Manually declare an arrow.
+->
+
+'Declare an action.
 :Second Action;
 
 @enduml
