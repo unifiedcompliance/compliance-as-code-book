@@ -10,7 +10,7 @@ Objects are declared using the keyword "object" followed by the name of the obje
 
 ```
 @startuml
-Example: Object Declaration
+'Example: Object Declaration
 
 'Declare an object.
 object MyObject
@@ -91,11 +91,11 @@ The **fill\_color** property determines the fill color of the drawn object. The 
 
 ```
 @startuml
-'Example: Object Declaration
+'Example: Object Fill Color
 
 'Declare an object with a fill color.
 object MyObject #009EA1
-
+sa
 @enduml
 ```
 
